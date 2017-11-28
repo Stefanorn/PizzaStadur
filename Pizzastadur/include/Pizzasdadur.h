@@ -7,12 +7,14 @@ class Pizzasdadur
 {
     public:
         Pizzasdadur();
-//      byrjavakt
-//
-    protected:
+        ~Pizzasdadur();
+        void createOrder();
 
     private:
-        Pontun _pantanir[];
+        void ReadFromFile();
+
+        Pontun* _pantanir = new Pontun[0];
+        int _numOfOrders;
 
 };
 

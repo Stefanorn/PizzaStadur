@@ -2,10 +2,8 @@
 
 Pontun::Pontun()
 {
-    //ctor
-}
-
-Pontun::~Pontun()
-{
-    //dtor
+//    cin >> _pizza;
+    _hasBeenPayedFor = false;
+    _hasBeenBaked = false;
+    _hasBeenDelevired = false;
 }

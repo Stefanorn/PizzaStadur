@@ -1,0 +1,24 @@
+# depslib dependency file v1.0
+1446667744 source:c:\users\stefanorn92\desktop\pizzastadur\main.cpp
+	<iostream>
+
+1511877960 source:c:\users\stefanorn92\desktop\pizzastadur\src\pizza.cpp
+	"Pizza.h"
+
+1511878420 c:\users\stefanorn92\desktop\pizzastadur\include\pizza.h
+	<iostream>
+	<string>
+
+1511877100 source:c:\users\stefanorn92\desktop\pizzastadur\src\pizzasdadur.cpp
+	"Pizzasdadur.h"
+
+1511877317 c:\users\stefanorn92\desktop\pizzastadur\include\pizzasdadur.h
+	"Pizza.h"
+	"Pontun.h"
+
+1511877748 c:\users\stefanorn92\desktop\pizzastadur\include\pontun.h
+	"Pizza.h"
+
+1511877140 source:c:\users\stefanorn92\desktop\pizzastadur\src\pontun.cpp
+	"Pontun.h"
+

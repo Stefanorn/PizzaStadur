@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		FEBBA7711FCD6BFA002634DA /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FEBBA7701FCD6BFA002634DA /* main.cpp */; };
+		FEBBA7791FCD8DC3002634DA /* Pizza.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FEBBA7771FCD8DC3002634DA /* Pizza.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -25,6 +26,8 @@
 /* Begin PBXFileReference section */
 		FEBBA76D1FCD6BFA002634DA /* PizzaStadur */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = PizzaStadur; sourceTree = BUILT_PRODUCTS_DIR; };
 		FEBBA7701FCD6BFA002634DA /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		FEBBA7771FCD8DC3002634DA /* Pizza.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Pizza.cpp; sourceTree = "<group>"; };
+		FEBBA7781FCD8DC3002634DA /* Pizza.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Pizza.hpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +61,8 @@
 			isa = PBXGroup;
 			children = (
 				FEBBA7701FCD6BFA002634DA /* main.cpp */,
+				FEBBA7771FCD8DC3002634DA /* Pizza.cpp */,
+				FEBBA7781FCD8DC3002634DA /* Pizza.hpp */,
 			);
 			path = PizzaStadur;
 			sourceTree = "<group>";
@@ -119,6 +124,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FEBBA7791FCD8DC3002634DA /* Pizza.cpp in Sources */,
 				FEBBA7711FCD6BFA002634DA /* main.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

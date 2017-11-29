@@ -21,7 +21,7 @@ int main()
             return 0;
             break;
         default:
-            cout <<"ologlet innput" << endl;
+            cout <<"Invalid innput" << endl;
             break;
         }
 

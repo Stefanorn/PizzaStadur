@@ -8,24 +8,25 @@ using namespace std;
 Pizzasdadur::Pizzasdadur(){
 
     ifstream stream;
-    stream.open( "Orders.bin" );
+    stream.open( "Orders.bin", ios::binary );
+
 
     if(stream.is_open() ){
 
         stream.seekg(0,stream.end);
-        _numOfOrders = stream.tellg() / sizeof( Pontun );
+        int length = stream.tellg() / sizeof(Pontun);
         stream.seekg(0, stream.beg);
+        _numOfOrders = length;
     }
     else{
         _numOfOrders = 0;
-        cerr << "Could not find orders.bin";
+        cerr << "Could not find orders.bin" << endl;
     }
 
     _pantanir = new Pontun[ _numOfOrders ];
 
+    stream.read((char*)(&_pantanir), sizeof(Pontun) * _numOfOrders);
 
-    //þarf að vita hversumargar pantanir ég er að lesa úr
-    //skránni þegar.
 }
 Pizzasdadur::~Pizzasdadur(){
 

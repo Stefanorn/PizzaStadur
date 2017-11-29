@@ -17,6 +17,13 @@ Pontun::Pontun()
     _hasBeenDelevired = false;
 }
 
+bool Pontun::hasBeenPayedFor(){
+    return _hasBeenPayedFor;
+}
+void Pontun::payOrder(){
+    _hasBeenPayedFor = true;
+}
+
 
 ostream& operator << (ostream& out, const Pontun& pontun){
 

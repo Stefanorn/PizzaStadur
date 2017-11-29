@@ -63,6 +63,18 @@ void Pizzasdadur::createOrder(){
     stream.close();
 }
 
+void Pizzasdadur::payForOrder(){
+    cout << "select a order to pay for" << endl;
+    for(int i = 0; i < _numOfOrders; i++ ){
+            if(!_pantanir[i].hasBeenPayedFor()){
+                cout << _pantanir[i];
+            }
+    }
+    int index;
+    cin >> index;
+    _pantanir[ index - 1 ].payOrder();
+}
+
 void Pizzasdadur::printAllOrders(){
 
     cout << "printing " << _numOfOrders << endl;

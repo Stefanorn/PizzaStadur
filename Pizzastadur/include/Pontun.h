@@ -10,6 +10,9 @@ class Pontun
         Pontun(int pizzaNumber);
         Pontun();
         friend ostream& operator << (ostream& out, const Pontun& pontun);
+        bool hasBeenPayedFor();
+        void payOrder();
+
     protected:
 
     private:

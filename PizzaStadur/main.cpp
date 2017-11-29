@@ -6,7 +6,7 @@ using namespace std;
 int main()
 {
     Pizzasdadur pizzaPlace;
-    cout << "Welcome to internet Pizza place" << endl;
+    cout << "Welcome to n33rdy Pizza place" << endl;
 
     while(true){
         char userInput;
@@ -23,8 +23,7 @@ int main()
         default:
             cout <<"ologlet innput" << endl;
             break;
-
-        };
+        }
 
     }
 }

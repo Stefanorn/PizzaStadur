@@ -13,7 +13,7 @@ Pizzasdadur::Pizzasdadur(){
     if(stream.is_open() ){
 
         stream.seekg(0,stream.end);
-        int _numOfOrders = stream.tellg() / sizeof( Pontun );
+        _numOfOrders = stream.tellg() / sizeof( Pontun );
         stream.seekg(0, stream.beg);
     }
     else{
@@ -32,12 +32,18 @@ Pizzasdadur::~Pizzasdadur(){
     delete[] _pantanir;
 }
 void Pizzasdadur::createOrder(){
+
     _numOfOrders ++;
     cout << "Making order no " << _numOfOrders << endl;
     Pontun newOrder;
-    /// hér mindi ég svo skrifa pöntunina nyðrí skrá
-    /// og á sama tima er ég að bæta henni aftast á arrayið mitt
-    _pantanir = new Pontun[ _numOfOrders ];
 
+    //Skrifa pöntunina í _pantanir array listann minn
+    _pantanir = new Pontun[ _numOfOrders ];
     _pantanir[_numOfOrders - 1] = newOrder;
+
+    //Skrifa pöntunina í skrá hér
+    ofstream stream;
+    stream.open("orders.bin", ios::binary|ios::app);
+    stream.write((char*)(&newOrder), sizeof(Pontun));
+
 }

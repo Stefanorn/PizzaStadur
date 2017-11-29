@@ -12,21 +12,35 @@ Pizzasdadur::Pizzasdadur(){
 
 
     if(stream.is_open() ){
-
         stream.seekg(0,stream.end);
         int length = stream.tellg() / sizeof(Pontun);
         stream.seekg(0, stream.beg);
+
+
+        cout << "Reading " << length << " orders" << endl;
+
+        Pontun temp;
+        for(int i = 0; i < length; i++){
+            stream.read((char*)(&temp), sizeof(Pontun));
+            _pantanir[i] = temp;
+        }
         _numOfOrders = length;
+
+        cout << _numOfOrders << length << endl;
+
     }
     else{
         _numOfOrders = 0;
         cerr << "Could not find orders.bin" << endl;
     }
 
-    _pantanir = new Pontun[ _numOfOrders ];
+   // _pantanir = new Pontun[ _numOfOrders ];
+   // Þegar ég geri new þá fæ ég nýan pointer þarf þá að afrita allt af gamla arrayinum yfir á nýa
 
-    stream.read((char*)(&_pantanir), sizeof(Pontun) * _numOfOrders);
 
+
+    stream.close();
+    cout << "Reddy to go" << endl;
 }
 Pizzasdadur::~Pizzasdadur(){
 
@@ -36,15 +50,26 @@ void Pizzasdadur::createOrder(){
 
     _numOfOrders ++;
     cout << "Making order no " << _numOfOrders << endl;
-    Pontun newOrder;
+    Pontun newOrder( _numOfOrders );
 
     //Skrifa pöntunina í _pantanir array listann minn
-    _pantanir = new Pontun[ _numOfOrders ];
+    // Þegar ég geri new þá fæ ég nýan pointer þarf þá að afrita allt af gamla arrayinum yfir á nýa
     _pantanir[_numOfOrders - 1] = newOrder;
 
-    //Skrifa pöntunina í skrá hér
+    ///Skrifa pöntunina í skrá hér
     ofstream stream;
     stream.open("orders.bin", ios::binary|ios::app);
     stream.write((char*)(&newOrder), sizeof(Pontun));
+    stream.close();
+}
+
+void Pizzasdadur::printAllOrders(){
+
+    cout << "printing " << _numOfOrders << endl;
+
+    for(int i = 0; i < _numOfOrders; i++){
+
+        cout << _pantanir[i];
+    }
 
 }

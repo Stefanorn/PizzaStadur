@@ -60,6 +60,7 @@ void Pontun::deleverPizza(){
 ostream& operator << (ostream& out, const Pontun& pontun){
 
     out << "pizza no " << pontun._pizzaNumber << endl;
+    //out << pontun._pizza;
     out << "has been payed for " << pontun._hasBeenPayedFor << endl;
     out << "has been baked " << pontun._hasBeenBaked << endl;
     out << "has been deleveried " << pontun._hasBeenDelevired << endl;

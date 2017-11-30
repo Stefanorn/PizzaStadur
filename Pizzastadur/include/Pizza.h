@@ -17,9 +17,8 @@ class Pizza
     private:
         char _name[30];
         char _topping[100];  // Breyta í klassa
-
         char _base[30];    //Breyta þessu i enum eða eitthva
-        char _size[10];  //Breyta þessu i enum eða eitthvad
+        char _size[30];  //Breyta þessu i enum eða eitthvad
         int _price;         //
 };
 

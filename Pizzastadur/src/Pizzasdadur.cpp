@@ -42,7 +42,7 @@ void Pizzasdadur::payForOrder(){
     cout << "select a order to pay for" << endl;
     cin >> index;
     _pantanir[ index - 1 ].payOrder();
-    if(!UpdateOrder(index)){
+    if(!UpdateOrder(index, _pantanir[index - 1] )){
         cerr << "could not uppdate database" << endl;
     }
 }
@@ -87,13 +87,26 @@ void Pizzasdadur::ReadFromFile(){
 
     stream.close();
 }
-bool Pizzasdadur::UpdateOrder(int orderNo){
+bool Pizzasdadur::UpdateOrder(int orderNo, Pontun newOrder){
+
+    ofstream stream;
+    stream.open("orders.bin", ios::binary|ios::app );
+    if(stream.is_open()){
+
+        stream.seekp(stream.beg);
+        stream.seekp(sizeof(Pontun) * orderNo );
+        stream.write((char*)(&newOrder), sizeof(Pontun));
+        stream.close();
+        return true;
+    }
+    stream.close();
     return false;
 }
 void Pizzasdadur::WriteOrderToFile( Pontun orderToWrite ){
 
     ofstream stream;
-    stream.open("orders.bin", ios::binary|ios::app);
+    stream.open("orders.bin", ios::binary|ios::ate);
     stream.write((char*)(&orderToWrite), sizeof(Pontun));
     stream.close();
+
 }

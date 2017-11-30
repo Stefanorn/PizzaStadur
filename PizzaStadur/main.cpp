@@ -10,7 +10,7 @@ int main()
 
     while(true){
         char userInput;
-        cout << "Press 1 to make order, 2 to print all orders, 3 to pay for order, q to quit " << endl;
+        cout << "Press 1 to make order, 2 to print all orders, 3 to pay for order, 4 to bake a pizza, q to quit " << endl;
         cin >> userInput;
 
         switch (userInput){
@@ -23,11 +23,14 @@ int main()
         case '3':
             pizzaPlace.payForOrder();
             break;
+        case '4':
+            pizzaPlace.bakePizza();
+            break;
         case 'q':
             return 0;
             break;
         default:
-            cout <<"Invalid innput" << endl;
+            cout <<"Invalid input" << endl;
             break;
         }
 

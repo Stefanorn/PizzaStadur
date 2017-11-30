@@ -42,8 +42,9 @@ void Pizzasdadur::payForOrder(){
     cout << "select a order to pay for" << endl;
     cin >> index;
     _pantanir[ index - 1 ].payOrder();
+
     if(!UpdateOrder(index)){
-        cerr << "could not uppdate database" << endl;
+        cerr << "could not update database" << endl;
     }
 }
 void Pizzasdadur::printAllOrders(){
@@ -54,6 +55,36 @@ void Pizzasdadur::printAllOrders(){
         cout << _pantanir[i];
     }
 
+}
+void Pizzasdadur::bakePizza(){
+    if(_numOfOrders < 1){
+        cout << "No order has been made!" << endl;
+        return;
+    }
+    for(int i = 0; i < _numOfOrders; i++){
+        if(!_pantanir[i].hasBeenBaked())
+            cout << _pantanir[i];
+    }
+    int index = 0;
+    bool valid_input = false;
+    while(valid_input == false){
+        cout << "Select order to bake " << endl;
+        cin >> index;
+        /*if(cin.fail()){
+            cout << "Invalid input" << endl;
+        }*/
+        if(index < 1 || index > _numOfOrders){
+            cout << "Invalid input" << endl;
+        }
+        else{
+            valid_input = true;
+        }
+    }
+    cout << "Baking order no " << index << endl;
+    _pantanir[index - 1].bakePizza();
+    cout << "Pizza has been baked. Order no " << index << " is ready" << endl;
+
+    UpdateOrder(index);
 }
 
 
@@ -97,3 +128,4 @@ void Pizzasdadur::WriteOrderToFile( Pontun orderToWrite ){
     stream.write((char*)(&orderToWrite), sizeof(Pontun));
     stream.close();
 }
+

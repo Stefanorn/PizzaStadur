@@ -13,11 +13,12 @@ class Pizzasdadur
         void createOrder();
         void printAllOrders();
         void payForOrder();
+        void bakePizza();
 
     private:
         void ReadFromFile();
         bool UpdateOrder(int orderNo);
-        void WriteOrderToFile( Pontun orderToWrite );
+        void WriteOrderToFile(Pontun orderToWrite);
 
         Pontun* _pantanir = new Pontun[100]; //Þarf að iplimenta kóða sem höndlar að stækka arrayið ef ég fæ fleirri enn 100 pantanir
         int _numOfOrders;

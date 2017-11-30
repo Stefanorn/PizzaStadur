@@ -80,3 +80,32 @@
 1512043964 source:c:\users\tinna\onedrive - reykjavik university\háskólinn í reykjavík\tölvunarfræði bsc\20174\t-113-vln1 verklegt námskeið 1\verkefni\pizzastadur\pizzastadur\pizzastadur\src\pontun.cpp
 	"Pontun.h"
 
+1512054228 source:c:\users\gabri\dropbox\hr\verklegt námskeið i\pizzastadur\pizzastadur\main.cpp
+	<iostream>
+	"Pizzasdadur.h"
+
+1512057219 c:\users\gabri\dropbox\hr\verklegt námskeið i\pizzastadur\pizzastadur\include\pizzasdadur.h
+	"Pizza.h"
+	"Pontun.h"
+	<vector>
+
+1512049195 c:\users\gabri\dropbox\hr\verklegt námskeið i\pizzastadur\pizzastadur\include\pizza.h
+	<iostream>
+	<string>
+
+1512049195 c:\users\gabri\dropbox\hr\verklegt námskeið i\pizzastadur\pizzastadur\include\pontun.h
+	"Pizza.h"
+	<iostream>
+
+1511960614 source:c:\users\gabri\dropbox\hr\verklegt námskeið i\pizzastadur\pizzastadur\src\pizza.cpp
+	"Pizza.h"
+
+1512057885 source:c:\users\gabri\dropbox\hr\verklegt námskeið i\pizzastadur\pizzastadur\src\pizzasdadur.cpp
+	"Pizzasdadur.h"
+	<fstream>
+	<iostream>
+	<string>
+
+1512049195 source:c:\users\gabri\dropbox\hr\verklegt námskeið i\pizzastadur\pizzastadur\src\pontun.cpp
+	"Pontun.h"
+

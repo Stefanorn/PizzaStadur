@@ -84,12 +84,12 @@
 	<iostream>
 	"Pizzasdadur.h"
 
-1512057219 c:\users\gabri\dropbox\hr\verklegt námskeið i\pizzastadur\pizzastadur\include\pizzasdadur.h
+1512058661 c:\users\gabri\dropbox\hr\verklegt námskeið i\pizzastadur\pizzastadur\include\pizzasdadur.h
 	"Pizza.h"
 	"Pontun.h"
 	<vector>
 
-1512049195 c:\users\gabri\dropbox\hr\verklegt námskeið i\pizzastadur\pizzastadur\include\pizza.h
+1512058068 c:\users\gabri\dropbox\hr\verklegt námskeið i\pizzastadur\pizzastadur\include\pizza.h
 	<iostream>
 	<string>
 
@@ -97,15 +97,15 @@
 	"Pizza.h"
 	<iostream>
 
-1511960614 source:c:\users\gabri\dropbox\hr\verklegt námskeið i\pizzastadur\pizzastadur\src\pizza.cpp
+1512058068 source:c:\users\gabri\dropbox\hr\verklegt námskeið i\pizzastadur\pizzastadur\src\pizza.cpp
 	"Pizza.h"
 
-1512057885 source:c:\users\gabri\dropbox\hr\verklegt námskeið i\pizzastadur\pizzastadur\src\pizzasdadur.cpp
+1512058711 source:c:\users\gabri\dropbox\hr\verklegt námskeið i\pizzastadur\pizzastadur\src\pizzasdadur.cpp
 	"Pizzasdadur.h"
 	<fstream>
 	<iostream>
 	<string>
 
-1512049195 source:c:\users\gabri\dropbox\hr\verklegt námskeið i\pizzastadur\pizzastadur\src\pontun.cpp
+1512058068 source:c:\users\gabri\dropbox\hr\verklegt námskeið i\pizzastadur\pizzastadur\src\pontun.cpp
 	"Pontun.h"
 

@@ -42,14 +42,9 @@ void Pizzasdadur::payForOrder(){
     cout << "select a order to pay for" << endl;
     cin >> index;
     _pantanir[ index - 1 ].payOrder();
-<<<<<<< HEAD
 
-    if(!UpdateOrder(index)){
+    if(!UpdateOrder(index, _pantanir[ index - 1 ])){
         cerr << "could not update database" << endl;
-=======
-    if(!UpdateOrder(index, _pantanir[index - 1] )){
-        cerr << "could not uppdate database" << endl;
->>>>>>> add88bb020ef129f9ac3a50b38e64a5647f3bdb6
     }
 }
 void Pizzasdadur::printAllOrders(){
@@ -89,7 +84,7 @@ void Pizzasdadur::bakePizza(){
     _pantanir[index - 1].bakePizza();
     cout << "Pizza has been baked. Order no " << index << " is ready" << endl;
 
-    UpdateOrder(index);
+    UpdateOrder(index, _pantanir[index - 1]);
 }
 
 

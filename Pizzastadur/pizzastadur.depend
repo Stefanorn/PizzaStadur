@@ -51,32 +51,3 @@
 	<iostream>
 	"Pizzasdadur.h"
 
-1512040641 source:c:\users\tinna\onedrive - reykjavik university\háskólinn í reykjavík\tölvunarfræði bsc\20174\t-113-vln1 verklegt námskeið 1\verkefni\pizzastadur\pizzastadur\pizzastadur\main.cpp
-	<iostream>
-	"Pizzasdadur.h"
-
-1512040641 c:\users\tinna\onedrive - reykjavik university\háskólinn í reykjavík\tölvunarfræði bsc\20174\t-113-vln1 verklegt námskeið 1\verkefni\pizzastadur\pizzastadur\pizzastadur\include\pizzasdadur.h
-	"Pizza.h"
-	"Pontun.h"
-	<vector>
-
-1512043933 c:\users\tinna\onedrive - reykjavik university\háskólinn í reykjavík\tölvunarfræði bsc\20174\t-113-vln1 verklegt námskeið 1\verkefni\pizzastadur\pizzastadur\pizzastadur\include\pizza.h
-	<iostream>
-	<string>
-
-1512043333 c:\users\tinna\onedrive - reykjavik university\háskólinn í reykjavík\tölvunarfræði bsc\20174\t-113-vln1 verklegt námskeið 1\verkefni\pizzastadur\pizzastadur\pizzastadur\include\pontun.h
-	"Pizza.h"
-	<iostream>
-
-1512040641 source:c:\users\tinna\onedrive - reykjavik university\háskólinn í reykjavík\tölvunarfræði bsc\20174\t-113-vln1 verklegt námskeið 1\verkefni\pizzastadur\pizzastadur\pizzastadur\src\pizza.cpp
-	"Pizza.h"
-
-1512040641 source:c:\users\tinna\onedrive - reykjavik university\háskólinn í reykjavík\tölvunarfræði bsc\20174\t-113-vln1 verklegt námskeið 1\verkefni\pizzastadur\pizzastadur\pizzastadur\src\pizzasdadur.cpp
-	"Pizzasdadur.h"
-	<fstream>
-	<iostream>
-	<string>
-
-1512043964 source:c:\users\tinna\onedrive - reykjavik university\háskólinn í reykjavík\tölvunarfræði bsc\20174\t-113-vln1 verklegt námskeið 1\verkefni\pizzastadur\pizzastadur\pizzastadur\src\pontun.cpp
-	"Pontun.h"
-

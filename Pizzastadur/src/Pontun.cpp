@@ -2,7 +2,7 @@
 
 Pontun::Pontun(int pizzaNumber)
 {
-//    cin >> _pizza;
+    cin >> _pizza;
     _pizzaNumber = pizzaNumber;
     _hasBeenPayedFor = false;
     _hasBeenBaked = false;
@@ -12,7 +12,7 @@ Pontun::Pontun(int pizzaNumber)
 }
 Pontun::Pontun()
 {
-//    cin >> _pizza;
+  //  cin >> _pizza;
     _pizzaNumber = -1;
     _hasBeenPayedFor = false;
     _hasBeenBaked = false;
@@ -60,7 +60,7 @@ void Pontun::deleverPizza(){
 ostream& operator << (ostream& out, const Pontun& pontun){
 
     out << "pizza no " << pontun._pizzaNumber << endl;
-    //out << pontun._pizza;
+    out << pontun._pizza;
     out << "has been payed for " << pontun._hasBeenPayedFor << endl;
     out << "has been baked " << pontun._hasBeenBaked << endl;
     out << "has been deleveried " << pontun._hasBeenDelevired << endl;

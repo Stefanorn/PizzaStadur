@@ -1,9 +1,7 @@
 #include "Pizza.h"
 
 Pizza::Pizza(){
-   _name = "none";
-   _base = "unknown";
-   _size = "unknown";
+
 }
 
 istream& operator >> (istream& ins, Pizza& pizza){

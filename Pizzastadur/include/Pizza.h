@@ -15,10 +15,10 @@ class Pizza
         friend ostream& operator << (ostream& outs, const Pizza& pizza);
 
     private:
-        string _name;
+        char _name[30];
         char _topping[100];  // Breyta í klassa
-        string _base;    //Breyta þessu i enum eða eitthva
-        string _size;  //Breyta þessu i enum eða eitthvad
+        char _base[30];    //Breyta þessu i enum eða eitthva
+        char _size[30];  //Breyta þessu i enum eða eitthvad
         int _price;         //
 };
 

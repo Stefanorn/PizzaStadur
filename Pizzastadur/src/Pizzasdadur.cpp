@@ -32,7 +32,6 @@ void Pizzasdadur::createOrder(){
     WriteOrderToFile( newOrder );
 
 }
-
 void Pizzasdadur::payForOrder(){
     for(int i = 0; i < _numOfOrders; i++ ){
             if(!_pantanir[i].hasBeenPayedFor()){
@@ -47,13 +46,11 @@ void Pizzasdadur::payForOrder(){
         cerr << "could not uppdate database" << endl;
     }
 }
-
 void Pizzasdadur::printAllOrders(){
 
     cout << "printing " << _numOfOrders << endl;
 
     for(int i = 0; i < _numOfOrders; i++){
-
         cout << _pantanir[i];
     }
 
@@ -91,8 +88,6 @@ void Pizzasdadur::ReadFromFile(){
     stream.close();
 }
 bool Pizzasdadur::UpdateOrder(int orderNo){
-
-
     return false;
 }
 void Pizzasdadur::WriteOrderToFile( Pontun orderToWrite ){

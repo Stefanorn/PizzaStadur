@@ -32,7 +32,7 @@ class Pontun
     protected:
 
     private:
-        //Pizza _pizza; //Breyta þessu í array þá get ég haft margar pizzur i sömu pöntun
+        Pizza _pizza; //Breyta þessu í array þá get ég haft margar pizzur i sömu pöntun
         bool _hasBeenPayedFor;
         bool _hasBeenBaked;
         bool _isReddy;

@@ -17,7 +17,7 @@ class Pizzasdadur
 
     private:
         void ReadFromFile();
-        bool UpdateOrder(int orderNo, Pontun newOrder );
+        bool UpdateOrder();
         void WriteOrderToFile( Pontun orderToWrite );
 
         Pontun* _pantanir = new Pontun[100]; //Þarf að iplimenta kóða sem höndlar að stækka arrayið ef ég fæ fleirri enn 100 pantanir

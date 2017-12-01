@@ -14,6 +14,7 @@ class Pizzasdadur
         void printAllOrders();
         void payForOrder();
         void bakePizza();
+        void addItemToDataBase();
 
     private:
         void ReadFromFile();

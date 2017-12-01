@@ -99,6 +99,10 @@ void Pizzasdadur::bakePizza(){
     UpdateOrder();
 }
 
+void Pizzasdadur::addItemToDataBase(){
+    Pizza pizza;
+    cin >> pizza;
+}
 
 /// PRIVATE FOLL
 /*

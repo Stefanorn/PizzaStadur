@@ -34,6 +34,8 @@
 			<Add option="-Wall" />
 			<Add option="-fexceptions" />
 		</Compiler>
+		<Unit filename="ItemDataBase.cpp" />
+		<Unit filename="ItemDataBase.h" />
 		<Unit filename="include/Pizza.h" />
 		<Unit filename="include/Pizzasdadur.h" />
 		<Unit filename="include/Pontun.h" />

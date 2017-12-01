@@ -29,13 +29,13 @@
 	<iostream>
 	<string>
 
-1512047765 source:c:\users\stefanorn92\documents\github\pizzastadur\pizzastadur\src\pizzasdadur.cpp
+1512129220 source:c:\users\stefanorn92\documents\github\pizzastadur\pizzastadur\src\pizzasdadur.cpp
 	"Pizzasdadur.h"
 	<fstream>
 	<iostream>
 	<string>
 
-1512127939 c:\users\stefanorn92\documents\github\pizzastadur\pizzastadur\include\pizzasdadur.h
+1512129195 c:\users\stefanorn92\documents\github\pizzastadur\pizzastadur\include\pizzasdadur.h
 	"Pizza.h"
 	"Pontun.h"
 	<vector>
@@ -44,10 +44,10 @@
 	"Pizza.h"
 	<iostream>
 
-1511973616 source:c:\users\stefanorn92\documents\github\pizzastadur\pizzastadur\src\pontun.cpp
+1512125649 source:c:\users\stefanorn92\documents\github\pizzastadur\pizzastadur\src\pontun.cpp
 	"Pontun.h"
 
-1512118379 source:c:\users\stefanorn92\documents\github\pizzastadur\pizzastadur\main.cpp
+1512129575 source:c:\users\stefanorn92\documents\github\pizzastadur\pizzastadur\main.cpp
 	<iostream>
 	"Pizzasdadur.h"
 
@@ -108,4 +108,15 @@
 
 1512058068 source:c:\users\gabri\dropbox\hr\verklegt námskeið i\pizzastadur\pizzastadur\src\pontun.cpp
 	"Pontun.h"
+
+1512137996 source:c:\users\stefanorn92\documents\github\pizzastadur\pizzastadur\itemdatabase.cpp
+	"ItemDataBase.h"
+	<fstream>
+	<iostream>
+	<string>
+
+1512138017 c:\users\stefanorn92\documents\github\pizzastadur\pizzastadur\itemdatabase.h
+	<vector>
+	<iostream>
+	"Pizza.h"
 

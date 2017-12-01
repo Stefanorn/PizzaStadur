@@ -29,6 +29,8 @@ class Pontun
         bool isPizzaDeleverd();
         void deleverPizza();
 
+        int GetPizzaNumber();
+
     protected:
 
     private:

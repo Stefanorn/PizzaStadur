@@ -33,17 +33,29 @@ void Pizzasdadur::createOrder(){
 
 }
 void Pizzasdadur::payForOrder(){
+    int* inputList = new int[_numOfOrders];
     for(int i = 0; i < _numOfOrders; i++ ){
             if(!_pantanir[i].hasBeenPayedFor()){
                 cout << _pantanir[i];
+                inputList[i] = _pantanir[i].GetPizzaNumber();
+            }
+            else{
+                inputList[i] = -1;
             }
     }
     int index;
+
     cout << "select a order to pay for" << endl;
     cin >> index;
-    _pantanir[ index - 1 ].payOrder();
+   /* if(inputCheck(index, *inputList )){
+        _pantanir[ index - 1 ].payOrder();
+    }
+    else{
+        cout << "Invalid Input" << endl;
+    }*/
 
-    if(!UpdateOrder(index, _pantanir[ index - 1 ])){
+    delete[] inputList;
+    if(!UpdateOrder()){
         cerr << "could not update database" << endl;
     }
 }
@@ -84,11 +96,29 @@ void Pizzasdadur::bakePizza(){
     _pantanir[index - 1].bakePizza();
     cout << "Pizza has been baked. Order no " << index << " is ready" << endl;
 
-    UpdateOrder(index, _pantanir[index - 1]);
+    UpdateOrder();
 }
 
+void Pizzasdadur::addItemToDataBase(){
+    Pizza pizza;
+    cin >> pizza;
+}
 
 /// PRIVATE FOLL
+/*
+bool Pizzasdadur::inputCheck(int input, int[] validInputList){
+    if(input <= 0){
+        return false;
+    }
+    for(int i = 0; i < _numOfOrders){
+        if( input == validInputList[i] ){
+            return true;
+        }
+    }
+    return false;
+}*/
+
+
 void Pizzasdadur::ReadFromFile(){
 
     ifstream stream;
@@ -118,8 +148,29 @@ void Pizzasdadur::ReadFromFile(){
 
     stream.close();
 }
-bool Pizzasdadur::UpdateOrder(int orderNo, Pontun newOrder){
+bool Pizzasdadur::UpdateOrder(){
 
+    ofstream stream;
+
+    stream.open("orders.bin", ios::binary);
+    if(stream.is_open()){
+        stream.seekp( stream.beg );
+        for(int i = 0; i < _numOfOrders; i++){
+            stream.write((char*)(&_pantanir[i]), sizeof(Pontun));
+        }
+
+
+        stream.close();
+        return true;
+    }
+
+    stream.close();
+    return false;
+  /*
+    Finna hvar færslan er í skránni og yfir rita hana
+
+    þarf þá að taka inn
+    int orderNo, Pontun newOrder
     ofstream stream;
     stream.open("orders.bin", ios::binary|ios::app );
     if(stream.is_open()){
@@ -131,12 +182,12 @@ bool Pizzasdadur::UpdateOrder(int orderNo, Pontun newOrder){
         return true;
     }
     stream.close();
-    return false;
+    return false;*/
 }
 void Pizzasdadur::WriteOrderToFile( Pontun orderToWrite ){
 
     ofstream stream;
-    stream.open("orders.bin", ios::binary|ios::ate);
+    stream.open("orders.bin", ios::binary|ios::app);
     stream.write((char*)(&orderToWrite), sizeof(Pontun));
     stream.close();
 

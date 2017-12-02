@@ -55,6 +55,9 @@ void Pontun::deleverPizza(){
     _hasBeenDelevired = true;
 }
 
+int Pontun::GetPizzaNumber(){
+    return _pizzaNumber;
+}
 
 
 ostream& operator << (ostream& out, const Pontun& pontun){

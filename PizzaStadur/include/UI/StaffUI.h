@@ -10,6 +10,7 @@ class StaffUI
 
     private:
         void PayForOrder();
+        void DeliverOrder();
         staffServices service;
 };
 

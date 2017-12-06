@@ -42,8 +42,16 @@
 		<Unit filename="include/Models/Pontun.h" />
 		<Unit filename="include/Models/Toppings.h" />
 		<Unit filename="include/Pizzasdadur.h" />
+		<Unit filename="include/UI/AdminUI.h" />
+		<Unit filename="include/UI/BakerUI.h" />
+		<Unit filename="include/UI/SalesUI.h" />
+		<Unit filename="include/UI/StaffUI.h" />
 		<Unit filename="main.cpp" />
 		<Unit filename="src/Pizzasdadur.cpp" />
+		<Unit filename="src/UI/AdminUI.cpp" />
+		<Unit filename="src/UI/BakerUI.cpp" />
+		<Unit filename="src/UI/SalesUI.cpp" />
+		<Unit filename="src/UI/StaffUI.cpp" />
 		<Unit filename="src/models/Pizza.cpp" />
 		<Unit filename="src/models/Pontun.cpp" />
 		<Unit filename="src/models/Toppings.cpp" />

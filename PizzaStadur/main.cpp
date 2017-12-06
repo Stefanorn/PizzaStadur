@@ -1,14 +1,16 @@
 #include <iostream>
 #include "Pizzasdadur.h"
 #include "StaffUI.h"
+#include "BakerUI.h"
 
 using namespace std;
 
 
 int main()
 {
-    StaffUI ui;
-
+    StaffUI staffui;
+    BakerUI bakerui;
+    bakerui._mainMenu();
     return 0;
     Pizzasdadur pizzaPlace;
     cout << "Welcome to n33rdy Pizza place" << endl;

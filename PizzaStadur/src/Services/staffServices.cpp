@@ -1,5 +1,7 @@
 #include "staffServices.h"
 
+staffServices::staffServices(){
+}
 vector<Pontun> staffServices::ReturnUnPayedOrders(){
     vector<Pontun> orders;
 

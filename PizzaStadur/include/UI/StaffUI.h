@@ -9,6 +9,8 @@ class StaffUI
     protected:
 
     private:
+        void PayForOrder();
+        staffServices service;
 };
 
 #endif // STAFFUI_H

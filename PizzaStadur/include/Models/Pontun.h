@@ -7,7 +7,7 @@ using namespace std;
 class Pontun
 {
     public:
-        Pontun(int pizzaNumber);
+        Pontun(int orderNumber);
         Pontun();
         friend ostream& operator << (ostream& out, const Pontun& pontun);
 

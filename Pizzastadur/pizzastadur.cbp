@@ -38,14 +38,14 @@
 		</Compiler>
 		<Unit filename="ItemDataBase.cpp" />
 		<Unit filename="ItemDataBase.h" />
+		<Unit filename="include/Models/Pizza.h" />
+		<Unit filename="include/Models/Pontun.h" />
 		<Unit filename="include/Models/Toppings.h" />
-		<Unit filename="include/Pizza.h" />
 		<Unit filename="include/Pizzasdadur.h" />
-		<Unit filename="include/Pontun.h" />
 		<Unit filename="main.cpp" />
-		<Unit filename="src/Pizza.cpp" />
 		<Unit filename="src/Pizzasdadur.cpp" />
-		<Unit filename="src/Pontun.cpp" />
+		<Unit filename="src/models/Pizza.cpp" />
+		<Unit filename="src/models/Pontun.cpp" />
 		<Unit filename="src/models/Toppings.cpp" />
 		<Extensions>
 			<code_completion />

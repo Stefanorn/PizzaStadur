@@ -2,15 +2,52 @@
 #include "Pizzasdadur.h"
 #include "StaffUI.h"
 #include "BakerUI.h"
+#include "SalesUI.h"
 
 using namespace std;
 
 
 int main()
 {
-    StaffUI staffui;
-    BakerUI bakerui;
-    bakerui._mainMenu();
+    while(true){
+        cout << "Press 1 if you are a customer " << endl;
+        cout << "Press 2 if you are a baker " << endl;
+        cout << "press 3 if you work the register" << endl;
+        cout << "Press 4 if you are the manager " << endl;
+        cout << "Press 5 to quit " << endl;
+        char index;
+        cin >> index;
+
+        if (index == '1'){
+                system("CLS");
+            SalesUI run;
+
+        }
+        else if (index == '2'){
+            system("CLS");
+            BakerUI bakerui;
+            bakerui._mainMenu();
+
+        }
+        else if (index == '3'){
+            system("CLS");
+            StaffUI run;
+        }
+        else if (index == '4'){
+            system("CLS");
+            cout << "Hello mr boss" << endl;
+
+        }
+        else if (index == '5'){
+            return 0;
+
+        }
+        else{
+            cout << "Invalid input" << endl;
+            system("CLS");
+        }
+    }
+
     return 0;
     Pizzasdadur pizzaPlace;
     cout << "Welcome to n33rdy Pizza place" << endl;

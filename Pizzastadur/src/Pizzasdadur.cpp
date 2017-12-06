@@ -11,7 +11,6 @@ Pizzasdadur::Pizzasdadur(){
     cout << "Reading orders from file " << endl;
     ReadFromFile();
     cout << "Reddy to go" << endl;
-
 }
 Pizzasdadur::~Pizzasdadur(){
 

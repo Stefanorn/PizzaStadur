@@ -12,11 +12,13 @@ class orderRepo
     public:
         orderRepo();
         void WriteOrderToFile( Pontun orderToWrite );
-        void UpdateOrder(  vector<Pontun> orders );
+        void AddOrders(  vector<Pontun> orders );
+        void PayForOrder(int orderNo);
 
         vector<Pontun> ReturnOrders(    bool hasBeenPayedFor,
                                         bool hasBeenDelivired,
                                         bool isReddy );
+        vector<Pontun> ReturnAllOrders();
 
     protected:
 

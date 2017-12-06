@@ -1,32 +1,21 @@
 #include "staffServices.h"
 
-/*void staffServices::registerOrder( int orderID ){
-    int* inputList = new int[_numOfOrders];
-    for(int i = 0; i < _numOfOrders; i++ ){
-            if(!_pantanir[i].hasBeenPayedFor()){
-                cout << _pantanir[i];
-                inputList[i] = _pantanir[i].GetPizzaNumber();
-            }
-            else{
-                inputList[i] = -1;
-            }
-    }
-    int index;
+vector<Pontun> staffServices::ReturnUnPayedOrders(){
+    vector<Pontun> orders;
 
-    cout << "select a order to pay for" << endl;
-    cin >> index;
-   /* if(inputCheck(index, *inputList )){
-        _pantanir[ index - 1 ].payOrder();
+    orders = repo.ReturnOrders(true,false,false);
+    return orders;
+}
+bool staffServices::PayForOrder(int orderNo){
+    vector<Pontun> orders = repo.ReturnAllOrders();
+    for(unsigned int i = 0; i < orders.size(); i++){
+        if( orders[i].GetPizzaNumber() == orderNo ){
+            orders[i].payOrder();
+            return true;
+        }
     }
-    else{
-        cout << "Invalid Input" << endl;
-    }
-
-    delete[] inputList;
-    if(!UpdateOrder()){
-        cerr << "could not update database" << endl;
-    }
-}*/
+    return false;
+}
 void staffServices::deliverOrder( int orderID ){
 
 }

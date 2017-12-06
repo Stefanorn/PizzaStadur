@@ -17,8 +17,8 @@ class Pontun
         void payOrder();
 
         //Bakarinn bakar pizzuna
-        bool hasBeenBaked();
-        void bakePizza();
+        bool hasBeenBaked(); // á frekar heima i pizzu
+        void bakePizza(); // á frekar heima í pizzu
 
         //Pizzan er reddy þegar hún er bokuð og búið að borga
         bool isPizzaReddy();
@@ -26,20 +26,20 @@ class Pontun
 
         // Það er bara hægt að delevera pizzur sem eru borgaðar
         // og bakaðar
-        bool isPizzaDeleverd();
-        void deleverPizza();
+        bool IsOrderDeliverd();
+        void deliverOrder();
 
-        int GetPizzaNumber();
+        int GetPizzaNumber(); //ætti að vera get order no
 
     protected:
 
     private:
-        Pizza _pizza; //Breyta þessu í array þá get ég haft margar pizzur i sömu pöntun
+        Pizza _pizza; //má eyða þessu
         bool _hasBeenPayedFor;
         bool _hasBeenBaked;
         bool _isReddy;
         bool _hasBeenDelevired;
-        int _pizzaNumber;
+        int _orderNumber;
         //char[100] info; //Auka upplýsingar
         //auka[??] _auka; hér mindi ég skilgreina gos franskar og auka dót
 

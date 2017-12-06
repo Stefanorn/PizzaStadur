@@ -31,7 +31,7 @@ void orderRepo::ReadFromFile(){
 
     stream.close();
 }
-void orderRepo::UpdateOrder( vector<Pontun> orders ){
+void orderRepo::AddOrders( vector<Pontun> orders ){
 
     ofstream stream;
 
@@ -76,9 +76,19 @@ vector<Pontun> orderRepo::ReturnOrders( bool hasBeenPayedFor,
                                         bool isReddy){
         vector<Pontun> ordersToReturn;
         for(unsigned int i = 0; i < _orders.size(); i++ ){
-        //    if(hasBeenPayedFor == _orders[i].)
+            if(hasBeenPayedFor == _orders[i].hasBeenPayedFor() &&
+               hasBeenDelivired == _orders[i].IsOrderDeliverd() &&
+               isReddy == _orders[i].isPizzaReddy()){
+                ordersToReturn.push_back(_orders[i]);
+
+               }
         }
 
+        return ordersToReturn;
+}
 
+vector<Pontun> orderRepo::ReturnAllOrders(){
+
+    return _orders;
 
 }

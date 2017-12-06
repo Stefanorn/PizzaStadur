@@ -39,6 +39,7 @@
 		<Compiler>
 			<Add option="-Wall" />
 			<Add option="-fexceptions" />
+			<Add directory="include/UI" />
 		</Compiler>
 		<Unit filename="ItemDataBase.cpp" />
 		<Unit filename="ItemDataBase.h" />

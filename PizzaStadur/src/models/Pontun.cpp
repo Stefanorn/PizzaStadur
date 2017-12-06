@@ -1,9 +1,8 @@
 #include "Pontun.h"
 
-Pontun::Pontun(int pizzaNumber)
+Pontun::Pontun(int orderNumber)
 {
-    cin >> _pizza;
-    _pizzaNumber = pizzaNumber;
+    _orderNumber = orderNumber;
     _hasBeenPayedFor = false;
     _hasBeenBaked = false;
     _hasBeenDelevired = false;
@@ -12,8 +11,7 @@ Pontun::Pontun(int pizzaNumber)
 }
 Pontun::Pontun()
 {
-  //  cin >> _pizza;
-    _pizzaNumber = -1;
+    _orderNumber = -1;
     _hasBeenPayedFor = false;
     _hasBeenBaked = false;
     _hasBeenDelevired = false;
@@ -48,21 +46,21 @@ void Pontun::makePizzaReddy(){
 
 // Það er bara hægt að delevera pizzur sem eru borgaðar
 // og bakaðar
-bool Pontun::isPizzaDeleverd(){
+bool Pontun::IsOrderDeliverd(){
     return _hasBeenDelevired;
 }
-void Pontun::deleverPizza(){
+void Pontun::deliverOrder(){
     _hasBeenDelevired = true;
 }
 
 int Pontun::GetPizzaNumber(){
-    return _pizzaNumber;
+    return _orderNumber;
 }
 
 
 ostream& operator << (ostream& out, const Pontun& pontun){
 
-    out << "pizza no " << pontun._pizzaNumber << endl;
+    out << "Order no " << pontun._orderNumber << endl;
     out << pontun._pizza;
     out << "has been payed for " << pontun._hasBeenPayedFor << endl;
     out << "has been baked " << pontun._hasBeenBaked << endl;

@@ -4,6 +4,8 @@
 #include <iostream>
 #include <string>
 #include "Enums.h"
+#include "PizzaExeptions.h"
+
 using namespace std;
 
 
@@ -13,7 +15,8 @@ class Pizza
         Pizza();
 
         friend istream& operator >> (istream& ins, Pizza& pizza);
-        friend ostream& operator << (ostream& outs, const Pizza& pizza);
+        friend ostream& operator << (ostream& outs,
+                                     const Pizza& pizza);
 
         void tagPizzaToOrder(int orderNo);
         int getPizzaToOrderId();
@@ -30,8 +33,8 @@ class Pizza
 
         char _name[32];
         double _price;
-        char _base[16];
-        char _size[4];
+        pizzaBase _base;
+        pizzaSize _size;
 };
 
 #endif // PIZZA_H

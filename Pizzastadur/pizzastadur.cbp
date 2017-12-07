@@ -19,6 +19,7 @@
 					<Add directory="include/repo" />
 					<Add directory="include/UI" />
 					<Add directory="include/Exeptions" />
+					<Add directory="include/Exceptions" />
 				</Compiler>
 			</Target>
 			<Target title="Release">
@@ -33,6 +34,7 @@
 					<Add directory="include/Services" />
 					<Add directory="include/repo" />
 					<Add directory="include/Exeptions" />
+					<Add directory="include/Exceptions" />
 				</Compiler>
 				<Linker>
 					<Add option="-s" />
@@ -42,9 +44,13 @@
 		<Compiler>
 			<Add option="-Wall" />
 			<Add option="-fexceptions" />
+			<Add directory="include/Exceptions" />
 		</Compiler>
 		<Unit filename="ItemDataBase.cpp" />
 		<Unit filename="ItemDataBase.h" />
+		<Unit filename="include/Enums.h" />
+		<Unit filename="include/Exceptions/OrderExeptions.h" />
+		<Unit filename="include/Exceptions/PizzaExeptions.h" />
 		<Unit filename="include/Exeptions/OrderExeptions.h" />
 		<Unit filename="include/Models/Pizza.h" />
 		<Unit filename="include/Models/Pontun.h" />
@@ -58,6 +64,7 @@
 		<Unit filename="include/UI/SalesUI.h" />
 		<Unit filename="include/UI/StaffUI.h" />
 		<Unit filename="include/repo/orderRepo.h" />
+		<Unit filename="include/repo/pizzaRepo.h" />
 		<Unit filename="main.cpp" />
 		<Unit filename="src/Pizzasdadur.cpp">
 			<Option compile="0" />
@@ -74,6 +81,7 @@
 		<Unit filename="src/models/Pontun.cpp" />
 		<Unit filename="src/models/Toppings.cpp" />
 		<Unit filename="src/repo/orderRepo.cpp" />
+		<Unit filename="src/repo/pizzaRepo.cpp" />
 		<Extensions>
 			<code_completion />
 			<envvars />

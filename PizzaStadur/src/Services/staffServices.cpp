@@ -14,7 +14,7 @@ vector<Pontun> staffServices::ReturnUnDeliverdOrder(){
 bool staffServices::PayForOrder(int orderNo){
     vector<Pontun> orders = repo.ReturnAllOrders();
     for(unsigned int i = 0; i < orders.size(); i++){
-        if( orders[i].GetPizzaNumber() == orderNo ){
+        if( orders[i].GetOrderNo() == orderNo ){
             orders[i].payOrder();
             return true;
         }
@@ -25,7 +25,7 @@ bool staffServices::PayForOrder(int orderNo){
 bool staffServices::DeliverOrder(int orderNo){
     vector<Pontun> orders = repo.ReturnAllOrders();
     for(unsigned int i = 0; i < orders.size(); i++){
-        if( orders[i].GetPizzaNumber() == orderNo ){
+        if( orders[i].GetOrderNo() == orderNo ){
             orders[i].deliverOrder();
             return true;
         }

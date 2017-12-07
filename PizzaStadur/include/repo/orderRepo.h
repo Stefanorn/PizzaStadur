@@ -5,12 +5,13 @@
 #include <iostream>
 #include <fstream>
 
+
 using namespace std;
 
 class orderRepo
 {
     public:
-        orderRepo();
+        orderRepo( int number);
         void WriteOrderToFile( Pontun orderToWrite );
         void AddOrders(  vector<Pontun> orders );
         void PayForOrder(int orderNo);
@@ -18,11 +19,12 @@ class orderRepo
         vector<Pontun> ReturnOrders(    bool hasBeenPayedFor,
                                         bool hasBeenDelivired,
                                         bool isReddy );
+
         vector<Pontun> ReturnAllOrders();
 
-    protected:
-
+        int getOrderNo();
     private:
+        int _orderNo;
         void ReadFromFile();
         vector<Pontun> _orders;
 };

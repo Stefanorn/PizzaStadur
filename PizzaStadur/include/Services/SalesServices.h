@@ -7,7 +7,7 @@ class SalesServices
 {
     public:
         SalesServices();
-
+        void MakeOrder(Pontun order);
     protected:
 
     private:

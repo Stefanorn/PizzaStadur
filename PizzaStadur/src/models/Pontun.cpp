@@ -1,19 +1,9 @@
 #include "Pontun.h"
 
-Pontun::Pontun(int orderNumber)
+Pontun::Pontun(int number)
 {
-    _orderNumber = orderNumber;
+    _orderNumber = number;
     _hasBeenPayedFor = false;
-    _hasBeenBaked = false;
-    _hasBeenDelevired = false;
-    _isReddy = false;
-
-}
-Pontun::Pontun()
-{
-    _orderNumber = -1;
-    _hasBeenPayedFor = false;
-    _hasBeenBaked = false;
     _hasBeenDelevired = false;
     _isReddy = false;
 }
@@ -26,21 +16,14 @@ void Pontun::payOrder(){
     _hasBeenPayedFor = true;
 }
 
-//Bakarinn bakar pizzuna
-bool Pontun::hasBeenBaked(){
-    return _hasBeenBaked;
-}
-void Pontun::bakePizza(){
 
-    _hasBeenBaked = true;
-}
 
 //Pizzan er reddy þegar hún er bokuð og búið að borga
-bool Pontun::isPizzaReddy(){
+bool Pontun::isOrderReddy(){
     return _isReddy;
 
 }
-void Pontun::makePizzaReddy(){
+void Pontun::makeOrderReddy(){
     _isReddy = true;
 }
 
@@ -53,7 +36,7 @@ void Pontun::deliverOrder(){
     _hasBeenDelevired = true;
 }
 
-int Pontun::GetPizzaNumber(){
+int Pontun::GetOrderNo(){
     return _orderNumber;
 }
 
@@ -61,10 +44,13 @@ int Pontun::GetPizzaNumber(){
 ostream& operator << (ostream& out, const Pontun& pontun){
 
     out << "Order no " << pontun._orderNumber << endl;
-    out << pontun._pizza;
     out << "has been payed for " << pontun._hasBeenPayedFor << endl;
-    out << "has been baked " << pontun._hasBeenBaked << endl;
     out << "has been deleveried " << pontun._hasBeenDelevired << endl;
 
     return out;
+}
+istream& operator >> (istream& in, Pontun& order){
+
+    in >> order._places;
+    return in;
 }

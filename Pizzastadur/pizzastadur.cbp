@@ -56,7 +56,10 @@
 		<Unit filename="include/UI/StaffUI.h" />
 		<Unit filename="include/repo/orderRepo.h" />
 		<Unit filename="main.cpp" />
-		<Unit filename="src/Pizzasdadur.cpp" />
+		<Unit filename="src/Pizzasdadur.cpp">
+			<Option compile="0" />
+			<Option link="0" />
+		</Unit>
 		<Unit filename="src/Services/BakerServices.cpp" />
 		<Unit filename="src/Services/SalesServices.cpp" />
 		<Unit filename="src/Services/staffServices.cpp" />

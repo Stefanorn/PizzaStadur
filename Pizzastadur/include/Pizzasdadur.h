@@ -24,7 +24,6 @@ class Pizzasdadur
         bool UpdateOrder();
         vector<Pontun> _pantanir;
 
-
 };
 
 #endif // PIZZASDADUR_H

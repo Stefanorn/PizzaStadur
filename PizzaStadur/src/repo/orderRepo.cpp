@@ -38,7 +38,7 @@ void orderRepo::AddOrders( vector<Pontun> orders ){
     stream.open("orders.bin", ios::binary);
     if(stream.is_open()){
         stream.seekp( stream.beg );
-        for(int i = 0; i < _orders.size(); i++){
+        for(unsigned int i = 0; i < _orders.size(); i++){
             stream.write((char*)(&_orders[i]), sizeof(Pontun));
         }
     }
@@ -78,7 +78,7 @@ vector<Pontun> orderRepo::ReturnOrders( bool hasBeenPayedFor,
         for(unsigned int i = 0; i < _orders.size(); i++ ){
             if(hasBeenPayedFor == _orders[i].hasBeenPayedFor() &&
                hasBeenDelivired == _orders[i].IsOrderDeliverd() &&
-               isReddy == _orders[i].isPizzaReddy()){
+               isReddy == _orders[i].isOrderReddy()){
                 ordersToReturn.push_back(_orders[i]);
 
                }
@@ -86,7 +86,11 @@ vector<Pontun> orderRepo::ReturnOrders( bool hasBeenPayedFor,
 
         return ordersToReturn;
 }
+int orderRepo::getOrderNo(){
 
+    return _orders.size();
+
+}
 vector<Pontun> orderRepo::ReturnAllOrders(){
 
     return _orders;

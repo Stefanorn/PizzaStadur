@@ -3,46 +3,39 @@
 
 #include "Pizza.h"
 #include <iostream>
+
 using namespace std;
 class Pontun
 {
     public:
-        Pontun(int orderNumber);
         Pontun();
         friend ostream& operator << (ostream& out, const Pontun& pontun);
-
+        friend istream& operator >> (istream& in, Pontun& order);
 
        // Viðskiptavinur borgar fyrir pizzuna
         bool hasBeenPayedFor();
         void payOrder();
 
-        //Bakarinn bakar pizzuna
-        bool hasBeenBaked(); // á frekar heima i pizzu
-        void bakePizza(); // á frekar heima í pizzu
-
         //Pizzan er reddy þegar hún er bokuð og búið að borga
-        bool isPizzaReddy();
-        void makePizzaReddy();
+        bool isOrderReddy();
+        void makeOrderReddy();
 
         // Það er bara hægt að delevera pizzur sem eru borgaðar
         // og bakaðar
         bool IsOrderDeliverd();
         void deliverOrder();
 
-        int GetPizzaNumber(); //ætti að vera get order no
+        int GetOrderNo(); //ætti að vera get order no
 
     protected:
 
     private:
-        Pizza _pizza; //má eyða þessu
+        char _places[32];
+
         bool _hasBeenPayedFor;
-        bool _hasBeenBaked;
         bool _isReddy;
         bool _hasBeenDelevired;
         int _orderNumber;
-        //char[100] info; //Auka upplýsingar
-        //auka[??] _auka; hér mindi ég skilgreina gos franskar og auka dót
-
 };
 
 #endif // PONTUN_H

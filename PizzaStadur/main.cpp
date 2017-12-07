@@ -3,9 +3,7 @@
 #include "StaffUI.h"
 #include "BakerUI.h"
 #include "SalesUI.h"
-
-using namespace std;
-
+#include "AdminUI.h"
 
 int main()
 {
@@ -26,7 +24,7 @@ int main()
         else if (index == '2'){
             system("CLS");
             BakerUI bakerui;
-            bakerui._mainMenu();
+            bakerui.mainMenu();
 
         }
         else if (index == '3'){
@@ -35,7 +33,8 @@ int main()
         }
         else if (index == '4'){
             system("CLS");
-            cout << "Hello mr boss" << endl;
+            AdminUI adminUI;
+            adminUI.mainMenu();
 
         }
         else if (index == '5'){

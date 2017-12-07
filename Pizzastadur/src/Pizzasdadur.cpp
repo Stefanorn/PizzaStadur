@@ -32,7 +32,7 @@ void Pizzasdadur::payForOrder(){
     for(int i = 0; i < _numOfOrders; i++ ){
             if(!_pantanir[i].hasBeenPayedFor()){
                 cout << _pantanir[i];
-                inputList[i] = _pantanir[i].GetPizzaNumber();
+//                inputList[i] = _pantanir[i].GetPizzaNumber();
             }
             else{
                 inputList[i] = -1;

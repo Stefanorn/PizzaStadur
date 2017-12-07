@@ -5,7 +5,7 @@ BakerUI::BakerUI()
     //ctor
 }
 
-void BakerUI::_mainMenu(){
+void BakerUI::mainMenu(){
     //while(true){
         cout << "Where would you like to bake the pizza?" << endl;
         //kalla á fall sem gerir "cin << einhver staður"

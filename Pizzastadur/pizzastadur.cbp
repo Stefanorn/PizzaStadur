@@ -48,6 +48,7 @@
 		<Unit filename="include/Models/Toppings.h" />
 		<Unit filename="include/Pizzasdadur.h" />
 		<Unit filename="include/Services/BakerServices.h" />
+		<Unit filename="include/Services/SalesServices.h" />
 		<Unit filename="include/Services/staffServices.h" />
 		<Unit filename="include/UI/AdminUI.h" />
 		<Unit filename="include/UI/BakerUI.h" />
@@ -57,6 +58,7 @@
 		<Unit filename="main.cpp" />
 		<Unit filename="src/Pizzasdadur.cpp" />
 		<Unit filename="src/Services/BakerServices.cpp" />
+		<Unit filename="src/Services/SalesServices.cpp" />
 		<Unit filename="src/Services/staffServices.cpp" />
 		<Unit filename="src/UI/AdminUI.cpp" />
 		<Unit filename="src/UI/BakerUI.cpp" />

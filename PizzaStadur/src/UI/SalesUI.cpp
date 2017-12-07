@@ -1,4 +1,4 @@
-#include "..\include\UI\SalesUI.h"
+#include "SalesUI.h"
 
 SalesUI::SalesUI()
 {

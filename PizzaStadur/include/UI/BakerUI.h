@@ -2,7 +2,6 @@
 #define BAKERUI_H
 
 #include <iostream>
-#include <time.h>
 #include "BakerServices.h"
 
 using namespace std;
@@ -14,7 +13,7 @@ class BakerUI
         void _mainMenu();
 
     private:
-        void _clockMessages();
+        BakerServices bakerService;
 };
 
 #endif // BAKERUI_H

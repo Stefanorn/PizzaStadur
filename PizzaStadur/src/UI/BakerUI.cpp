@@ -15,16 +15,6 @@ void BakerUI::_mainMenu(){
         if (input == '1'){
             cout << "Baking pizza..." << endl;
         }
-        _clockMessages();
+        bakerService._clockMessages();
     //}
-}
-
-void BakerUI::_clockMessages(){
-    clock_t time = clock() / CLOCKS_PER_SEC;
-    while(true){
-        if (clock() / CLOCKS_PER_SEC == time + 10){
-            cout << "Pizza is ready!";
-            break;
-        }
-    }
 }

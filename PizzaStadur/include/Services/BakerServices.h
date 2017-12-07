@@ -20,6 +20,7 @@ class BakerServices
     private:
         bool _hasBeenBaked;
         vector<int> _temp_vector;
+
 };
 
 #endif // BAKERSERVICES_H

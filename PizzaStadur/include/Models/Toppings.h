@@ -3,6 +3,7 @@
 #include <string>
 #include <iostream>
 #include "ToppingsRepo.h"
+/*
 using namespace std;
 
 class Toppings
@@ -19,5 +20,6 @@ class Toppings
         string toppingType;
         int toppingPrice;
 };
-
+*/
 #endif // TOPPINGS_H
+

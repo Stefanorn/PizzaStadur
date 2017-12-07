@@ -1,5 +1,5 @@
 #include "Toppings.h"
-
+/*
 Toppings::Toppings(string toppingName, string toppingType, int toppingPrice)
 {
     this->toppingName = toppingName;
@@ -37,3 +37,4 @@ ostream& operator << (ostream& outs, const Toppings& topping)
     outs << topping.toppingPrice << endl;
     return outs;
 }
+*/

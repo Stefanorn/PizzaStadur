@@ -15,11 +15,23 @@ class Pizza
         friend istream& operator >> (istream& ins, Pizza& pizza);
         friend ostream& operator << (ostream& outs, const Pizza& pizza);
 
+        void tagPizzaToOrder(int orderNo);
+        int getPizzaToOrderId();
+
+        void setPizzaID(int id);
+        int getPizzaID();
+
+        double getPize();
+
     private:
-        char _name[30];
-        int _price;
-        string _base;
-        int _size;
+        int _orderIdNumber;
+
+        int _pizzaID;
+
+        char _name[32];
+        double _price;
+        char _base[16];
+        char _size[4];
 };
 
 #endif // PIZZA_H

@@ -22,3 +22,18 @@ ostream& operator << (ostream& outs, const Pizza& pizza){
     return outs;
 }
 
+void Pizza::tagPizzaToOrder(int orderNo){
+    _orderIdNumber = orderNo;
+}
+int Pizza::getPizzaToOrderId(){
+    return _orderIdNumber;
+}
+void Pizza::setPizzaID(int id){
+     _pizzaID = id;
+}
+int Pizza::getPizzaID(){
+    return _pizzaID;
+}
+double Pizza::getPize(){
+    return _price;
+}

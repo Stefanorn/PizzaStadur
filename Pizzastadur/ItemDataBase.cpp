@@ -49,7 +49,7 @@ bool ItemDataBase::UpdateOrder(){
     stream.open("items.bin", ios::binary);
     if(stream.is_open()){
         stream.seekp( stream.beg );
-        for(int i = 0; i < _item.size(); i++){
+        for(unsigned int i = 0; i < _item.size(); i++){
             stream.write((char*)(&_item[i]), sizeof(Pizza));
         }
 

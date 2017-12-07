@@ -10,7 +10,7 @@ class BakerUI
 {
     public:
         BakerUI();
-        void _mainMenu();
+        void mainMenu();
 
     private:
         BakerServices bakerService;

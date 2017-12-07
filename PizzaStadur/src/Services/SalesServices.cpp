@@ -8,6 +8,10 @@ SalesServices::SalesServices()
 void SalesServices::CommitOrder(Pontun order){
    repo.WriteOrderToFile( order );
 }
+
+void SalesServices::CommitPizza(Pizza pizza){
+    pzRepo.WriteOrderToFile(pizza);
+}
 int SalesServices::OrderNumber(){
     return repo.getOrderNo();
 }

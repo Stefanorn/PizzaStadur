@@ -17,6 +17,23 @@ SalesUI::SalesUI()
             Pontun newOrder(orderNo);
             cout << "Enter a delivery Place " << endl;
             cin >> newOrder;
+            while(true){
+                cout << "Do you whant to add pizza to order y/n" << endl;
+                char input;
+                cin >> input;
+                if(input == 'y'){
+                    Pizza pz;
+                    cin >> pz;
+                    pz.tagPizzaToOrder( orderNo );
+
+                }
+                else if (input == 'n'){
+                    break;
+                }
+                else{
+                    cout << "Invalid Input " << endl;
+                }
+            }
             service.CommitOrder(newOrder);
             system("CLS");
         }

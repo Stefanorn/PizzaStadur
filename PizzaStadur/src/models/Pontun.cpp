@@ -7,6 +7,13 @@ Pontun::Pontun(int number)
     _hasBeenDelevired = false;
     _isReddy = false;
 }
+Pontun::Pontun()
+{
+    _orderNumber = 0;
+    _hasBeenPayedFor = false;
+    _hasBeenDelevired = false;
+    _isReddy = false;
+}
 
 //Viðskiptavinurinn borgar fyrir pizzuna
 bool Pontun::hasBeenPayedFor(){

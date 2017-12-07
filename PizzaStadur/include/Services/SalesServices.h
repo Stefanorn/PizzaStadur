@@ -7,10 +7,12 @@ class SalesServices
 {
     public:
         SalesServices();
-        void MakeOrder(Pontun order);
+        void CommitOrder(Pontun order);
+        int OrderNumber();
     protected:
 
     private:
+        orderRepo repo;
 };
 
 #endif // SALESSERVICES_H

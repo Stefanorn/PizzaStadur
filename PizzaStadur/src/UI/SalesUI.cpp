@@ -12,6 +12,12 @@ SalesUI::SalesUI()
 
         if(input == '1'){
 
+            int orderNo = service.OrderNumber();
+            cout << "Making Order number " << orderNo << endl;
+            Pontun newOrder(orderNo);
+            cout << "Enter a delivery Place " << endl;
+            cin >> newOrder;
+            service.CommitOrder(newOrder);
             system("CLS");
         }
         else if(input == '2'){

@@ -8,6 +8,7 @@ using namespace std;
 class Pontun
 {
     public:
+        Pontun(int number);
         Pontun();
         friend ostream& operator << (ostream& out, const Pontun& pontun);
         friend istream& operator >> (istream& in, Pontun& order);

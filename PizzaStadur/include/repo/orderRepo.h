@@ -11,7 +11,7 @@ using namespace std;
 class orderRepo
 {
     public:
-        orderRepo( int number);
+        orderRepo();
         void WriteOrderToFile( Pontun orderToWrite );
         void AddOrders(  vector<Pontun> orders );
         void PayForOrder(int orderNo);

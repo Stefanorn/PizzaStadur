@@ -59,7 +59,6 @@
 		<Unit filename="include/UI/StaffUI.h" />
 		<Unit filename="include/repo/orderRepo.h" />
 		<Unit filename="main.cpp" />
-		<Unit filename="sr/Exeptions/OrderExeptions.cpp" />
 		<Unit filename="src/Pizzasdadur.cpp">
 			<Option compile="0" />
 			<Option link="0" />

@@ -44,11 +44,11 @@ void StaffUI::PayForOrder(){
       }
         if(service.PayForOrder(input)){
             cout << "Order number " << input << " Payed for press anykey to continue" << endl;
-            cin >> input;
+            system("pause");
         }
         else{
             cout << "Faild to pay for order press anykey to continue" << endl;
-            cin >> input;
+            system("pause");
         }
 }
 void StaffUI::DeliverOrder(){
@@ -67,12 +67,12 @@ void StaffUI::DeliverOrder(){
         cin.ignore();
       }
         if(service.DeliverOrder(input)){
-            cout << "Order number " << input << " Payed for press anykey to continue" << endl;
-            cin >> input;
+            cout << "Order number " << input << " has been delivered" << endl;
+            system("pause");
         }
         else{
             cout << "Faild to pay for order press anykey to continue" << endl;
-            cin >> input;
+            system("pause");
         }
 }
 

@@ -19,7 +19,7 @@ void orderRepo::ReadFromFile(){
         Pontun temp;
         for(int i = 0; i < length; i++){
             stream.read((char*)(&temp), sizeof(Pontun));
-            _orders[i] = temp;
+            _orders.push_back(temp);
         }
     }
     else{
@@ -31,19 +31,19 @@ void orderRepo::ReadFromFile(){
 
     stream.close();
 }
-void orderRepo::AddOrders( vector<Pontun> orders ){
-
+void orderRepo::RewriteFile( vector<Pontun> orders ){
     ofstream stream;
 
     stream.open("orders.bin", ios::binary);
     if(stream.is_open()){
         stream.seekp( stream.beg );
         for(unsigned int i = 0; i < _orders.size(); i++){
-            stream.write((char*)(&_orders[i]), sizeof(Pontun));
+            stream.write((char*)(&orders[i]), sizeof(Pontun));
         }
     }
 
     stream.close();
+    _orders = orders;
   /*
     Finna hvar færslan er í skránni og yfir rita hana
 
@@ -69,30 +69,14 @@ void orderRepo::WriteOrderToFile( Pontun orderToWrite ){
     stream.write((char*)(&orderToWrite), sizeof(Pontun));
     stream.close();
 
+    _orders.push_back(orderToWrite);
 }
 
-vector<Pontun> orderRepo::ReturnOrders( bool hasBeenPayedFor,
-                                        bool hasBeenDelivired,
-                                        bool isReddy){
-        vector<Pontun> ordersToReturn;
-        for(unsigned int i = 0; i < _orders.size(); i++ ){
-            if(hasBeenPayedFor == _orders[i].hasBeenPayedFor() &&
-               hasBeenDelivired == _orders[i].IsOrderDeliverd() &&
-               isReddy == _orders[i].isOrderReddy()){
-                ordersToReturn.push_back(_orders[i]);
-
-               }
-        }
-
-        return ordersToReturn;
-}
 int orderRepo::getOrderNo(){
 
     return _orders.size();
 
 }
 vector<Pontun> orderRepo::ReturnAllOrders(){
-
     return _orders;
-
 }

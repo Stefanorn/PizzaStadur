@@ -4,6 +4,7 @@
 #include "Pontun.h"
 #include <iostream>
 #include <fstream>
+#include "OrderExeptions.h"
 
 
 using namespace std;
@@ -13,8 +14,7 @@ class orderRepo
     public:
         orderRepo();
         void WriteOrderToFile( Pontun orderToWrite );
-        void AddOrders(  vector<Pontun> orders );
-        void PayForOrder(int orderNo);
+        void RewriteFile(  vector<Pontun> orders );
 
         vector<Pontun> ReturnOrders(    bool hasBeenPayedFor,
                                         bool hasBeenDelivired,

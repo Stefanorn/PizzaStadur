@@ -47,3 +47,13 @@ void BakerServices::bakePizza(){
 
     cout << "Að lokum þarf að uppfæra orders lista hér." << endl;
 }
+
+void BakerServices::_clockMessages(){
+    clock_t time = clock() / CLOCKS_PER_SEC;
+    while(true){
+        if (clock() / CLOCKS_PER_SEC == time + 10){
+            cout << "Pizza is ready!";
+            break;
+        }
+    }
+}

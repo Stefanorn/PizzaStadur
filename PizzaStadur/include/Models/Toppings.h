@@ -3,23 +3,23 @@
 #include <string>
 #include <iostream>
 #include "ToppingsRepo.h"
-/*
+
 using namespace std;
 
 class Toppings
 {
     public:
-        Toppings(string toppingName, string toppingType, int toppingPrice);
+        Toppings(string name, string type, int price);
         string getToppingName();
         string getToppingType();
         int getToppingPrice();
-        friend istream& operator >> (istream& ins, const Toppings& topping);
+        friend istream& operator >> (istream& ins, Toppings& topping);
         friend ostream& operator << (ostream& outs, const Toppings& topping);
     private:
-        string toppingName;
-        string toppingType;
-        int toppingPrice;
+        string _toppingName;
+        string _toppingType;
+        int _toppingPrice;
 };
-*/
+
 #endif // TOPPINGS_H
 

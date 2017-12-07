@@ -1,40 +1,40 @@
 #include "Toppings.h"
-/*
-Toppings::Toppings(string toppingName, string toppingType, int toppingPrice)
+
+Toppings::Toppings(string name, string type, int price)
 {
-    this->toppingName = toppingName;
-    this->toppingType = toppingType;
-    this->toppingPrice = toppingPrice;
+    _toppingName = name;
+    _toppingType = type;
+    _toppingPrice = price;
 }
 
 string Toppings::getToppingName()
 {
-    return this->toppingName;
+    return _toppingName;
 }
 
 string Toppings::getToppingType()
 {
-    return this->toppingType;
+    return _toppingType;
 }
 
 int Toppings::getToppingPrice()
 {
-    return this->toppingPrice;
+    return _toppingPrice;
 }
 
-istream& operator >> (istream& ins, const Toppings& topping)
+istream& operator >> (istream& ins, Toppings& topping)
 {
-    ins >> topping.getToppingName;
-    ins >> topping.getToppingType;
-    ins >> topping.getToppingPrice;
+    ins >> topping._toppingName;
+    ins >> topping._toppingType;
+    ins >> topping._toppingPrice;
     return ins;
 }
 
 ostream& operator << (ostream& outs, const Toppings& topping)
 {
-    outs << topping.toppingName << ", ";
-    outs << topping.toppingType << ", ";
-    outs << topping.toppingPrice << endl;
+    outs << topping._toppingName << ", ";
+    outs << topping._toppingType << ", ";
+    outs << topping._toppingPrice << endl;
     return outs;
 }
-*/
+

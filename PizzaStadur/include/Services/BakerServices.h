@@ -3,6 +3,7 @@
 
 #include <iostream>
 #include <vector>
+#include <time.h>
 #include "orderRepo.h"
 
 using namespace std;
@@ -14,6 +15,7 @@ class BakerServices
         void bakePizza();
         bool hasBeenBaked();
         void bakeSomePizza();
+        void _clockMessages();
 
     private:
         bool _hasBeenBaked;

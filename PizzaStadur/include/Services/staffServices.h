@@ -7,9 +7,12 @@ class staffServices
     public:
         staffServices();
         void registerOrder( int orderID );
-        void deliverOrder( int orderID );
+
         vector<Pontun> ReturnUnPayedOrders();
+        vector<Pontun> ReturnUnDeliverdOrder();
+
         bool PayForOrder(int orderNo);
+        bool DeliverOrder(int orderNo);
     protected:
 
     private:

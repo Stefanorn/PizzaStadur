@@ -1,11 +1,16 @@
 #include "staffServices.h"
 
-vector<Pontun> staffServices::ReturnUnPayedOrders(){
-    vector<Pontun> orders;
-
-    orders = repo.ReturnOrders(true,false,false);
-    return orders;
+staffServices::staffServices(){
 }
+vector<Pontun> staffServices::ReturnUnPayedOrders(){
+    return repo.ReturnOrders(true,false,false);
+}
+vector<Pontun> staffServices::ReturnUnDeliverdOrder(){
+        return repo.ReturnOrders(true,true,false);
+}
+
+
+
 bool staffServices::PayForOrder(int orderNo){
     vector<Pontun> orders = repo.ReturnAllOrders();
     for(unsigned int i = 0; i < orders.size(); i++){
@@ -16,6 +21,15 @@ bool staffServices::PayForOrder(int orderNo){
     }
     return false;
 }
-void staffServices::deliverOrder( int orderID ){
 
+bool staffServices::DeliverOrder(int orderNo){
+    vector<Pontun> orders = repo.ReturnAllOrders();
+    for(unsigned int i = 0; i < orders.size(); i++){
+        if( orders[i].GetPizzaNumber() == orderNo ){
+            orders[i].deliverOrder();
+            return true;
+        }
+    }
+    return false;
 }
+

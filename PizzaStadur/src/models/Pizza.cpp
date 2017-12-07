@@ -55,6 +55,13 @@ void Pizza::setPizzaID(int id){
 int Pizza::getPizzaID(){
     return _pizzaID;
 }
-double Pizza::getPize(){
+double Pizza::getPrize(){
     return _price;
+}
+
+void Pizza::bakePizza(){
+    _isPizzaBaked = true;
+}
+bool Pizza::isPizzaBaked(){
+    return _isPizzaBaked;
 }

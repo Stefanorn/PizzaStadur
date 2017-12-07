@@ -24,12 +24,15 @@ class Pizza
         void setPizzaID(int id);
         int getPizzaID();
 
-        double getPize();
+        double getPrize();
+
+        void bakePizza();
+        bool isPizzaBaked();
 
     private:
         int _orderIdNumber;
-
         int _pizzaID;
+        bool _isPizzaBaked;
 
         char _name[32];
         double _price;

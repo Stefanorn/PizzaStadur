@@ -18,6 +18,7 @@
 					<Add directory="include/Services" />
 					<Add directory="include/repo" />
 					<Add directory="include/UI" />
+					<Add directory="include/Exeptions" />
 				</Compiler>
 			</Target>
 			<Target title="Release">
@@ -31,6 +32,7 @@
 					<Add directory="include/Models" />
 					<Add directory="include/Services" />
 					<Add directory="include/repo" />
+					<Add directory="include/Exeptions" />
 				</Compiler>
 				<Linker>
 					<Add option="-s" />
@@ -43,6 +45,7 @@
 		</Compiler>
 		<Unit filename="ItemDataBase.cpp" />
 		<Unit filename="ItemDataBase.h" />
+		<Unit filename="include/Exeptions/OrderExeptions.h" />
 		<Unit filename="include/Models/Pizza.h" />
 		<Unit filename="include/Models/Pontun.h" />
 		<Unit filename="include/Models/Toppings.h" />
@@ -56,6 +59,7 @@
 		<Unit filename="include/UI/StaffUI.h" />
 		<Unit filename="include/repo/orderRepo.h" />
 		<Unit filename="main.cpp" />
+		<Unit filename="sr/Exeptions/OrderExeptions.cpp" />
 		<Unit filename="src/Pizzasdadur.cpp">
 			<Option compile="0" />
 			<Option link="0" />

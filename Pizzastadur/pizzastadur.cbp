@@ -15,9 +15,8 @@
 					<Add option="-g" />
 					<Add directory="include" />
 					<Add directory="include/Models" />
-					<Add directory="include/Services" />
-					<Add directory="include/repo" />
 					<Add directory="include/UI" />
+					<Add directory="include/repo" />
 				</Compiler>
 			</Target>
 			<Target title="Release">
@@ -29,7 +28,7 @@
 					<Add option="-O2" />
 					<Add directory="include" />
 					<Add directory="include/Models" />
-					<Add directory="include/Services" />
+					<Add directory="include/UI" />
 					<Add directory="include/repo" />
 				</Compiler>
 				<Linker>
@@ -46,17 +45,20 @@
 		<Unit filename="include/Models/Pizza.h" />
 		<Unit filename="include/Models/Pontun.h" />
 		<Unit filename="include/Models/Toppings.h" />
+		<Unit filename="include/Pizza.h" />
 		<Unit filename="include/Pizzasdadur.h" />
-		<Unit filename="include/Services/BakerServices.h" />
+		<Unit filename="include/Pontun.h" />
 		<Unit filename="include/Services/staffServices.h" />
 		<Unit filename="include/UI/AdminUI.h" />
 		<Unit filename="include/UI/BakerUI.h" />
 		<Unit filename="include/UI/SalesUI.h" />
 		<Unit filename="include/UI/StaffUI.h" />
+		<Unit filename="include/repo/ToppingsRepo.h" />
 		<Unit filename="include/repo/orderRepo.h" />
 		<Unit filename="main.cpp" />
+		<Unit filename="src/Pizza.cpp" />
 		<Unit filename="src/Pizzasdadur.cpp" />
-		<Unit filename="src/Services/BakerServices.cpp" />
+		<Unit filename="src/Pontun.cpp" />
 		<Unit filename="src/Services/staffServices.cpp" />
 		<Unit filename="src/UI/AdminUI.cpp" />
 		<Unit filename="src/UI/BakerUI.cpp" />
@@ -65,6 +67,7 @@
 		<Unit filename="src/models/Pizza.cpp" />
 		<Unit filename="src/models/Pontun.cpp" />
 		<Unit filename="src/models/Toppings.cpp" />
+		<Unit filename="src/repo/ToppingsRepo.cpp" />
 		<Unit filename="src/repo/orderRepo.cpp" />
 		<Extensions>
 			<code_completion />

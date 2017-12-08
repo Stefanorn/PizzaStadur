@@ -43,14 +43,17 @@ void ToppingsRepo::readFile()
     }
 }
 
-void ToppingsRepo::addTopping(Toppings topping)
+void ToppingsRepo::addTopping(vector<Toppings> toppings)
 {
+    /// TODO: LAGA KÓÐANN ÞANNIG AÐ OUTPUT-IÐ SÉ RÉTT
     ofstream fout;
     fout.open("toppings.bin", ios::binary|ios::app);
-    fout.write((char*)(&topping), sizeof(Toppings));
+    fout.write((char*)(&toppings), sizeof(Toppings));
     fout.close();
 
-    _topp.push_back(topping);
+    _topp.reserve(_topp.size() + toppings.size());
+    _topp.insert(_topp.end(), toppings.begin(), toppings.end());
+    toppings.clear();
 }
 
 vector<Toppings> ToppingsRepo::returnToppings()

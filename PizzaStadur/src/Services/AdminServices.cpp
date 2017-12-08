@@ -19,10 +19,14 @@ void AdminServices::registerPizza()
 
 void AdminServices::registerToppings()
 {
-    Toppings topping;
-    cin >> topping;
+    int size;
+    cin >> size;
+    vector<Toppings> toppings(size);
+    for(unsigned int i = 0; i < toppings.size(); i++){
+        cin >> toppings[i];
+    }
     ToppingsRepo toppingrepo;
-    toppingrepo.addTopping(topping);
+    toppingrepo.addTopping(toppings);
     vector<Toppings> tp = toppingrepo.returnToppings();
     for(unsigned int i = 0; i < tp.size(); i++){
         cout << tp[i];

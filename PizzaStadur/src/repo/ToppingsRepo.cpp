@@ -17,8 +17,9 @@ void ToppingsRepo::overwriteFile(vector<Toppings> topping)
         fout.close();
     }
     else{
-        cout << "Unable to read file" << endl;
+        cerr << "Unable to read file" << endl;
     }
+    _topp = topping;
 }
 
 void ToppingsRepo::readFile()
@@ -38,7 +39,7 @@ void ToppingsRepo::readFile()
         }
     }
     else{
-        cerr << "Could not read toppings.bin!" << endl;
+        cout << "Creating file toppings.bin" << endl;
     }
 }
 

@@ -39,6 +39,9 @@ void pizzaRepo::RewriteFile( vector<Pizza> pizzas ){
             stream.write((char*)(&pizzas[i]), sizeof(Pizza));
         }
     }
+    else{
+        cerr << "Unable to read file" << endl;
+    }
 
     stream.close();
     _pizzas = pizzas;
@@ -53,3 +56,6 @@ void pizzaRepo::WriteOrderToFile( Pizza pizzaToAdd ){
     _pizzas.push_back(pizzaToAdd);
 }
 
+vector<Pizza> pizzaRepo::ReturnAllPizzas(){
+    return _pizzas;
+}

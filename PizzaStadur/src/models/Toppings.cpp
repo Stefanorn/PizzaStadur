@@ -1,10 +1,9 @@
 #include "Toppings.h"
 
-Toppings::Toppings(string name, string type, int price)
+Toppings::Toppings()
 {
-    _toppingName = name;
-    _toppingType = type;
-    _toppingPrice = price;
+    _toppingName[0] = '\0';
+    _toppingPrice = 0;
 }
 
 string Toppings::getToppingName()
@@ -12,10 +11,10 @@ string Toppings::getToppingName()
     return _toppingName;
 }
 
-string Toppings::getToppingType()
+/*string Toppings::getToppingType()
 {
     return _toppingType;
-}
+}*/
 
 int Toppings::getToppingPrice()
 {
@@ -25,7 +24,7 @@ int Toppings::getToppingPrice()
 istream& operator >> (istream& ins, Toppings& topping)
 {
     ins >> topping._toppingName;
-    ins >> topping._toppingType;
+    //ins >> topping._toppingType;
     ins >> topping._toppingPrice;
     return ins;
 }
@@ -33,8 +32,8 @@ istream& operator >> (istream& ins, Toppings& topping)
 ostream& operator << (ostream& outs, const Toppings& topping)
 {
     outs << topping._toppingName << ", ";
-    outs << topping._toppingType << ", ";
-    outs << topping._toppingPrice << endl;
+    //outs << topping._toppingType << ", ";
+    outs << topping._toppingPrice << " kr." << endl;
     return outs;
 }
 

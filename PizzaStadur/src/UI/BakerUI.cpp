@@ -15,6 +15,7 @@ void BakerUI::mainMenu(){
         if (input == '1'){
             cout << "Baking pizza..." << endl;
         }
-        bakerService._clockMessages();
+        bakerService.clockMessages();
+        cout << "Pizza is ready!" << endl;
     //}
 }

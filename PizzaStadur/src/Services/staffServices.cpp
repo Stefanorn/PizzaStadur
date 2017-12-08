@@ -35,6 +35,7 @@ bool staffServices::DeliverOrder(int orderNo){
             return true;
         }
     }
+    throw NoOrderToReturnExeption();
     return false;
 }
 

@@ -12,6 +12,7 @@ class pizzaRepo
         pizzaRepo();
         void RewriteFile( vector<Pizza> pizzas );
         void WriteOrderToFile( Pizza pizzaToAdd );
+        vector<Pizza> ReturnAllPizzas();
 
     private:
         void ReadFromFile();

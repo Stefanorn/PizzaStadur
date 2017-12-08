@@ -15,11 +15,12 @@ class BakerServices
         void bakePizza();
         bool hasBeenBaked();
         void bakeSomePizza();
-        void _clockMessages();
+        void clockMessages();
 
     private:
         bool _hasBeenBaked;
         vector<int> _temp_vector;
+
 };
 
 #endif // BAKERSERVICES_H

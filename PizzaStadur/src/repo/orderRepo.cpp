@@ -40,9 +40,8 @@ void orderRepo::RewriteFile( vector<Pontun> orders ){
         for(unsigned int i = 0; i < _orders.size(); i++){
             stream.write((char*)(&orders[i]), sizeof(Pontun));
         }
+        stream.close();
     }
-
-    stream.close();
     _orders = orders;
   /*
     Finna hvar færslan er í skránni og yfir rita hana

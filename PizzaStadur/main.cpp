@@ -1,13 +1,27 @@
-#include <iostream>
 #include "Pizzasdadur.h"
 #include "StaffUI.h"
 #include "BakerUI.h"
 #include "SalesUI.h"
 #include "AdminUI.h"
+#include "PlacesRepo.h"
 
 int main()
 {
+    /*while(true){
+        DeliveryPlaces places;
+        cin >> places;
+        int number = 0;
+        PlacesRepo placesrepo;
+        placesrepo.addPlaces(places, number);
+        vector<DeliveryPlaces> del_pl = placesrepo.ReturnAllPlaces();
+        for(unsigned int i = 0; i < del_pl.size(); i++){
+            cout << del_pl[i];
+        }
+        AdminUI ui;
+        ui.mainMenu();
+    }*/
     while(true){
+        system("CLS");
         cout << "Press 1 if you are a customer " << endl;
         cout << "Press 2 if you are a baker " << endl;
         cout << "press 3 if you work the register" << endl;

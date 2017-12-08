@@ -2,22 +2,21 @@
 #define TOPPINGS_H
 #include <string>
 #include <iostream>
-#include "ToppingsRepo.h"
 
 using namespace std;
 
 class Toppings
 {
     public:
-        Toppings(string name, string type, int price);
+        Toppings();
         string getToppingName();
-        string getToppingType();
+        //string getToppingType();
         int getToppingPrice();
         friend istream& operator >> (istream& ins, Toppings& topping);
         friend ostream& operator << (ostream& outs, const Toppings& topping);
     private:
-        string _toppingName;
-        string _toppingType;
+        char _toppingName[32];
+        //string _toppingType;
         int _toppingPrice;
 };
 

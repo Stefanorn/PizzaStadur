@@ -45,16 +45,19 @@
 			<Add option="-Wall" />
 			<Add option="-fexceptions" />
 			<Add directory="include/Exceptions" />
+			<Add directory="include/Services" />
 		</Compiler>
 		<Unit filename="ItemDataBase.cpp" />
 		<Unit filename="ItemDataBase.h" />
 		<Unit filename="include/Enums.h" />
 		<Unit filename="include/Exceptions/OrderExeptions.h" />
 		<Unit filename="include/Exceptions/PizzaExeptions.h" />
+		<Unit filename="include/Models/DeliveryPlaces.h" />
 		<Unit filename="include/Models/Pizza.h" />
 		<Unit filename="include/Models/Pontun.h" />
 		<Unit filename="include/Models/Toppings.h" />
 		<Unit filename="include/Pizzasdadur.h" />
+		<Unit filename="include/Services/AdminServices.h" />
 		<Unit filename="include/Services/BakerServices.h" />
 		<Unit filename="include/Services/SalesServices.h" />
 		<Unit filename="include/Services/staffServices.h" />
@@ -62,6 +65,7 @@
 		<Unit filename="include/UI/BakerUI.h" />
 		<Unit filename="include/UI/SalesUI.h" />
 		<Unit filename="include/UI/StaffUI.h" />
+		<Unit filename="include/repo/PlacesRepo.h" />
 		<Unit filename="include/repo/ToppingsRepo.h" />
 		<Unit filename="include/repo/orderRepo.h" />
 		<Unit filename="include/repo/pizzaRepo.h" />
@@ -70,6 +74,7 @@
 			<Option compile="0" />
 			<Option link="0" />
 		</Unit>
+		<Unit filename="src/Services/AdminServices.cpp" />
 		<Unit filename="src/Services/BakerServices.cpp" />
 		<Unit filename="src/Services/SalesServices.cpp" />
 		<Unit filename="src/Services/staffServices.cpp" />
@@ -77,9 +82,11 @@
 		<Unit filename="src/UI/BakerUI.cpp" />
 		<Unit filename="src/UI/SalesUI.cpp" />
 		<Unit filename="src/UI/StaffUI.cpp" />
+		<Unit filename="src/models/DeliveryPlaces.cpp" />
 		<Unit filename="src/models/Pizza.cpp" />
 		<Unit filename="src/models/Pontun.cpp" />
 		<Unit filename="src/models/Toppings.cpp" />
+		<Unit filename="src/repo/PlacesRepo.cpp" />
 		<Unit filename="src/repo/ToppingsRepo.cpp" />
 		<Unit filename="src/repo/orderRepo.cpp" />
 		<Unit filename="src/repo/pizzaRepo.cpp" />

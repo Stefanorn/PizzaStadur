@@ -38,7 +38,12 @@ SalesUI::SalesUI()
             system("CLS");
         }
         else if(input == '2'){
-
+            cout << "input the orderNumber " << endl;
+            int orderNo;
+            cin >> orderNo;
+            cout << "Printing order no " << orderNo << endl;
+            cout << service.returnAOrder(orderNo) ;
+            system("PAUSE");
             system("CLS");
         }
         else if (input == '3'){

@@ -26,6 +26,7 @@ istream& operator >> (istream& ins, Pizza& pizza){
     }
     cout << "Enter size of pizza: " << endl;
     cout << "Press 1 for small\nPress 2 for medium\nPress 3 for large";
+    ins >> input;
     switch (input){
         case '1': pizza._size = SMALL; break;
         case '2': pizza._size = MEDIUM; break;

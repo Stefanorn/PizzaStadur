@@ -7,7 +7,7 @@ class PlacesRepo
 {
     public:
         PlacesRepo();
-        void addPlaces(DeliveryPlaces places);
+        void addPlaces(vector<DeliveryPlaces> places, int size);
         void overWriteFile(vector<DeliveryPlaces> places);
         vector<DeliveryPlaces> ReturnAllPlaces();
 

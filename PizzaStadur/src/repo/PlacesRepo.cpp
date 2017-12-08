@@ -22,7 +22,7 @@ void PlacesRepo::_readFile(){
         }
     }
     else{
-        cerr << "Could not find places.bin" << endl;
+        cout << "Creating file places.bin" << endl;
     }
     fin.close();
 }
@@ -45,12 +45,14 @@ void PlacesRepo::overWriteFile( vector<DeliveryPlaces> places){
     _places = places;
 }
 
-void PlacesRepo::addPlaces(DeliveryPlaces places){
+void PlacesRepo::addPlaces(vector<DeliveryPlaces> places, int size){
 
     ofstream fout;
-    fout.open("orders.bin", ios::binary|ios::app);
+    fout.open("places.bin", ios::binary|ios::app);
     fout.write((char*)(&places), sizeof(DeliveryPlaces));
-    _places.push_back(places);
+    _places.reserve(_places.size() + places.size());
+    _places.insert(_places.end(), places.begin(), places.end());
+    places.clear();
     fout.close();
 }
 

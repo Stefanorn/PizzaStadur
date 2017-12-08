@@ -17,16 +17,14 @@ void AdminServices::registerPizza()
     }
 }
 
-void AdminServices::registerToppings()
+void AdminServices::registerToppings(int size)
 {
-    int size;
-    cin >> size;
     vector<Toppings> toppings(size);
     for(unsigned int i = 0; i < toppings.size(); i++){
         cin >> toppings[i];
     }
     ToppingsRepo toppingrepo;
-    toppingrepo.addTopping(toppings);
+    toppingrepo.addTopping(toppings, size);
     vector<Toppings> tp = toppingrepo.returnToppings();
     for(unsigned int i = 0; i < tp.size(); i++){
         cout << tp[i];
@@ -48,14 +46,16 @@ void AdminServices::editPrices()
 
 }
 
-void AdminServices::registerPlaces()
+void AdminServices::registerPlaces(int size)
 {
-    /*int size;
-    cin >> size;
-    DeliveryPlaces places[size];
-    for(int i = 0; i < size; i++){
+    vector<DeliveryPlaces> places(size);
+    for(unsigned int i = 0; i < places.size(); i++){
         cin >> places[i];
     }
     PlacesRepo repo;
-    repo.addPlaces(places, size);*/
+    repo.addPlaces(places, size);
+    vector<DeliveryPlaces> del_pl = repo.ReturnAllPlaces();
+    for(unsigned int i = 0; i < del_pl.size(); i++){
+        cout << del_pl[i];
+    }
 }

@@ -14,11 +14,11 @@ class AdminServices
     public:
         AdminServices();
         void registerPizza();
-        void registerToppings();
+        void registerToppings(int size);
         void registerOffer();
         void registerProduct();
         void editPrices();
-        void registerPlaces();
+        void registerPlaces(int size);
 
     private:
 };

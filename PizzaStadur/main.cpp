@@ -31,7 +31,7 @@ int main()
         cin >> index;
 
         if (index == '1'){
-                system("CLS");
+            system("CLS");
             SalesUI run;
 
         }
@@ -39,6 +39,7 @@ int main()
             system("CLS");
             BakerUI bakerui;
             bakerui.mainMenu();
+            system("pause");
 
         }
         else if (index == '3'){

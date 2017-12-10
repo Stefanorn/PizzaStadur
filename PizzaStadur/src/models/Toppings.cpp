@@ -11,12 +11,12 @@ string Toppings::getToppingName()
     return _toppingName;
 }
 
-/*string Toppings::getToppingType()
+int Toppings::getToppingID()
 {
-    return _toppingType;
-}*/
+    return _toppingID;
+}
 
-int Toppings::getToppingPrice()
+double Toppings::getToppingPrice()
 {
     return _toppingPrice;
 }

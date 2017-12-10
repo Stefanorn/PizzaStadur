@@ -10,14 +10,14 @@ class Toppings
     public:
         Toppings();
         string getToppingName();
-        //string getToppingType();
-        int getToppingPrice();
+        int getToppingID();
+        double getToppingPrice();
         friend istream& operator >> (istream& ins, Toppings& topping);
         friend ostream& operator << (ostream& outs, const Toppings& topping);
     private:
         char _toppingName[32];
-        //string _toppingType;
-        int _toppingPrice;
+        int _toppingID;
+        double _toppingPrice;
 };
 
 #endif // TOPPINGS_H

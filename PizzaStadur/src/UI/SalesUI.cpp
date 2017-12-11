@@ -14,7 +14,7 @@ SalesUI::SalesUI()
         if(input == '1')
         {
             int orderNo = service.OrderNumber();
-            cout << "Making Order number " << orderNo + 1 << endl;
+            cout << "Making Order number " << orderNo << endl;
             Pontun newOrder(orderNo);
             cout << "Enter a delivery place " << endl;
             cin >> newOrder;

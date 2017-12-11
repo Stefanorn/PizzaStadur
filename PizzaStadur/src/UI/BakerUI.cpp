@@ -22,7 +22,7 @@ void BakerUI::mainMenu(){
             int pizzaOrder;
             cin >> pizzaOrder;
             bakerService.bakePizza( pizzaOrder );
-            bakerService.clockMessages();
+            // bakerService.clockMessages();
             cout << "Pizza is ready!" << endl;
         }
         else if (input == '2'){

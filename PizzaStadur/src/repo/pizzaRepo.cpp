@@ -56,6 +56,9 @@ void pizzaRepo::WriteOrderToFile( Pizza pizzaToAdd ){
     _pizzas.push_back(pizzaToAdd);
 }
 
+int pizzaRepo::MakePizzaID(){
+    return _pizzas.size() + 1;
+}
 vector<Pizza> pizzaRepo::ReturnAllPizzas(){
     return _pizzas;
 }

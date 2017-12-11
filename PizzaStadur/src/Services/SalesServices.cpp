@@ -9,7 +9,9 @@ void SalesServices::CommitOrder(Pontun order){
    repo.WriteOrderToFile( order );
 }
 
+
 void SalesServices::CommitPizza(Pizza pizza){
+    pizza.setPizzaID( pzRepo.MakePizzaID() );
     pzRepo.WriteOrderToFile(pizza);
 }
 int SalesServices::OrderNumber(){
@@ -40,7 +42,7 @@ vector<Pizza> SalesServices::GetPizzaByOrderID(int orderNumber){
 double SalesServices::GetOrderPrice(){
     double price;
     Pizza pizza;
-    price = pizza.getPrice();
+   // price = pizza.getPrice();
     return price;
 }
 

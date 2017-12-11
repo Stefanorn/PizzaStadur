@@ -24,7 +24,7 @@ istream& operator >> (istream& ins, Pizza& pizza){
     default: throw invalidBaseIndex(); break;
     }
     cout << "Enter size of pizza: " << endl;
-    cout << "Press 1 for small\nPress 2 for medium\nPress 3 for large";
+    cout << "Press 1 for small\nPress 2 for medium\nPress 3 for large" << endl;
     ins >> input;
     switch (input){
         case '1': pizza._size = SMALL; break;
@@ -37,6 +37,7 @@ istream& operator >> (istream& ins, Pizza& pizza){
 }
 
 ostream& operator << (ostream& outs, const Pizza& pizza){
+    outs << "ID  : " << pizza._pizzaID << endl;
     outs << "Name: " << pizza._name << endl;
     outs << "Base: " << pizza._base << endl;
     outs << "Size: " << pizza._size << endl;

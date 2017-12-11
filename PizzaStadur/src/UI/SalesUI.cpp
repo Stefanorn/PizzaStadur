@@ -25,8 +25,7 @@ SalesUI::SalesUI()
                     Pizza pz;
                     cin >> pz;
                     pz.tagPizzaToOrder( orderNo );
-                    service.CommitPizza(pz);
-
+                    service.CommitPizza( pz );
                 }
                 else if (input == 'n'){
                     break;

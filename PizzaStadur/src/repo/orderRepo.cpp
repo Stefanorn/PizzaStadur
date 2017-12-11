@@ -73,7 +73,7 @@ void orderRepo::WriteOrderToFile( Pontun orderToWrite ){
 
 int orderRepo::getOrderNo(){
 
-    return _orders.size();
+    return _orders.size() + 1;
 
 }
 vector<Pontun> orderRepo::ReturnAllOrders(){

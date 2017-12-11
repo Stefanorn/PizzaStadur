@@ -8,8 +8,8 @@ class staffServices
         staffServices();
         void registerOrder( int orderID );
 
-        vector<Pontun> ReturnUnPayedOrders();
-        vector<Pontun> ReturnUnDeliverdOrder();
+        vector<Pontun> ReturnUnPaidOrders();
+        vector<Pontun> ReturnUnDeliveredOrder();
 
         bool PayForOrder(int orderNo);
         bool DeliverOrder(int orderNo);

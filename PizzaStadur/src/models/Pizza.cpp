@@ -9,28 +9,51 @@ Pizza::Pizza(){
 }
 
 istream& operator >> (istream& ins, Pizza& pizza){
+    bool base = false, pSize = false;
     cout << "Enter name of pizza: ";
     ins >> pizza._name;
-    cout << "Enter base type: " << endl;
-    cout << "Press 1 for Regular \nPress 2 for thin " << endl;
-    cout << "Press 3 for Pan \nPress 4 for Spelt" << endl;
     char input;
-    ins >> input;
-    switch (input){
-        case '1': pizza._base = REGULAR; break;
-        case '2': pizza._base = THIN; break;
-        case '3': pizza._base = PAN; break;
-        case '4': pizza._base = SPELT; break;
-    default: throw invalidBaseIndex(); break;
+
+    while (base == false)
+    {
+        cout << "Enter base type: " << endl;
+        cout << "Press 1 for Regular \nPress 2 for thin " << endl;
+        cout << "Press 3 for Pan \nPress 4 for Spelt" << endl;
+        ins >> input;
+        try
+        {
+            switch (input){
+                case '1': pizza._base = REGULAR; base = true; break;
+                case '2': pizza._base = THIN; base = true; break;
+                case '3': pizza._base = PAN; base = true; break;
+                case '4': pizza._base = SPELT; base = true; break;
+            }
+        }
+        catch (invalidBaseIndex)
+        {
+            cout << "Invalid input" << endl;
+            base = false;
+        }
     }
-    cout << "Enter size of pizza: " << endl;
-    cout << "Press 1 for small\nPress 2 for medium\nPress 3 for large" << endl;
-    ins >> input;
-    switch (input){
-        case '1': pizza._size = SMALL; break;
-        case '2': pizza._size = MEDIUM; break;
-        case '3': pizza._size = LARGE; break;
-    default: throw invalidSizeIndex(); break;
+
+    while (pSize == false)
+    {
+        cout << "Enter size of pizza: " << endl;
+        cout << "Press 1 for small\nPress 2 for medium\nPress 3 for large" << endl;
+        ins >> input;
+        try
+        {
+            switch (input){
+                case '1': pizza._size = SMALL; pSize = true; break;
+                case '2': pizza._size = MEDIUM; pSize = true; break;
+                case '3': pizza._size = LARGE; pSize = true; break;
+            }
+        }
+        catch (invalidSizeIndex)
+        {
+            cout << "Invalid input" << endl;
+            pSize = false;
+        }
     }
 
     return ins;
@@ -68,6 +91,9 @@ double Pizza::getPrice() const{
         }
         else if (_base == 3){
             total += 1500;
+        }
+        else if (_base == 5){
+            total += 900;
         }
         else{
             //throw SomeException;

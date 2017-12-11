@@ -31,6 +31,8 @@ void StaffUI::PayForOrder(){
     vector<Pontun> orders = service.ReturnUnPaidOrders();
     if(orders.size() == 0){
         cout << "No unpaid orders!" << endl;
+        system("PAUSE");
+        return;
     }
     cout << "---------------------------------------------" << endl;
     for(unsigned int i = 0; i < orders.size(); i++){
@@ -57,7 +59,9 @@ void StaffUI::PayForOrder(){
 void StaffUI::DeliverOrder(){
     vector<Pontun> orders = service.ReturnUnDeliveredOrder();
     if(orders.size() == 0){
-        cout << "Well Done! All orders have been delivered!" << endl;
+        cout << "Well done! All orders have been delivered!" << endl;
+        system("PAUSE");
+        return;
     }
     cout << "---------------------------------------------" << endl;
     for(unsigned int i = 0; i < orders.size(); i++){

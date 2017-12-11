@@ -2,8 +2,9 @@
 #define SALESSERVICES_H
 #include "orderRepo.h"
 #include "pizzaRepo.h"
+#include "ToppingMenuRepo.h"
+#include "ToppingsRepo.h"
 #include "OrderExeptions.h"
-#include "Toppings.h"
 
 
 class SalesServices
@@ -16,12 +17,16 @@ class SalesServices
         int OrderNumber();
         vector<Pizza> GetPizzaByOrderID(int orderNumber);
 
-        vector<Toppings> GetToppingsMenu();
+
+        vector<ToppingsMenuItem> GetToppingsMenu();
         void addToppingToPizza();
         //void AssignOrderToPlace();
 
     private:
-        orderRepo repo;
+
+        ToppingMenuRepo topMenuItems;
+        ToppingsRepo topRepo;
+        orderRepo ordRepo;
         pizzaRepo pzRepo;
 };
 

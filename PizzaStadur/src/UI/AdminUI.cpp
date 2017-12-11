@@ -27,16 +27,13 @@ void AdminUI::mainMenu(){
                 cout << "How many toppings would you like to register? " << endl;
                 cin >> size;
                 cout << "Please enter the topping you would like to add, followed by its price:" << endl;
-                vector<ToppingsMenuItem> menuItem;
-                for(unsigned int i = 0; i < size; i++){
+                for( int i = 0; i < size; i++){
                     ToppingsMenuItem temp;
                     cout << "Topping " << i + 1 << endl;
                     cin >> temp;
                     cout << endl;
-                    menuItem.push_back(temp);
-                }
 
-                _adminService.registerToppings(menuItem, size);
+                }
                 cout << "Would you like to add more toppings (y/n)?" << endl;
                 cin >> input;
             }

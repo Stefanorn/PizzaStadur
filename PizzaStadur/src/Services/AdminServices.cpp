@@ -17,9 +17,9 @@ void AdminServices::registerBaseSize()
     }
 }
 
-void AdminServices::registerToppings( vector<ToppingsMenuItem> items, int size)
+void AdminServices::registerToppings( ToppingsMenuItem item)
 {
-    _toppingsMenuRepo.addTopping(items, size);
+    _toppingsMenuRepo.addTopping(item);
 }
 
 void AdminServices::registerPizza()

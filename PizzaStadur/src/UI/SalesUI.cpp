@@ -33,10 +33,10 @@ SalesUI::SalesUI()
                         cout << "Do you whant to add more toppings 'y' to add more topping 'n' to quit " << endl;
                         cin >> input;
                         if(input == 'y'){
-                          //  vector <Toppings> allToppings = service.GetToppingsMenu();
-                           // for(unsigned int i = 0; i < allToppings.size(); i++){
-                              //  cout << allToppings[i];
-                           // }
+                            vector <ToppingsMenuItem> allToppings = service.GetToppingsMenu();
+                            for(unsigned int i = 0; i < allToppings.size(); i++){
+                                cout << allToppings[i];
+                            }
                             cout << "Select Toping :" << endl;
                             cin >> input;
 

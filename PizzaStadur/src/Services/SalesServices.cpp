@@ -6,7 +6,7 @@ SalesServices::SalesServices()
 }
 
 void SalesServices::CommitOrder(Pontun order){
-   repo.WriteOrderToFile( order );
+   ordRepo.WriteOrderToFile( order );
 }
 
 
@@ -15,10 +15,10 @@ void SalesServices::CommitPizza(Pizza pizza){
     pzRepo.WriteOrderToFile(pizza);
 }
 int SalesServices::OrderNumber(){
-    return repo.getOrderNo();
+    return ordRepo.getOrderNo();
 }
 Pontun SalesServices::returnAOrder( int orderNo ){
-    vector<Pontun> allOrders = repo.ReturnAllOrders();
+    vector<Pontun> allOrders = ordRepo.ReturnAllOrders();
     for(unsigned int i = 0; i < allOrders.size(); i++ ){
         if(allOrders[i].GetOrderNo() == orderNo){
             return allOrders[i];
@@ -42,3 +42,7 @@ vector<Pizza> SalesServices::GetPizzaByOrderID(int orderNumber){
 //void SalesServices::AssignOrderToPlace(){
 
 //}
+
+vector<ToppingsMenuItem> SalesServices::GetToppingsMenu(){
+    return topMenuItems.returnToppings();
+}

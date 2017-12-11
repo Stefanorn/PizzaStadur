@@ -43,16 +43,14 @@ void ToppingMenuRepo::readFile()
     }
 }
 
-void ToppingMenuRepo::addTopping(vector<ToppingsMenuItem> menItem, int size)
+void ToppingMenuRepo::addTopping( ToppingsMenuItem item)
 {
-    ofstream fout;
-    fout.open("toppingsMenu.bin", ios::binary|ios::app);
-    fout.write((char*)(&menItem), sizeof(ToppingsMenuItem)* size);
-    fout.close();
+    ofstream stream;
+    stream.open("toppingsMenu.bin", ios::binary|ios::app);
+    stream.write((char*)(&item), sizeof(ToppingsMenuItem));
+    stream.close();
 
-    _menItem.reserve(_menItem.size() + menItem.size());
-    _menItem.insert(_menItem.end(), menItem.begin(), menItem.end());
-    menItem.clear();
+    _menItem.push_back(item);
 }
 
 vector<ToppingsMenuItem> ToppingMenuRepo::returnToppings()

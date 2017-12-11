@@ -12,7 +12,7 @@ class ToppingMenuRepo
     public:
         ToppingMenuRepo();
         void overwriteFile(vector<ToppingsMenuItem> topping);
-        void addTopping(vector<ToppingsMenuItem> topping, int size);
+        void addTopping( ToppingsMenuItem item);
         vector<ToppingsMenuItem> returnToppings();
 
     private:

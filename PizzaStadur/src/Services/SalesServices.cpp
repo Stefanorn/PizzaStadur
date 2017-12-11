@@ -43,6 +43,34 @@ vector<Pizza> SalesServices::GetPizzaByOrderID(int orderNumber){
 
 //}
 
+void SalesServices::addToppingToPizza(char index  ){
+    vector<ToppingsMenuItem> allToppingsMenu = topMenuRepo.returnToppings();
+
+    for(unsigned int i = 0; i < allToppingsMenu.size(); i++){
+        if( index == allToppingsMenu[i].getHotkey() ){
+            Toppings item(allToppingsMenu[i].getName(), allToppingsMenu[i].getPrice(), pzRepo.MakePizzaID()-1 );
+                                                                            /// slæm harðkóðun -1 til að fá seinustu pizzu sem var bættvið
+                                                                            /// ef ég kalla á þetta fall áður enn ég bý til pizzuna þá fer
+                                                                            /// allt í fokk, kettir verða hundar og það fer að rigna upp
+
+            topRepo.addTopping( item );
+            return;
+        }
+    }
+    throw invalidToppingHotkey();
+}
+
 vector<ToppingsMenuItem> SalesServices::GetToppingsMenu(){
-    return topMenuItems.returnToppings();
+    return topMenuRepo.returnToppings();
+}
+
+vector<Toppings> SalesServices::getToppingsByPizzaID(int id){
+    vector<Toppings> allTopping = topRepo.returnToppings();
+    vector<Toppings> selectedToppings;
+    for(unsigned int i = 0; i < allTopping.size(); i++){
+        if(allTopping[i].getToppingID() == id){
+            selectedToppings.push_back(allTopping[i]);
+        }
+    }
+    return selectedToppings;
 }

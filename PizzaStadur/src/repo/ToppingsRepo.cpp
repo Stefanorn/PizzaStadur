@@ -43,16 +43,14 @@ void ToppingsRepo::readFile()
     }
 }
 
-void ToppingsRepo::addTopping(vector<Toppings> toppings, int size)
+void ToppingsRepo::addTopping(Toppings toppingsToAdd)
 {
-    ofstream fout;
-    fout.open("toppings.bin", ios::binary|ios::app);
-    fout.write((char*)(&toppings), sizeof(Toppings)* size);
-    fout.close();
+    ofstream stream;
+    stream.open("toppings.bin", ios::binary|ios::app);
+    stream.write((char*)(&toppingsToAdd), sizeof(Toppings));
+    stream.close();
 
-    _topp.reserve(_topp.size() + toppings.size());
-    _topp.insert(_topp.end(), toppings.begin(), toppings.end());
-    toppings.clear();
+    _topp.push_back(toppingsToAdd);
 }
 
 vector<Toppings> ToppingsRepo::returnToppings()

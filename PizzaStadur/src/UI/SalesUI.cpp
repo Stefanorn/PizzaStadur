@@ -29,18 +29,18 @@ SalesUI::SalesUI()
                     pz.tagPizzaToOrder( orderNo );
                     service.CommitPizza( pz );
                     cout << "Adding Toppings to your pizza " << endl;
+                    vector <ToppingsMenuItem> allToppings = service.GetToppingsMenu();
                     while(true){
                         cout << "Do you whant to add more toppings 'y' to add more topping 'n' to quit " << endl;
                         cin >> input;
                         if(input == 'y'){
-                            vector <ToppingsMenuItem> allToppings = service.GetToppingsMenu();
+
                             for(unsigned int i = 0; i < allToppings.size(); i++){
                                 cout << allToppings[i];
                             }
                             cout << "Select Toping :" << endl;
                             cin >> input;
-
-                          //  service.addToppingToPizza(input);
+                            service.addToppingToPizza( input );
                         }
                         else if( input == 'n'){
                             break;
@@ -74,6 +74,11 @@ SalesUI::SalesUI()
                 vector<Pizza> pz = service.GetPizzaByOrderID(orderNo);
                 for(unsigned int i = 0; i < pz.size(); i++){
                     cout << pz[i];
+                    vector<Toppings> tp = service.getToppingsByPizzaID( orderNo );
+
+                    for(unsigned int j = 0; j < tp.size(); j++){
+                        cout << tp[j];
+                    }
                 }
                 //service.GetOrderPrice();
             }

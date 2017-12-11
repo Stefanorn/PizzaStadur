@@ -27,6 +27,7 @@ int main()
         cout << "press 3 to mark order paid or delivered " << endl;
         cout << "Press 4 if you are the manager " << endl;
         cout << "Press 5 to quit " << endl;
+        cout << "Press 6 to remove everything !!!!" << endl;
         char index;
         cin >> index;
 
@@ -55,6 +56,13 @@ int main()
         else if (index == '5'){
             return 0;
 
+        }
+        else if (index == '6'){
+            if(!remove("orders.bin")) cout << "remove all orders\n";
+            if(!remove("pizza.bin")) cout << "remove all pizza\n";
+            if(!remove("toppings.bin")) cout << "remove all topping\n";
+            if(!remove("toppingsMenu.bin")) cout << "remove all toppingsMenu\n";
+            system("PAUSE");
         }
         else{
             cout << "Invalid input" << endl;

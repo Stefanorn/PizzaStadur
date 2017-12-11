@@ -13,7 +13,7 @@ istream& operator >> (istream& ins, ToppingsMenuItem& toppingsMenuItem){
 }
 ostream& operator << (ostream& outs, const ToppingsMenuItem& toppingsMenuItem){
     outs << toppingsMenuItem._name << endl;
-    outs << "press " << toppingsMenuItem._name << " to add this to your pizza" << endl;
+    outs << "press " << toppingsMenuItem._hotkey << " to add this to your pizza" << endl;
     outs << "This item cost " << toppingsMenuItem._price << endl;
     return outs;
 }
@@ -23,4 +23,7 @@ char ToppingsMenuItem::getHotkey(){
 }
 double ToppingsMenuItem::getPrice(){
     return _price;
+}
+string ToppingsMenuItem::getName(){
+    return _name;
 }

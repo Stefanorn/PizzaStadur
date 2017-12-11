@@ -10,7 +10,7 @@ class ToppingsRepo
     public:
         ToppingsRepo();
         void overwriteFile(vector<Toppings> topping);
-        void addTopping(vector<Toppings> topping, int size);
+        void addTopping(Toppings toppingToAdd);
         vector<Toppings> returnToppings();
 
     private:

@@ -16,15 +16,16 @@ class SalesServices
         void CommitPizza( Pizza pizza );
         int OrderNumber();
         vector<Pizza> GetPizzaByOrderID(int orderNumber);
+        vector<Toppings> getToppingsByPizzaID(int pizzaOrderNumber);
 
 
         vector<ToppingsMenuItem> GetToppingsMenu();
-        void addToppingToPizza();
+        void addToppingToPizza( char index );
         //void AssignOrderToPlace();
 
     private:
 
-        ToppingMenuRepo topMenuItems;
+        ToppingMenuRepo topMenuRepo;
         ToppingsRepo topRepo;
         orderRepo ordRepo;
         pizzaRepo pzRepo;

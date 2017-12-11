@@ -1,6 +1,7 @@
 #ifndef TOPPINGS_H
 #define TOPPINGS_H
 #include <string>
+#include <cstring>
 #include <iostream>
 
 using namespace std;
@@ -9,6 +10,7 @@ class Toppings
 {
     public:
         Toppings();
+        Toppings( string toppingName, double toppingPrice , int pizzaToToppingId);
         string getToppingName();
         int getToppingID();
         double getToppingPrice();

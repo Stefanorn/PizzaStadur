@@ -32,6 +32,7 @@ void AdminUI::mainMenu(){
                     cout << "Topping " << i + 1 << endl;
                     cin >> temp;
                     cout << endl;
+                    _adminService.registerToppings(temp);
 
                 }
                 cout << "Would you like to add more toppings (y/n)?" << endl;

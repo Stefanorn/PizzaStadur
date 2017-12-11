@@ -5,6 +5,14 @@ Toppings::Toppings()
     _toppingName[0] = '\0';
     _toppingPrice = 200;
 }
+Toppings::Toppings( string toppingName, double toppingPrice , int pizzaToToppingId){
+
+    toppingName[31] = '\0';
+    strcpy (_toppingName, toppingName.c_str());
+    _toppingPrice = toppingPrice;
+    _toppingID = pizzaToToppingId;
+
+}
 
 string Toppings::getToppingName()
 {

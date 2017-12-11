@@ -12,6 +12,7 @@ class ToppingsMenuItem
 
         char getHotkey();
         double getPrice();
+        string getName();
 
     private:
         char _name[32];

@@ -15,7 +15,7 @@ void AdminUI::mainMenu(){
         cout << "Press 1 to register new pizza sizes or bases" << endl << "Press 2 to register new toppings" << endl
             << "Press 3 to register new menu items" << endl << "Press 4 to register new products" << endl
             << "Press 5 to edit prices" << endl << "Press 6 to register new places for delivery" << endl
-            << "Press 7 to go to the main menu" << endl;
+            << "Press 7 to go back to the main menu" << endl;
         cout << "------------------------------------------------" << endl;
         cin >> input;
 

@@ -4,7 +4,7 @@ StaffUI::StaffUI(){
     while(true){
         cout << "Press 1 to pay for order, " << endl;
         cout << "press 2 to deliver order " << endl;
-        cout << "press 3 to quit" << endl;
+        cout << "press 3 to go back to the main menu " << endl;
         char input;
         cin >> input;
 

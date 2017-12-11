@@ -6,7 +6,7 @@ SalesUI::SalesUI()
     while(true){
         cout << "Press 1 to make a order " << endl;
         cout << "Press 2 to get info about your order " << endl;
-        cout << "press 3 to quit" << endl;
+        cout << "press 3 to go back to main menu " << endl;
         char input;
         cin >> input;
 

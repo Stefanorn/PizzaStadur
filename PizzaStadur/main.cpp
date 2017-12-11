@@ -22,9 +22,9 @@ int main()
     }*/
     while(true){
         system("CLS");
-        cout << "Press 1 if you are a customer " << endl;
-        cout << "Press 2 if you are a baker " << endl;
-        cout << "press 3 if you work the register" << endl;
+        cout << "Press 1 to input an order " << endl;
+        cout << "Press 2 for baking " << endl;
+        cout << "press 3 to mark order paid or delivered " << endl;
         cout << "Press 4 if you are the manager " << endl;
         cout << "Press 5 to quit " << endl;
         char index;

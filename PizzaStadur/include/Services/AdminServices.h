@@ -4,23 +4,28 @@
 #include "Pizza.h"
 #include "DeliveryPlaces.h"
 #include "Toppings.h"
+#include "Products.h"
 
 #include "pizzaRepo.h"
 #include "PlacesRepo.h"
 #include "ToppingsRepo.h"
+#include "ProductRepo.h"
 
 class AdminServices
 {
     public:
         AdminServices();
-        void registerPizza();
+        void registerBaseSize();
         void registerToppings(int size);
-        void registerOffer();
-        void registerProduct();
+        void registerPizza();
+        void registerProduct(int size);
         void editPrices();
         void registerPlaces(int size);
 
     private:
+        ToppingsRepo _toppingrepo;
+        PlacesRepo _placesrepo;
+        ProductRepo _productrepo;
 };
 
 #endif // ADMINSERVICES_H

@@ -39,13 +39,6 @@ vector<Pizza> SalesServices::GetPizzaByOrderID(int orderNumber){
     //throw SomeException;
 }
 
-double SalesServices::GetOrderPrice(){
-    double price;
-    Pizza pizza;
-   // price = pizza.getPrice();
-    return price;
-}
-
 //void SalesServices::AssignOrderToPlace(){
 
 //}

@@ -8,22 +8,23 @@
 
 #include "pizzaRepo.h"
 #include "PlacesRepo.h"
-#include "ToppingsRepo.h"
+#include "ToppingMenuRepo.h"
 #include "ProductRepo.h"
+
 
 class AdminServices
 {
     public:
         AdminServices();
         void registerBaseSize();
-        void registerToppings(int size);
+        void registerToppings(vector<ToppingsMenuItem> items, int size);
         void registerPizza();
         void registerProduct(int size);
         void editPrices();
         void registerPlaces(int size);
 
     private:
-        ToppingsRepo _toppingrepo;
+        ToppingMenuRepo _toppingsMenuRepo;
         PlacesRepo _placesrepo;
         ProductRepo _productrepo;
 };

@@ -17,11 +17,9 @@ void AdminServices::registerBaseSize()
     }
 }
 
-void AdminServices::registerToppings(int size)
+void AdminServices::registerToppings( vector<ToppingsMenuItem> items, int size)
 {
-    vector<Toppings> toppings;
-    _toppingrepo.addTopping(toppings, size);
-    //toppings = _toppingrepo.returnToppings();
+    _toppingsMenuRepo.addTopping(items, size);
 }
 
 void AdminServices::registerPizza()
@@ -31,8 +29,8 @@ void AdminServices::registerPizza()
 
 void AdminServices::registerProduct(int size)
 {
-    vector<Toppings> toppings;
-    _toppingrepo.addTopping(toppings, size);
+   // vector<> toppings;
+   // _toppingrepo.addTopping(toppings, size);
 }
 
 void AdminServices::editPrices()

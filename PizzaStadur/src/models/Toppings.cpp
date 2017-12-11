@@ -3,7 +3,7 @@
 Toppings::Toppings()
 {
     _toppingName[0] = '\0';
-    _toppingPrice = 0;
+    _toppingPrice = 200;
 }
 
 string Toppings::getToppingName()
@@ -21,8 +21,7 @@ double Toppings::getToppingPrice()
     return _toppingPrice;
 }
 
-istream& operator >> (istream& ins, Toppings& topping)
-{
+istream& operator >> (istream& ins, Toppings& topping) {
     ins >> topping._toppingName;
     //ins >> topping._toppingType;
     ins >> topping._toppingPrice;

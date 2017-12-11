@@ -14,16 +14,16 @@ class Pontun
         friend istream& operator >> (istream& in, Pontun& order);
 
        // Viðskiptavinur borgar fyrir pizzuna
-        bool hasBeenPayedFor();
+        bool IsOrderPaid();
         void payOrder();
 
         //Pizzan er reddy þegar hún er bokuð og búið að borga
-        bool isOrderReddy();
-        void makeOrderReddy();
+        bool isOrderReady();
+        void makeOrderReady();
 
         // Það er bara hægt að delevera pizzur sem eru borgaðar
         // og bakaðar
-        bool IsOrderDeliverd();
+        bool IsOrderDelivered();
         void deliverOrder();
 
         int GetOrderNo(); //ætti að vera get order no
@@ -33,9 +33,9 @@ class Pontun
     private:
         char _places[32];
 
-        bool _hasBeenPayedFor;
-        bool _isReddy;
-        bool _hasBeenDelevired;
+        bool _hasBeenPaid;
+        bool _isReady;
+        bool _hasBeenDelivered;
         int _orderNumber;
 };
 

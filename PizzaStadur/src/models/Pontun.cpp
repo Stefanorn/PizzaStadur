@@ -3,44 +3,44 @@
 Pontun::Pontun(int number)
 {
     _orderNumber = number;
-    _hasBeenPayedFor = false;
-    _hasBeenDelevired = false;
-    _isReddy = false;
+    _hasBeenPaid = false;
+    _hasBeenDelivered = false;
+    _isReady = false;
 }
 Pontun::Pontun()
 {
     _orderNumber = 0;
-    _hasBeenPayedFor = false;
-    _hasBeenDelevired = false;
-    _isReddy = false;
+    _hasBeenPaid = false;
+    _hasBeenDelivered = false;
+    _isReady = false;
 }
 
 //Viðskiptavinurinn borgar fyrir pizzuna
-bool Pontun::hasBeenPayedFor(){
-    return _hasBeenPayedFor;
+bool Pontun::IsOrderPaid(){
+    return _hasBeenPaid;
 }
 void Pontun::payOrder(){
-    _hasBeenPayedFor = true;
+    _hasBeenPaid = true;
 }
 
 
 
 //Pizzan er reddy þegar hún er bokuð og búið að borga
-bool Pontun::isOrderReddy(){
-    return _isReddy;
+bool Pontun::isOrderReady(){
+    return _isReady;
 
 }
-void Pontun::makeOrderReddy(){
-    _isReddy = true;
+void Pontun::makeOrderReady(){
+    _isReady = true;
 }
 
 // Það er bara hægt að delevera pizzur sem eru borgaðar
 // og bakaðar
-bool Pontun::IsOrderDeliverd(){
-    return _hasBeenDelevired;
+bool Pontun::IsOrderDelivered(){
+    return _hasBeenDelivered;
 }
 void Pontun::deliverOrder(){
-    _hasBeenDelevired = true;
+    _hasBeenDelivered = true;
 }
 
 int Pontun::GetOrderNo(){
@@ -51,8 +51,8 @@ int Pontun::GetOrderNo(){
 ostream& operator << (ostream& out, const Pontun& pontun){
 
     out << "Order no " << pontun._orderNumber << endl;
-    out << "has been payed for " << pontun._hasBeenPayedFor << endl;
-    out << "has been deleveried " << pontun._hasBeenDelevired << endl;
+    out << "has been payed for " << pontun._hasBeenPaid << endl;
+    out << "has been delivered " << pontun._hasBeenDelivered << endl;
 
     return out;
 }

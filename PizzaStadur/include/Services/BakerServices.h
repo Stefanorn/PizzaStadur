@@ -5,6 +5,7 @@
 #include <vector>
 #include <time.h>
 #include "pizzaRepo.h"
+#include "PizzaExeptions.h"
 
 using namespace std;
 
@@ -12,15 +13,12 @@ class BakerServices
 {
     public:
         BakerServices();
-        void bakePizza();
-        bool hasBeenBaked();
-        void bakeSomePizza();
+        void bakePizza(int pizzaId);
         void clockMessages();
 
         vector<Pizza> ReturnUnbakedPizzas();
 
     private:
-        bool _hasBeenBaked;
 
         pizzaRepo pzRepo;
         vector<int> _temp_vector;

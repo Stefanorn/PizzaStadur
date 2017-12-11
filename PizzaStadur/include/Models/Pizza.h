@@ -33,7 +33,6 @@ class Pizza
         int _orderIdNumber;
         int _pizzaID;
         bool _isPizzaBaked;
-
         char _name[32];
         double _price;
         pizzaBase _base;

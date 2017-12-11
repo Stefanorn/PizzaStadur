@@ -13,7 +13,9 @@ class SalesServices
         void CommitOrder(Pontun order);
         void CommitPizza( Pizza pizza );
         int OrderNumber();
-    protected:
+        vector<Pizza> GetPizzaByOrderID(int orderNumber);
+        double GetOrderPrice();
+        //void AssignOrderToPlace();
 
     private:
         orderRepo repo;

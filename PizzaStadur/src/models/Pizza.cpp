@@ -4,7 +4,6 @@ Pizza::Pizza(){
     _orderIdNumber = -1;
     _pizzaID = -1;
     _name[0] = '\0';
-    _price = 0;
     _base = REGULAR;
     _size = SMALL;
 }
@@ -41,6 +40,7 @@ ostream& operator << (ostream& outs, const Pizza& pizza){
     outs << "Name: " << pizza._name << endl;
     outs << "Base: " << pizza._base << endl;
     outs << "Size: " << pizza._size << endl;
+    outs << "Price: " << pizza.getPrice() << endl;
     return outs;
 }
 
@@ -56,8 +56,39 @@ void Pizza::setPizzaID(int id){
 int Pizza::getPizzaID(){
     return _pizzaID;
 }
-double Pizza::getPrize(){
-    return _price;
+double Pizza::getPrice() const{
+    double total = 0;
+    //if (pizza name er valid){
+        if (_base == 1){
+            total += 500;
+        }
+        else if (_base == 2){
+            total += 1000;
+        }
+        else if (_base == 3){
+            total += 1500;
+        }
+        else{
+            //throw SomeException;
+        }
+
+        if (_size == 1){
+            total += 200;
+        }
+        else if (_size == 2){
+            total += 400;
+        }
+        else if (_size == 3){
+            total += 600;
+        }
+        else{
+            //throw SomeException;
+        }
+
+
+    //}
+
+    return total;
 }
 
 void Pizza::bakePizza(){

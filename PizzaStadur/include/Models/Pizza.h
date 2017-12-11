@@ -15,8 +15,7 @@ class Pizza
         Pizza();
 
         friend istream& operator >> (istream& ins, Pizza& pizza);
-        friend ostream& operator << (ostream& outs,
-                                     const Pizza& pizza);
+        friend ostream& operator << (ostream& outs, const Pizza& pizza);
 
         void tagPizzaToOrder(int orderNo);
         int getPizzaToOrderId();
@@ -24,7 +23,7 @@ class Pizza
         void setPizzaID(int id);
         int getPizzaID();
 
-        double getPrize();
+        double getPrice() const;
 
         void bakePizza();
         bool isPizzaBaked();
@@ -33,9 +32,7 @@ class Pizza
         int _orderIdNumber;
         int _pizzaID;
         bool _isPizzaBaked;
-
         char _name[32];
-        double _price;
         pizzaBase _base;
         pizzaSize _size;
 };

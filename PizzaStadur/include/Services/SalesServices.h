@@ -14,7 +14,6 @@ class SalesServices
         void CommitPizza( Pizza pizza );
         int OrderNumber();
         vector<Pizza> GetPizzaByOrderID(int orderNumber);
-        double GetOrderPrice();
         //void AssignOrderToPlace();
 
     private:

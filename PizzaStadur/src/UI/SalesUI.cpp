@@ -28,6 +28,27 @@ SalesUI::SalesUI()
                     cin >> pz;
                     pz.tagPizzaToOrder( orderNo );
                     service.CommitPizza( pz );
+                    cout << "Adding Toppings to your pizza " << endl;
+                    while(true){
+                        cout << "Do you whant to add more toppings 'y' to add more topping 'n' to quit " << endl;
+                        cin >> input;
+                        if(input == 'y'){
+                          //  vector <Toppings> allToppings = service.GetToppingsMenu();
+                           // for(unsigned int i = 0; i < allToppings.size(); i++){
+                              //  cout << allToppings[i];
+                           // }
+                            cout << "Select Toping :" << endl;
+                            cin >> input;
+
+                          //  service.addToppingToPizza(input);
+                        }
+                        else if( input == 'n'){
+                            break;
+                        }
+                        else{
+                            cout << "Invalid input " << endl;
+                        }
+                    }
                 }
                 else if (input == 'n')
                 {

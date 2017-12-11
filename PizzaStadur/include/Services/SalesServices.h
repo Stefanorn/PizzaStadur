@@ -3,6 +3,7 @@
 #include "orderRepo.h"
 #include "pizzaRepo.h"
 #include "OrderExeptions.h"
+#include "Toppings.h"
 
 
 class SalesServices
@@ -14,6 +15,9 @@ class SalesServices
         void CommitPizza( Pizza pizza );
         int OrderNumber();
         vector<Pizza> GetPizzaByOrderID(int orderNumber);
+
+        vector<Toppings> GetToppingsMenu();
+        void addToppingToPizza();
         //void AssignOrderToPlace();
 
     private:

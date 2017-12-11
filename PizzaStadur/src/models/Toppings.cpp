@@ -21,8 +21,7 @@ double Toppings::getToppingPrice()
     return _toppingPrice;
 }
 
-istream& operator >> (istream& ins, Toppings& topping)
-{
+istream& operator >> (istream& ins, Toppings& topping) {
     ins >> topping._toppingName;
     //ins >> topping._toppingType;
     ins >> topping._toppingPrice;

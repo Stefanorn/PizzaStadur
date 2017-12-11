@@ -57,6 +57,7 @@
 		<Unit filename="include/Models/Pontun.h" />
 		<Unit filename="include/Models/Products.h" />
 		<Unit filename="include/Models/Toppings.h" />
+		<Unit filename="include/Models/ToppingsMenuItem.h" />
 		<Unit filename="include/Pizzasdadur.h" />
 		<Unit filename="include/Services/AdminServices.h" />
 		<Unit filename="include/Services/BakerServices.h" />
@@ -68,6 +69,7 @@
 		<Unit filename="include/UI/StaffUI.h" />
 		<Unit filename="include/repo/PlacesRepo.h" />
 		<Unit filename="include/repo/ProductRepo.h" />
+		<Unit filename="include/repo/ToppingMenuRepo.h" />
 		<Unit filename="include/repo/ToppingsRepo.h" />
 		<Unit filename="include/repo/orderRepo.h" />
 		<Unit filename="include/repo/pizzaRepo.h" />
@@ -89,8 +91,10 @@
 		<Unit filename="src/models/Pontun.cpp" />
 		<Unit filename="src/models/Products.cpp" />
 		<Unit filename="src/models/Toppings.cpp" />
+		<Unit filename="src/models/ToppingsMenuItem.cpp" />
 		<Unit filename="src/repo/PlacesRepo.cpp" />
 		<Unit filename="src/repo/ProductRepo.cpp" />
+		<Unit filename="src/repo/ToppingMenuRepo.cpp" />
 		<Unit filename="src/repo/ToppingsRepo.cpp" />
 		<Unit filename="src/repo/orderRepo.cpp" />
 		<Unit filename="src/repo/pizzaRepo.cpp" />

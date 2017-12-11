@@ -4,7 +4,7 @@
 #include <iostream>
 #include <vector>
 #include <time.h>
-#include "orderRepo.h"
+#include "pizzaRepo.h"
 
 using namespace std;
 
@@ -17,8 +17,12 @@ class BakerServices
         void bakeSomePizza();
         void clockMessages();
 
+        vector<Pizza> ReturnUnbakedPizzas();
+
     private:
         bool _hasBeenBaked;
+
+        pizzaRepo pzRepo;
         vector<int> _temp_vector;
 
 };

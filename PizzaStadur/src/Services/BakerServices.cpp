@@ -48,6 +48,13 @@ void BakerServices::bakePizza(){
     cout << "Að lokum þarf að uppfæra orders lista hér." << endl;
 }
 
+
+vector<Pizza> ReturnUnbakedPizzas(){
+
+    pzRepo;
+}
+
+
 void BakerServices::clockMessages(){
     clock_t time = clock() / CLOCKS_PER_SEC;
     while(true){

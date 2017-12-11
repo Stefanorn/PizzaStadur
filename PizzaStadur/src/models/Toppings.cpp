@@ -3,7 +3,7 @@
 Toppings::Toppings()
 {
     _toppingName[0] = '\0';
-    _toppingPrice = 0;
+    _toppingPrice = 200;
 }
 
 string Toppings::getToppingName()

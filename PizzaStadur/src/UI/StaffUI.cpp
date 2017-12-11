@@ -27,8 +27,14 @@ StaffUI::StaffUI(){
 
     }
 }
+
 void StaffUI::PayForOrder(){
-    vector<Pontun> orders = service.ReturnUnPayedOrders();
+    vector<Pontun> orders = service.ReturnUnPaidOrders();
+    if(orders.size() == 0){
+        cout << "No unpaid orders!" << endl;
+        system("PAUSE");
+        return;
+    }
     cout << "---------------------------------------------" << endl;
     for(unsigned int i = 0; i < orders.size(); i++){
         cout << orders[i];
@@ -43,16 +49,21 @@ void StaffUI::PayForOrder(){
         cin.ignore();
       }
         if(service.PayForOrder(input)){
-            cout << "Order number " << input << " Payed for press anykey to continue" << endl;
+            cout << "Order number " << input << " payed for" << endl;
             system("pause");
         }
         else{
-            cout << "Faild to pay for order press anykey to continue" << endl;
+            cout << "Failed to pay for order" << endl;
             system("pause");
         }
 }
 void StaffUI::DeliverOrder(){
-    vector<Pontun> orders = service.ReturnUnDeliverdOrder();
+    vector<Pontun> orders = service.ReturnUnDeliveredOrder();
+    if(orders.size() == 0){
+        cout << "Well Done! All orders have been delivered!" << endl;
+        system("PAUSE");
+        return;
+    }
     cout << "---------------------------------------------" << endl;
     for(unsigned int i = 0; i < orders.size(); i++){
         cout << orders[i];
@@ -71,7 +82,7 @@ void StaffUI::DeliverOrder(){
             system("pause");
         }
         else{
-            cout << "Faild to pay for order press anykey to continue" << endl;
+            cout << "Failed to pay for order" << endl;
             system("pause");
         }
 }

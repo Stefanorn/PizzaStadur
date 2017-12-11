@@ -13,19 +13,22 @@ SalesUI::SalesUI()
         if(input == '1'){
 
             int orderNo = service.OrderNumber();
-            cout << "Making Order number " << orderNo + 1 << endl;
+            cout << "Making Order number " << orderNo << endl;
             Pontun newOrder(orderNo);
             cout << "Enter a delivery place " << endl;
             cin >> newOrder;
             while(true){
-                cout << "Do you want to add pizza to order y/n" << endl;
+                cout << "Do you want to add a pizza to your order (y/n)?" << endl;
                 char input;
                 cin >> input;
                 if(input == 'y'){
+                    //cout << "Here's the menu! Select a pizza from the menu or create your own";
                     Pizza pz;
                     cin >> pz;
                     pz.tagPizzaToOrder( orderNo );
                     service.CommitPizza( pz );
+                    //cout << "Comments: " << endl;
+                    //cin >> comments;
                 }
                 else if (input == 'n'){
                     break;

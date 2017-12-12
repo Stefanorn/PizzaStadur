@@ -21,7 +21,7 @@ class AdminServices
         void registerPizza();
         void registerProduct(int size);
         void editPrices();
-        void registerPlaces( DeliveryPlaces deliveryPlc);
+        void registerPlaces( DeliveryPlaces deliveryPlace);
 
     private:
         ToppingMenuRepo _toppingsMenuRepo;

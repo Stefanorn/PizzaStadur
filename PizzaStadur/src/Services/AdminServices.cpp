@@ -40,5 +40,5 @@ void AdminServices::editPrices()
 
 void AdminServices::registerPlaces( DeliveryPlaces place )
 {
-//    PlacesRepo.addPlaces(place);
+    _placesrepo.addPlaces(place);
 }

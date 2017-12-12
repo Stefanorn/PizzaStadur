@@ -74,7 +74,7 @@ void AdminUI::mainMenu(){
                     cout << "Place " << i + 1 << endl;
                     cin >> places[i];
                     cout << endl;
-                  //  AdminServices.registerPlaces( places[i] );
+                    _adminService.registerPlaces( places[i] );
                 }
                 cout << "Would you like to add more places (y/n)?" << endl;
                 cin >> input;

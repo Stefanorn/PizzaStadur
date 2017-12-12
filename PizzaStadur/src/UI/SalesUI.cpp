@@ -3,7 +3,7 @@
 SalesUI::SalesUI()
 {
 
-   // selectDeliveryPlace();
+    selectDeliveryPlace();
 
     while(true)
     {
@@ -111,6 +111,7 @@ void SalesUI::selectDeliveryPlace(){
 
     vector<DeliveryPlaces> allPlaces = service.GetAllPlaces();
     for(unsigned int i = 0; i < allPlaces.size(); i++){
+
         cout << allPlaces[i];
     }
     cout << "Select a PizzaPlace" << endl;

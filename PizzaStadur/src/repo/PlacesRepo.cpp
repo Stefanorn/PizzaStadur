@@ -12,13 +12,14 @@ void PlacesRepo::_readFile(){
 
     if(fin.is_open() ){
         fin.seekg(0, fin.end);
-        int size = fin.tellg() / sizeof(Pontun);
+        int size = fin.tellg() / sizeof(DeliveryPlaces);
         fin.seekg(0, fin.beg);
 
         DeliveryPlaces temp;
         for(int i = 0; i < size; i++){
             fin.read((char*)(&temp), sizeof(DeliveryPlaces));
             _places.push_back(temp);
+
         }
     }
     else{
@@ -45,15 +46,13 @@ void PlacesRepo::overWriteFile( vector<DeliveryPlaces> places){
     _places = places;
 }
 
-void PlacesRepo::addPlaces(vector<DeliveryPlaces> places, int size){
+void PlacesRepo::addPlaces(DeliveryPlaces place){
 
-    ofstream fout;
-    fout.open("places.bin", ios::binary|ios::app);
-    fout.write((char*)(&places), sizeof(DeliveryPlaces));
-    _places.reserve(_places.size() + places.size());
-    _places.insert(_places.end(), places.begin(), places.end());
-    places.clear();
-    fout.close();
+    ofstream stream;
+    stream.open("places.bin", ios::binary|ios::app);
+    stream.write((char*)(&place), sizeof(DeliveryPlaces));
+    stream.close();
+    _places.push_back(place);
 }
 
 vector<DeliveryPlaces> PlacesRepo::ReturnAllPlaces()

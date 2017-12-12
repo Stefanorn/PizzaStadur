@@ -62,6 +62,7 @@ int main()
             if(!remove("pizza.bin")) cout << "remove all pizza\n";
             if(!remove("toppings.bin")) cout << "remove all topping\n";
             if(!remove("toppingsMenu.bin")) cout << "remove all toppingsMenu\n";
+            if(!remove("places.bin")) cout << "remove all places\n";
             system("PAUSE");
         }
         else{

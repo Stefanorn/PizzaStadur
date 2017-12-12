@@ -12,6 +12,8 @@ class SalesUI
 
     private:
         SalesServices service;
+        void createOrder();
+        void GetInfoAboutOrder();
 };
 
 #endif // SALESUI_H

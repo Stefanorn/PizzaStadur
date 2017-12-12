@@ -10,19 +10,18 @@ void AdminUI::mainMenu(){
     int size;
     while(true){
         system("CLS");
-        cout << "Hello Mr. Boss" << endl;
+        cout << "Hello Boss!" << endl;
         cout << "------------------------------------------------" << endl;
-        cout << "Press 1 to register new pizza sizes or bases" << endl << "Press 2 to register new toppings" << endl
-             << "Press 3 to register new menu items" << endl << "Press 4 to register new products" << endl
-             << "Press 5 to edit prices" << endl << "Press 6 to register new places for delivery" << endl
-             << "Press 7 to go back to the main menu" << endl;
+        cout << "Press 1 to register new toppings" << endl
+             << "Press 2 to register new menu items" << endl
+             << "Press 3 to register new products" << endl
+             << "Press 4 to edit prices" << endl
+             << "Press 5 to register new places for delivery" << endl
+             << "Press 6 to go back to the main menu" << endl;
         cout << "------------------------------------------------" << endl;
         cin >> input;
 
         if(input == '1'){
-            _adminService.registerBaseSize();
-        }
-        else if(input == '2'){
             do{
                 cout << "How many toppings would you like to register? " ;
                 cin >> size;
@@ -48,10 +47,10 @@ void AdminUI::mainMenu(){
             }
             while(input == 'y');
         }
-        else if(input == '3'){
+        else if(input == '2'){
             _adminService.registerPizza();
         }
-        else if(input == '4'){
+        else if(input == '3'){
             do{
             cout << "How many products would you like to register? " << endl;
             cin >> size;
@@ -69,10 +68,10 @@ void AdminUI::mainMenu(){
             }
             while(input == 'y');
         }
-        else if(input == '5'){
+        else if(input == '4'){
             _adminService.editPrices();
         }
-        else if(input == '6'){
+        else if(input == '5'){
             do{
                 cout << "How many places would you like to add?" << endl;
                 cin >> size;
@@ -89,7 +88,7 @@ void AdminUI::mainMenu(){
             }
             while(input == 'y');
         }
-        else if(input == '7'){
+        else if(input == '6'){
             break;
         }
         else{

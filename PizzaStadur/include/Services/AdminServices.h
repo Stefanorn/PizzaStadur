@@ -16,7 +16,6 @@ class AdminServices
 {
     public:
         AdminServices();
-        void registerBaseSize();
         void registerToppings( ToppingsMenuItem item );
         void registerPizza();
         void registerProduct(int size);

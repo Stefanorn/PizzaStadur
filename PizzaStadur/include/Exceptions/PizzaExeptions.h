@@ -7,5 +7,6 @@ class invalidSizeIndex { };
 class invalidToppingHotkey { };
 class InvalidDeliveryPlaceInput{ };
 class invalidPizzaSelection{ };
+class NoOrderToReturnExeption{ };
 
 #endif // PIZZAEXEPTIONS_H

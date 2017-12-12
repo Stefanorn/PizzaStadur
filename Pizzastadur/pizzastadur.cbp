@@ -54,6 +54,7 @@
 		<Unit filename="include/Exceptions/PizzaExeptions.h" />
 		<Unit filename="include/Models/DeliveryPlaces.h" />
 		<Unit filename="include/Models/Pizza.h" />
+		<Unit filename="include/Models/PizzaMenu.h" />
 		<Unit filename="include/Models/Pontun.h" />
 		<Unit filename="include/Models/Products.h" />
 		<Unit filename="include/Models/Toppings.h" />
@@ -88,6 +89,7 @@
 		<Unit filename="src/UI/StaffUI.cpp" />
 		<Unit filename="src/models/DeliveryPlaces.cpp" />
 		<Unit filename="src/models/Pizza.cpp" />
+		<Unit filename="src/models/PizzaMenu.cpp" />
 		<Unit filename="src/models/Pontun.cpp" />
 		<Unit filename="src/models/Products.cpp" />
 		<Unit filename="src/models/Toppings.cpp" />

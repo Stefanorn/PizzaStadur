@@ -38,7 +38,7 @@ void SalesUI::createOrder(){
 
     int orderNo = service.OrderNumber();
     cout << "Making Order number " << orderNo << endl;
-    Pontun newOrder(orderNo);
+    Pontun newOrder(orderNo, _selectedDeliveryPlace);
     cout << "Enter a delivery place " << endl;
     cin >> newOrder;
     while(true)

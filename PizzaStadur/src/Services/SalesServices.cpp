@@ -12,6 +12,7 @@ void SalesServices::CommitOrder(Pontun order){
 
 void SalesServices::CommitPizza(Pizza pizza){
     pizza.setPizzaID( pzRepo.MakePizzaID() );
+    pizza._place = _deliveryPlace;
     pzRepo.WriteOrderToFile(pizza);
 }
 int SalesServices::OrderNumber(){
@@ -39,11 +40,8 @@ vector<Pizza> SalesServices::GetPizzaByOrderID(int orderNumber){
     //throw SomeException;
 }
 
-//void SalesServices::AssignOrderToPlace(){
 
-//}
-
-void SalesServices::addToppingToPizza(char index  ){
+void SalesServices::addToppingToPizza( char index ){
     vector<ToppingsMenuItem> allToppingsMenu = topMenuRepo.returnToppings();
 
     for(unsigned int i = 0; i < allToppingsMenu.size(); i++){
@@ -83,7 +81,9 @@ DeliveryPlaces SalesServices::GetDeleveryPlace(char index){
     vector<DeliveryPlaces> allplaces = plcRepo.ReturnAllPlaces();
     for(unsigned int i = 0; i < allplaces.size(); i++){
         if(allplaces[i].GetKey() == index){
+            _deliveryPlace = allplaces[i];
             return allplaces[i];
+
         }
 
     }

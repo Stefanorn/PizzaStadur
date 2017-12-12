@@ -1,7 +1,8 @@
 #include "Pontun.h"
 
-Pontun::Pontun(int number)
+Pontun::Pontun(int number , DeliveryPlaces place)
 {
+    _place = place;
     _orderNumber = number;
     _hasBeenPaid = false;
     _hasBeenDelivered = false;
@@ -9,6 +10,7 @@ Pontun::Pontun(int number)
 }
 Pontun::Pontun()
 {
+     _place = DeliveryPlaces();
     _orderNumber = 0;
     _hasBeenPaid = false;
     _hasBeenDelivered = false;
@@ -47,7 +49,6 @@ int Pontun::GetOrderNo(){
     return _orderNumber;
 }
 
-
 ostream& operator << (ostream& out, const Pontun& pontun){
 
     out << "Order no " << pontun._orderNumber << endl;
@@ -58,6 +59,5 @@ ostream& operator << (ostream& out, const Pontun& pontun){
 }
 istream& operator >> (istream& in, Pontun& order){
 
-    in >> order._places;
     return in;
 }

@@ -2,6 +2,9 @@
 #define PLACESREPO_H
 
 #include "DeliveryPlaces.h"
+#include <iostream>
+#include <fstream>
+
 
 class PlacesRepo
 {

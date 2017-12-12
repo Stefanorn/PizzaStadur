@@ -13,7 +13,10 @@ class BakerUI
         void mainMenu();
 
     private:
+        DeliveryPlaces _deliveryPlace;
+        DeliveryPlaces _selectedDeliveryPlace;
         BakerServices bakerService;
+        void selectDeliveryPlace();
 };
 
 #endif // BAKERUI_H

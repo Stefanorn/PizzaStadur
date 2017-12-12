@@ -2,16 +2,12 @@
 
 BakerUI::BakerUI()
 {
-    //ctor
+    selectDeliveryPlace();
 }
 
 void BakerUI::mainMenu(){
     while(true){
-        cout << "Where would you like to bake the pizza?" << endl;
-        //kalla á fall sem gerir "cin << einhver staður"
-        //Pizzur þurfa að vita hvar þær eiga að vera
-        // eða ég get látið leita að pontunum a fundið gefinn stað og
-        // sótt pizzur með þetta order number sem eru á þessum stað.
+
         cout << "Press 1 to bake the pizza" << endl;
         cout << "Press 2 to list all unbaked " << endl;
         cout << "Press 3 to quit" << endl;
@@ -21,9 +17,17 @@ void BakerUI::mainMenu(){
             cout << "Enter the pizza id number of pizza you whant to bake" << endl;
             int pizzaOrder;
             cin >> pizzaOrder;
+            if( !cin.fail()){
+
             bakerService.bakePizza( pizzaOrder );
             // bakerService.clockMessages();
             cout << "Pizza is ready!" << endl;
+
+            }
+            else{
+                cout << "Invalid Input" << endl;
+            }
+
         }
         else if (input == '2'){
             vector<Pizza> unbakedPizzas = bakerService.ReturnUnbakedPizzas();
@@ -37,3 +41,19 @@ void BakerUI::mainMenu(){
         }
     }
 }
+
+void BakerUI::selectDeliveryPlace(){
+
+    vector<DeliveryPlaces> allPlaces = bakerService.GetAllPlaces();
+    for(unsigned int i = 0; i < allPlaces.size(); i++){
+
+        cout << allPlaces[i];
+    }
+    cout << "Select a PizzaPlace" << endl;
+    char input;
+    cin >> input;
+
+    _selectedDeliveryPlace = bakerService.GetDeleveryPlace(input);
+
+}
+

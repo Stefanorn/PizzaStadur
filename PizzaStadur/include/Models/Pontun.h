@@ -2,13 +2,14 @@
 #define PONTUN_H
 
 #include "Pizza.h"
+#include "DeliveryPlaces.h"
 #include <iostream>
 
 using namespace std;
 class Pontun
 {
     public:
-        Pontun(int number);
+        Pontun(int number, DeliveryPlaces place);
         Pontun();
         friend ostream& operator << (ostream& out, const Pontun& pontun);
         friend istream& operator >> (istream& in, Pontun& order);
@@ -26,13 +27,11 @@ class Pontun
         bool IsOrderDelivered();
         void deliverOrder();
 
-        int GetOrderNo(); //ætti að vera get order no
-
-    protected:
+        int GetOrderNo();
 
     private:
-        char _places[32];
 
+        DeliveryPlaces _place;
         bool _hasBeenPaid;
         bool _isReady;
         bool _hasBeenDelivered;

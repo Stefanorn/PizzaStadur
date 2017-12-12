@@ -28,6 +28,7 @@ class SalesServices
 
     private:
 
+        DeliveryPlaces _deliveryPlace;
         PlacesRepo plcRepo;
         ToppingMenuRepo topMenuRepo;
         ToppingsRepo topRepo;

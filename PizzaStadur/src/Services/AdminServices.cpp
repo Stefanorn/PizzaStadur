@@ -5,18 +5,6 @@ AdminServices::AdminServices()
     //ctor
 }
 
-void AdminServices::registerBaseSize()
-{
-    Pizza pizza;
-    cin >> pizza;
-    pizzaRepo repo;
-    repo.WriteOrderToFile(pizza);
-    vector<Pizza> pz = repo.ReturnAllPizzas();
-    for(unsigned int i = 0; i < pz.size(); i++){
-        cout << pz[i];
-    }
-}
-
 void AdminServices::registerToppings( ToppingsMenuItem item)
 {
     _toppingsMenuRepo.addTopping(item);

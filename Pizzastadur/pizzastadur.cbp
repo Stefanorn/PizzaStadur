@@ -48,7 +48,6 @@
 			<Add directory="include/Services" />
 		</Compiler>
 		<Unit filename="include/Enums.h" />
-		<Unit filename="include/Exceptions/OrderExeptions.h" />
 		<Unit filename="include/Exceptions/PizzaExeptions.h" />
 		<Unit filename="include/Models/DeliveryPlaces.h" />
 		<Unit filename="include/Models/Pizza.h" />

@@ -4,6 +4,7 @@ SalesUI::SalesUI()
 {
 
     selectDeliveryPlace();
+    system("CLS");
 
     while(true)
     {
@@ -39,8 +40,6 @@ void SalesUI::createOrder(){
     int orderNo = service.OrderNumber();
     cout << "Making Order number " << orderNo << endl;
     Pontun newOrder(orderNo);
-    cout << "Enter a delivery place " << endl;
-    cin >> newOrder;
     while(true)
         {
         cout << "Do you want to add pizza to order y/n" << endl;

@@ -8,8 +8,7 @@
 
 using namespace std;
 
-class AdminUI
-{
+class AdminUI {
     public:
         AdminUI();
         void mainMenu();

@@ -74,3 +74,18 @@ vector<Toppings> SalesServices::getToppingsByPizzaID(int id){
     }
     return selectedToppings;
 }
+
+vector<DeliveryPlaces> SalesServices::GetAllPlaces(){
+    return plcRepo.ReturnAllPlaces();
+}
+
+DeliveryPlaces SalesServices::GetDeleveryPlace(char index){
+    vector<DeliveryPlaces> allplaces = plcRepo.ReturnAllPlaces();
+    for(unsigned int i = 0; i < allplaces.size(); i++){
+        if(allplaces[i].GetKey() == index){
+            return allplaces[i];
+        }
+
+    }
+    throw InvalidDeliveryPlaceInput();
+}

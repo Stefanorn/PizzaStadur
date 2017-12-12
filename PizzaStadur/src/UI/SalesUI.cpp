@@ -3,6 +3,8 @@
 SalesUI::SalesUI()
 {
 
+   // selectDeliveryPlace();
+
     while(true)
     {
         cout << "Press 1 to make a order " << endl;
@@ -10,7 +12,6 @@ SalesUI::SalesUI()
         cout << "press 3 to go back to the main menu" << endl;
         char input;
         cin >> input;
-
         if(input == '1'){
             createOrder();
             system("PAUSE");
@@ -106,5 +107,17 @@ void SalesUI::GetInfoAboutOrder(){
     }
 }
 
+void SalesUI::selectDeliveryPlace(){
 
+    vector<DeliveryPlaces> allPlaces = service.GetAllPlaces();
+    for(unsigned int i = 0; i < allPlaces.size(); i++){
+        cout << allPlaces[i];
+    }
+    cout << "Select a PizzaPlace" << endl;
+    char input;
+    cin >> input;
+
+    _selectedDeliveryPlace = service.GetDeleveryPlace(input);
+
+}
 

@@ -5,6 +5,7 @@
 #include "ToppingMenuRepo.h"
 #include "ToppingsRepo.h"
 #include "OrderExeptions.h"
+#include "PlacesRepo.h"
 
 
 class SalesServices
@@ -18,6 +19,8 @@ class SalesServices
         vector<Pizza> GetPizzaByOrderID(int orderNumber);
         vector<Toppings> getToppingsByPizzaID(int pizzaOrderNumber);
 
+        vector<DeliveryPlaces> GetAllPlaces();
+        DeliveryPlaces GetDeleveryPlace(char index);
 
         vector<ToppingsMenuItem> GetToppingsMenu();
         void addToppingToPizza( char index );
@@ -25,6 +28,7 @@ class SalesServices
 
     private:
 
+        PlacesRepo plcRepo;
         ToppingMenuRepo topMenuRepo;
         ToppingsRepo topRepo;
         orderRepo ordRepo;

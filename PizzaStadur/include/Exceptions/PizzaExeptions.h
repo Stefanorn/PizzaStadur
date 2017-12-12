@@ -5,6 +5,6 @@
 class invalidBaseIndex { };
 class invalidSizeIndex { };
 class invalidToppingHotkey { };
-
+class InvalidDeliveryPlaceInput{ };
 
 #endif // PIZZAEXEPTIONS_H

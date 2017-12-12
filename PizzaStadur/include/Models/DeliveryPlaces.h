@@ -13,12 +13,13 @@ class DeliveryPlaces
     public:
         DeliveryPlaces();
         string getName();
+        char GetKey();
         friend istream& operator >> (istream& in, DeliveryPlaces& places);
         friend ostream& operator << (ostream& out, const DeliveryPlaces& places);
 
     private:
-        vector<Pontun> orders;
         char _name[32];
+        char _hotkey;
 };
 
 #endif // DELIVERYPLACES_H

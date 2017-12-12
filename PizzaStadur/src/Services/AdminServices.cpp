@@ -38,8 +38,7 @@ void AdminServices::editPrices()
 
 }
 
-void AdminServices::registerPlaces(int size)
+void AdminServices::registerPlaces( DeliveryPlaces place )
 {
-    vector<DeliveryPlaces> places;
-    _placesrepo.addPlaces(places, size);
+//    PlacesRepo.addPlaces(place);
 }

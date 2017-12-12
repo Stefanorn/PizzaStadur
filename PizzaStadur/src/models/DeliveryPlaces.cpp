@@ -28,3 +28,10 @@ ostream& operator << (ostream& out, const DeliveryPlaces& places)
     return out;
 
 }
+
+bool operator == ( const DeliveryPlaces& leftSide, const DeliveryPlaces& rightSide ){
+    if( leftSide._hotkey == rightSide._hotkey ){
+        return true;
+    }
+    return false;
+}

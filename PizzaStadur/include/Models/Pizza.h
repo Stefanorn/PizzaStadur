@@ -5,6 +5,7 @@
 #include <string>
 #include "Enums.h"
 #include "PizzaExeptions.h"
+#include "DeliveryPlaces.h"
 
 using namespace std;
 
@@ -27,6 +28,8 @@ class Pizza
 
         void bakePizza();
         bool isPizzaBaked();
+
+         DeliveryPlaces _place;
 
     private:
         int _orderIdNumber;

@@ -3,8 +3,6 @@
 
 #include <iostream>
 #include <vector>
-#include "Pontun.h"
-#include "orderRepo.h"
 
 using namespace std;
 
@@ -16,6 +14,7 @@ class DeliveryPlaces
         char GetKey();
         friend istream& operator >> (istream& in, DeliveryPlaces& places);
         friend ostream& operator << (ostream& out, const DeliveryPlaces& places);
+        friend bool operator == ( const DeliveryPlaces& leftSide, const DeliveryPlaces& rightSide );
 
     private:
         char _name[32];

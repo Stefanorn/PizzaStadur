@@ -8,7 +8,7 @@ int main()
 {
     while(true){
         system("CLS");
-        cout << "Welcome to N3rdy pizza! How can we be of service?" << endl << endl;
+        cout << "Welcome to N3rdy pizza! How can we be of service to you?" << endl << endl;
         cout << "Press 1 to make/view an order" << endl;
         cout << "Press 2 for baking" << endl;
         cout << "press 3 to pay or deliver orders" << endl;
@@ -19,31 +19,28 @@ int main()
         cin >> input;
 
         if (input == '1'){
-            system("CLS");
             SalesUI run;
 
         }
+
         else if (input == '2'){
-            system("CLS");
             BakerUI bakerui;
             bakerui.mainMenu();
-            system("pause");
-
         }
+
         else if (input == '3'){
-            system("CLS");
             StaffUI run;
         }
+
         else if (input == '4'){
-            system("CLS");
             AdminUI adminUI;
             adminUI.mainMenu();
-
         }
+
         else if (input == '5'){
             return 0;
-
         }
+
         else if (input == '6'){
             if(!remove("orders.bin")) cout << "remove all orders\n";
             if(!remove("pizza.bin")) cout << "remove all pizza\n";
@@ -52,9 +49,9 @@ int main()
             if(!remove("places.bin")) cout << "remove all places\n";
             system("PAUSE");
         }
-        else{
+
+        else {
             cout << "Invalid input" << endl;
-            system("CLS");
         }
     }
 

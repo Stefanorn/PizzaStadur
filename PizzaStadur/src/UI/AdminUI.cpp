@@ -24,8 +24,16 @@ void AdminUI::mainMenu(){
         }
         else if(input == '2'){
             do{
-                cout << "How many toppings would you like to register? " << endl;
+                cout << "How many toppings would you like to register? " ;
                 cin >> size;
+                while(cin.fail()){
+                    cin.clear();
+                    cin.ignore();
+                    cout << "Incorrect Input" << endl
+                    << "How many toppings would you like to register? " ;
+                    cin >> size;
+                }
+                system("CLS");
                 cout << "Please enter the topping you would like to add, followed by its price:" << endl;
                 for( int i = 0; i < size; i++){
                     ToppingsMenuItem temp;

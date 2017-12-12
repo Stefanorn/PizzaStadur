@@ -1,6 +1,7 @@
 #ifndef TOPPINGSMENUITEM_H
 #define TOPPINGSMENUITEM_H
-
+#include <cstring>
+#include <string>
 #include <iostream>
 using namespace std;
 

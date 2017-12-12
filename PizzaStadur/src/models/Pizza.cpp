@@ -60,11 +60,10 @@ istream& operator >> (istream& ins, Pizza& pizza){
 }
 
 ostream& operator << (ostream& outs, const Pizza& pizza){
-    outs << "ID  : " << pizza._pizzaID << endl;
-    outs << "Name: " << pizza._name << endl;
-    outs << "Base: " << pizza._base << endl;
-    outs << "Size: " << pizza._size << endl;
-    outs << "Price: " << pizza.getPrice() << endl;
+    outs << "ID   : " << pizza._pizzaID << endl;
+    outs << "Base : " << pizza._base << endl;
+    outs << "Size : " << pizza._size << endl;
+    outs << "Price: " << pizza.getPrice() << " kr." << endl;
     return outs;
 }
 

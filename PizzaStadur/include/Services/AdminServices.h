@@ -19,11 +19,11 @@ class AdminServices
     public:
         AdminServices();
         void registerToppings( ToppingsMenuItem item );
-        void registerPizza();
+        void registerPizza(PizzaMenu,vector<Toppings>);
         void registerProduct(int size);
         void editPrices();
         void registerPlaces( DeliveryPlaces deliveryPlace);
-
+        Toppings CharToTopping(char input);
         vector<ToppingsMenuItem> returnToppingsMenu();
 
     private:

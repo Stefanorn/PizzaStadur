@@ -33,6 +33,10 @@ ostream& operator << (ostream& outs, const ToppingsMenuItem& toppingsMenuItem){
     return outs;
 }
 
+Toppings ToppingsMenuItem::createTopping(){
+    return Toppings( _name, _price, 0 );
+}
+
 char ToppingsMenuItem::getHotkey(){
     return _hotkey;
 }

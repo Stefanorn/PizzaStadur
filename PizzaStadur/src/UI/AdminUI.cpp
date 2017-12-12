@@ -57,12 +57,15 @@ void AdminUI::mainMenu(){
             for(unsigned int i = 0; i < toppingsMenu.size(); i++){
                 cout << toppingsMenu[i] << endl;
             }
-
+            vector<Toppings> inputs;
             for(int i = 0; i < size; i++){
                 cin >> input;
+                Toppings temp = _adminService.CharToTopping(input);
+                inputs.push_back(temp);
             }
+            _adminService.registerPizza( temp,inputs );
+            system("PAUSE");
             cout << temp;
-           // _adminService.registerPizza( temp ):
         }
         else if(input == '3'){
             do{

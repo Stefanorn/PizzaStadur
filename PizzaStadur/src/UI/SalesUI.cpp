@@ -40,8 +40,6 @@ void SalesUI::createOrder(){
     int orderNo = service.OrderNumber();
     cout << "Making Order number " << orderNo << endl;
     Pontun newOrder(orderNo, _selectedDeliveryPlace);
-    cout << "Enter a delivery place " << endl;
-    cin >> newOrder;
     while(true)
         {
         cout << "Do you want to add pizza to order y/n" << endl;
@@ -55,33 +53,34 @@ void SalesUI::createOrder(){
             cout << "Adding Toppings to your pizza " << endl;
             vector <ToppingsMenuItem> allToppings = service.GetToppingsMenu();
             while(true){
-                cout << "Do you whant to add more toppings 'y' to add more topping 'n' to quit " << endl;
-                cin >> input;
-                if(input == 'y'){
-
                     for(unsigned int i = 0; i < allToppings.size(); i++){
                         cout << allToppings[i];
                     }
-                    cout << "Select Toping :" << endl;
+                    cout << "Select Topping or press 'q' to quit: " << endl;
                     cin >> input;
+                    if(input == 'q'){
+                        break;
+                    }
+                    cout << "Adding topping to pizza" << endl;
                     service.addToppingToPizza( input );
-                }
-                else if( input == 'n'){
-                    break;
-                }
-                else{
-                    cout << "Invalid input " << endl;
-                }
             }
         }
-        else if (input == 'n') {
+        else if(input == 'n'){
             break;
         }
         else {
             cout << "Invalid Input " << endl;
         }
     }
-    service.CommitOrder(newOrder);
+    cout << "Press y to confirm your order: ";
+    char input;
+    cin >> input;
+    if(input == 'y'){
+        service.CommitOrder(newOrder);
+    }
+    else{
+        cout << "Order was aborted!";
+    }
 }
 
 void SalesUI::GetInfoAboutOrder(){

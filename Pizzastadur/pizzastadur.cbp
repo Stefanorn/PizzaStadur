@@ -47,8 +47,6 @@
 			<Add directory="include/Exceptions" />
 			<Add directory="include/Services" />
 		</Compiler>
-		<Unit filename="ItemDataBase.cpp" />
-		<Unit filename="ItemDataBase.h" />
 		<Unit filename="include/Enums.h" />
 		<Unit filename="include/Exceptions/OrderExeptions.h" />
 		<Unit filename="include/Exceptions/PizzaExeptions.h" />
@@ -58,7 +56,6 @@
 		<Unit filename="include/Models/Products.h" />
 		<Unit filename="include/Models/Toppings.h" />
 		<Unit filename="include/Models/ToppingsMenuItem.h" />
-		<Unit filename="include/Pizzasdadur.h" />
 		<Unit filename="include/Services/AdminServices.h" />
 		<Unit filename="include/Services/BakerServices.h" />
 		<Unit filename="include/Services/SalesServices.h" />
@@ -74,10 +71,6 @@
 		<Unit filename="include/repo/orderRepo.h" />
 		<Unit filename="include/repo/pizzaRepo.h" />
 		<Unit filename="main.cpp" />
-		<Unit filename="src/Pizzasdadur.cpp">
-			<Option compile="0" />
-			<Option link="0" />
-		</Unit>
 		<Unit filename="src/Services/AdminServices.cpp" />
 		<Unit filename="src/Services/BakerServices.cpp" />
 		<Unit filename="src/Services/SalesServices.cpp" />

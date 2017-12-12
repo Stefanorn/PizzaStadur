@@ -6,6 +6,22 @@ SalesServices::SalesServices()
 }
 
 void SalesServices::CommitOrder(Pontun order){
+    vector<Pizza> allPizza = pzRepo.ReturnAllPizzas();
+    vector<Toppings> allToppings = topRepo.returnToppings();
+    for(unsigned int i = 0; i < allPizza.size(); i++){
+        if( order.GetOrderNo() == allPizza[i].getPizzaToOrderId()){
+            order.ComputeTotalPrice( allPizza[i].getPrice() );
+
+            for( unsigned int j = 0; j < allToppings.size(); j++){
+                if( allPizza[i].getPizzaID() == allToppings[j].getToppingID() ){
+                    order.ComputeTotalPrice( allToppings[j].getToppingPrice() );
+
+                }
+
+            }
+        }
+    }
+
    ordRepo.WriteOrderToFile( order );
 }
 
@@ -13,6 +29,7 @@ void SalesServices::CommitOrder(Pontun order){
 void SalesServices::CommitPizza(Pizza pizza){
     pizza.setPizzaID( pzRepo.MakePizzaID() );
     pizza._place = _deliveryPlace;
+
     pzRepo.WriteOrderToFile(pizza);
 }
 int SalesServices::OrderNumber(){

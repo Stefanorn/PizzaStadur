@@ -2,6 +2,7 @@
 
 Pontun::Pontun(int number , DeliveryPlaces place)
 {
+    _price = 0;
     _place = place;
     _orderNumber = number;
     _hasBeenPaid = false;
@@ -10,6 +11,7 @@ Pontun::Pontun(int number , DeliveryPlaces place)
 }
 Pontun::Pontun()
 {
+    _price = 0;
      _place = DeliveryPlaces();
     _orderNumber = 0;
     _hasBeenPaid = false;
@@ -21,11 +23,14 @@ Pontun::Pontun()
 bool Pontun::IsOrderPaid(){
     return _hasBeenPaid;
 }
+
 void Pontun::payOrder(){
     _hasBeenPaid = true;
 }
 
-
+void Pontun::ComputeTotalPrice(double price) {
+    _price += price;
+}
 
 //Pizzan er reddy þegar hún er bokuð og búið að borga
 bool Pontun::isOrderReady(){
@@ -45,16 +50,26 @@ void Pontun::deliverOrder(){
     _hasBeenDelivered = true;
 }
 
-int Pontun::GetOrderNo(){
+int Pontun::GetOrderNo() const{
     return _orderNumber;
 }
 
 ostream& operator << (ostream& out, const Pontun& pontun){
-
     out << "Order no " << pontun._orderNumber << endl;
-    out << "has been payed for " << pontun._hasBeenPaid << endl;
-    out << "has been delivered " << pontun._hasBeenDelivered << endl;
+    out << "Total price: " << pontun._price << endl;
+    if(pontun._hasBeenPaid){
+        out << "has been paid" << endl;
+    }
+    else{
+        out << "has not been paid" << endl;
+    }
 
+    if(pontun._hasBeenDelivered){
+        out << "has been delivered" << endl;
+    }
+    else{
+        out << "has not been delivered" << endl;
+    }
     return out;
 }
 istream& operator >> (istream& in, Pontun& order){

@@ -5,11 +5,13 @@
 #include "DeliveryPlaces.h"
 #include "Toppings.h"
 #include "Products.h"
+#include "PizzaMenu.h"
 
 #include "pizzaRepo.h"
 #include "PlacesRepo.h"
 #include "ToppingMenuRepo.h"
 #include "ProductRepo.h"
+
 
 
 class AdminServices
@@ -21,6 +23,8 @@ class AdminServices
         void registerProduct(int size);
         void editPrices();
         void registerPlaces( DeliveryPlaces deliveryPlace);
+
+        vector<ToppingsMenuItem> returnToppingsMenu();
 
     private:
         ToppingMenuRepo _toppingsMenuRepo;

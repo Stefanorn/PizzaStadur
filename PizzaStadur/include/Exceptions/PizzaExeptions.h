@@ -8,5 +8,6 @@ class invalidToppingHotkey { };
 class InvalidDeliveryPlaceInput{ };
 class invalidPizzaSelection{ };
 class NoOrderToReturnExeption{ };
+class toManyToppingsExeptions{ };
 
 #endif // PIZZAEXEPTIONS_H

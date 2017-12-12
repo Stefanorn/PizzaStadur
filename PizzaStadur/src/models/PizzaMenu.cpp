@@ -1,13 +1,13 @@
 #include "PizzaMenu.h"
 
 PizzaMenu::PizzaMenu(){
-    //ctor
-}
+    _toppingIndex = 0;
 
+}
 istream& operator >> (istream& ins, PizzaMenu& pizza){
     bool base = false, pSize = false;
 
-    cout << "enter Name of pizza";
+    cout << "enter Name of pizza : ";
     ins >> pizza._name;
     char input;
 
@@ -53,13 +53,12 @@ istream& operator >> (istream& ins, PizzaMenu& pizza){
         }
     }
 
-
     cout << "Enter the price of pizza ";
     ins >> pizza._price;
 
-
-
     while (ins.fail()){
+        ins.clear();
+        ins.ignore();
         cout << "Invalid input enter valid input ";
         ins >> pizza._price;
     }
@@ -67,7 +66,42 @@ istream& operator >> (istream& ins, PizzaMenu& pizza){
     return ins;
 }
 ostream& operator << (ostream& outs, const PizzaMenu& pizza){
+
+    outs << "Menu item name " << pizza._name << endl;
+    outs << "Price " << pizza._price << " kr." << endl;
+    outs << "Toppings : " << endl;
+    for(int i = 0; i < pizza._toppingIndex; i ++){
+        outs << pizza._toppings << endl;
+    }
+    switch (pizza._base){
+        case PAN : outs << "pan"; break;
+        case REGULAR : outs << "regular"; break;
+        case SPELT : outs << "spelt"; break;
+        case THIN : outs << "thin"; break;
+        default : break;
+    }
+    outs << " base." << endl;
+    outs << "size ";
+    switch (pizza._size){
+        case LARGE : outs << "larg"; break;
+        case SMALL : outs << "small"; break;
+        case MEDIUM : outs << "medium"; break;
+        default : break;
+    }
+    outs << endl;
+    outs << "Press '" << pizza._hotkey << "' to add this item to your order " << endl;
+
+
     return outs;
+}
+
+void PizzaMenu::addTopping( Toppings item ){
+   if(_toppingIndex == 15){
+        throw toManyToppingsExeptions();
+   }
+    _toppings[ _toppingIndex ] = item;
+    _toppingIndex ++;
+
 }
 
 string PizzaMenu::getName(){

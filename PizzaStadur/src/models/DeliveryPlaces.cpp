@@ -15,15 +15,16 @@ char DeliveryPlaces::GetKey(){
 
 istream& operator >> (istream& in, DeliveryPlaces& places){
 
-    //cout << "Please enter the delivery place(s) to add:" << endl;
+    cout << "Enter name of delivery place : " ;
     in >> places._name;
+    cout << "Enter hotkey for your place  : ";
     in >> places._hotkey;
     return in;
 }
 
 ostream& operator << (ostream& out, const DeliveryPlaces& places)
 {
-    out << "To deliver to" << places._name ;
+    out << "To deliver to " << places._name ;
     out << " Press '"  << places._hotkey << "'" << endl;
     return out;
 

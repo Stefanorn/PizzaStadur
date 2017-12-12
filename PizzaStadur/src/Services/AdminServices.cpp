@@ -30,3 +30,7 @@ void AdminServices::registerPlaces( DeliveryPlaces place )
 {
     _placesrepo.addPlaces(place);
 }
+
+vector<ToppingsMenuItem> AdminServices::returnToppingsMenu(){
+    return _toppingsMenuRepo.returnToppings();
+}

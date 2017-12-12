@@ -22,33 +22,47 @@ void AdminUI::mainMenu(){
         cin >> input;
 
         if(input == '1'){
-            do{
-                cout << "How many toppings would you like to register? " ;
+            cout << "How many toppings would you like to register? " ;
+            cin >> size;
+            while(cin.fail()){
+                cin.clear();
+                cin.ignore();
+                cout << "Incorrect Input" << endl
+                << "How many toppings would you like to register? " ;
                 cin >> size;
-                while(cin.fail()){
-                    cin.clear();
-                    cin.ignore();
-                    cout << "Incorrect Input" << endl
-                    << "How many toppings would you like to register? " ;
-                    cin >> size;
-                }
-                system("CLS");
-                cout << "Please enter the topping you would like to add, followed by its price:" << endl;
-                for( int i = 0; i < size; i++){
-                    ToppingsMenuItem temp;
-                    cout << "Topping " << i + 1 << endl;
-                    cin >> temp;
-                    cout << endl;
-                    _adminService.registerToppings(temp);
-
-                }
-                cout << "Would you like to add more toppings (y/n)?" << endl;
-                cin >> input;
             }
-            while(input == 'y');
+            system("CLS");
+            for( int i = 0; i < size; i++){
+                ToppingsMenuItem temp;
+                cout << "Topping " << i + 1 << endl;
+                cin >> temp;
+                cout << endl;
+                _adminService.registerToppings(temp);
+
+            }
         }
         else if(input == '2'){
-            _adminService.registerPizza();
+            PizzaMenu temp;
+            cin >> temp;
+            cout << "How many toppings would you like to register? " ;
+            cin >> size;
+            while(cin.fail() || size > 16){
+                cin.clear();
+                cin.ignore();
+                cout << "Incorrect Input" << endl
+                << "How many toppings would you like to register? " ;
+                cin >> size;
+            }
+            vector<ToppingsMenuItem> toppingsMenu = _adminService.returnToppingsMenu();
+            for(unsigned int i = 0; i < toppingsMenu.size(); i++){
+                cout << toppingsMenu[i] << endl;
+            }
+
+            for(int i = 0; i < size; i++){
+                cin >> input;
+            }
+            cout << temp;
+           // _adminService.registerPizza( temp ):
         }
         else if(input == '3'){
             do{
@@ -72,21 +86,25 @@ void AdminUI::mainMenu(){
             _adminService.editPrices();
         }
         else if(input == '5'){
-            do{
-                cout << "How many places would you like to add?" << endl;
+            cout << "How many places would you like to add?";
+            cin >> size;
+            while(cin.fail()){
+                cin.clear();
+                cin.ignore();
+                cout << "Incorrect Input" << endl
+                << "How many places would you like to add? " ;
                 cin >> size;
-                cout << "Where would you like to open your new place(s)?" << endl;
-                vector<DeliveryPlaces> places(size);
-                for(unsigned int i = 0; i < places.size(); i++){
-                    cout << "Place " << i + 1 << endl;
-                    cin >> places[i];
-                    cout << endl;
-                    _adminService.registerPlaces( places[i] );
-                }
-                cout << "Would you like to add more places (y/n)?" << endl;
-                cin >> input;
             }
-            while(input == 'y');
+            vector<DeliveryPlaces> places(size);
+            for(unsigned int i = 0; i < places.size(); i++){
+                cout << "Place " << i + 1 << endl;
+                cin >> places[i];
+                cout << endl;
+                _adminService.registerPlaces( places[i] );
+            }
+            cout << "Would you like to add more places (y/n)?" << endl;
+            cin >> input;
+
         }
         else if(input == '6'){
             break;

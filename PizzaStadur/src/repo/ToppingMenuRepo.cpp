@@ -33,6 +33,7 @@ void ToppingMenuRepo::readFile()
         fin.seekg(0, fin.beg);
 
         ToppingsMenuItem temp;
+
         for(int i = 0; i < size; i++){
             fin.read((char*)(&temp), sizeof(ToppingsMenuItem));
             _menItem.push_back(temp);

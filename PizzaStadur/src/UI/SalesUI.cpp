@@ -4,6 +4,7 @@ SalesUI::SalesUI()
 {
 
     selectDeliveryPlace();
+    system("CLS");
 
     while(true)
     {

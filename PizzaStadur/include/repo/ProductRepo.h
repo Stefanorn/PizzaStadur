@@ -12,9 +12,11 @@ class ProductRepo
         void overwriteFile(vector<Products> product);
         void addProduct(vector<Products> product, int size);
         vector<Products> returnProducts();
-
+        void readFile(); ///Færði í public úr private til að geta fengið aðgang úr öðrum klasa
+        // friend ostream& operator << (ostream& outs, const );
+        ///Er að reyna að lesa úr skránni hér og birta það á skjáinn.
     private:
         vector<Products> _prod;
-        void readFile();
+
 };
 #endif // PRODUCTREPO_H

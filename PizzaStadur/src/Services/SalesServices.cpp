@@ -1,7 +1,6 @@
 #include "SalesServices.h"
 
-SalesServices::SalesServices()
-{
+SalesServices::SalesServices(){
     //ctor
 }
 
@@ -94,7 +93,15 @@ vector<DeliveryPlaces> SalesServices::GetAllPlaces(){
     return plcRepo.ReturnAllPlaces();
 }
 
+<<<<<<< HEAD
 DeliveryPlaces SalesServices::GetDeliveryPlace(char index){
+=======
+vector <PizzaMenu> SalesServices::ReturnPizzaMenu(){
+    pizzaMenuRepo.ReturnAllPizzaMenu();
+}
+
+DeliveryPlaces SalesServices::GetDeleveryPlace(char index){
+>>>>>>> 53dcb2ee5e3f23e97df57564f5fce9ddd6e7a1bf
     vector<DeliveryPlaces> allplaces = plcRepo.ReturnAllPlaces();
     for(unsigned int i = 0; i < allplaces.size(); i++){
         if(allplaces[i].GetKey() == index){

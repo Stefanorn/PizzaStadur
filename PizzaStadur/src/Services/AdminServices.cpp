@@ -29,10 +29,16 @@ Toppings AdminServices::CharToTopping(char input){
     }
     throw invalidToppingHotkey();
 }
-void AdminServices::registerProduct(int size)
+void AdminServices::registerProduct(vector<Products> product, int size)
 {
+    _productrepo.addProduct(product, size);
    // vector<> toppings;
    // _toppingrepo.addTopping(toppings, size);
+}
+
+void AdminServices::readProduct()
+{
+    _productrepo.readFile();
 }
 
 void AdminServices::editMenuPrices(double price)

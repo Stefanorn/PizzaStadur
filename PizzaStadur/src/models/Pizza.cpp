@@ -3,7 +3,6 @@
 Pizza::Pizza(){
     _orderIdNumber = -1;
     _pizzaID = -1;
-    _name[0] = '\0';
     _base = REGULAR;
     _size = SMALL;
     _basePrice = 0;
@@ -12,8 +11,7 @@ Pizza::Pizza(){
 
 istream& operator >> (istream& ins, Pizza& pizza){
     bool base = false, pSize = false;
-    cout << "Enter name of pizza: ";
-    ins >> pizza._name;
+
     char input;
 
     while (base == false)

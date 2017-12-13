@@ -4,9 +4,10 @@
 istream& operator >> (istream& ins, ToppingsMenuItem& toppingsMenuItem){
     string name;
     cout << "enter topping name : ";
-    ins >> toppingsMenuItem._name;
-    //std::getline(ins, name);
-    //strcpy(toppingsMenuItem._name ,name.c_str());
+    //ins >> toppingsMenuItem._name;
+    ins.sync();
+    getline(ins, name);
+    strcpy(toppingsMenuItem._name ,name.c_str());
     //toppingsMenuItem._name[31] = '\0';
     //ins.ignore();
     cout << "Enter hotkey for item : ";

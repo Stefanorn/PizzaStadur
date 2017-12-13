@@ -106,27 +106,6 @@ void AdminUI::mainMenu(){
                 system("PAUSE");
             }
 
-            /*else if(input == '2'){
-                cout << "Please select a base from the menu" << endl;
-                /// cout << bases;
-                cin >> input;
-                cout << "Enter the base's new price " << endl;
-                cin >> newPrice;
-                _adminService.editBasePrices(newPrice);
-                cout << "The base's price has been successfully changed!" << endl;
-                system("PAUSE");
-            }
-
-            else if(input == '3'){
-                cout << "Please select a size from the menu" << endl;
-                /// cout << sizes;
-                cin >> input;
-                cout << "Enter the size's new price " << endl;
-                cin >> newPrice;
-                _adminService.editSizePrices(newPrice);
-                cout << "The size's price has been successfully changed!" << endl;
-                system("PAUSE");
-            }*/
 
             else if(input == '4'){
                 cout << "Please select a topping from the menu" << endl;

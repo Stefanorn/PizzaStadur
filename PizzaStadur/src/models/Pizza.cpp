@@ -67,8 +67,24 @@ istream& operator >> (istream& ins, Pizza& pizza){
 
 ostream& operator << (ostream& outs, const Pizza& pizza){
     outs << "ID   : " << pizza._pizzaID << endl;
-    outs << "Base : " << pizza._base << endl;
-    outs << "Size : " << pizza._size << endl;
+    outs << "Base : ";
+    if(_base == 1){
+        cout << "Regular" << endl;
+    }
+
+    else if(_base == 2){
+        cout << " Thin" << endl;
+    }
+
+    else if(_base == 3){
+        cout << " Pan" << endl;
+    }
+
+    else if(_base == 4){
+        cout << " Spelt" << endl;
+    }
+    outs << "Size : "
+    << pizza._size << endl;
     outs << "Price: " << pizza.getPrice() << " kr." << endl;
     return outs;
 }

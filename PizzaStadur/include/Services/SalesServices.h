@@ -20,7 +20,7 @@ class SalesServices
         vector<Toppings> getToppingsByPizzaID(int pizzaOrderNumber);
 
         vector<DeliveryPlaces> GetAllPlaces();
-        DeliveryPlaces GetDeleveryPlace(char index);
+        DeliveryPlaces GetDeliveryPlace(char index);
 
         vector<ToppingsMenuItem> GetToppingsMenu();
         void addToppingToPizza( char index );

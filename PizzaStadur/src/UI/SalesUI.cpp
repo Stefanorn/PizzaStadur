@@ -114,11 +114,11 @@ void SalesUI::selectDeliveryPlace(){
 
         cout << allPlaces[i];
     }
-    cout << "Select a PizzaPlace" << endl;
+    cout << "Select a PizzaPlace " << endl;
     char input;
     cin >> input;
 
-    _selectedDeliveryPlace = service.GetDeleveryPlace(input);
+    _selectedDeliveryPlace = service.GetDeliveryPlace(input);
 
 }
 

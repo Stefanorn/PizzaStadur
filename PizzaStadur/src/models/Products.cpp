@@ -24,7 +24,6 @@ double Products::getProductPrice()
 istream& operator >> (istream& ins, Products& product)
 {
     ins >> product._productName;
-    //ins >> topping._toppingType;
     ins >> product._productPrice;
     return ins;
 }
@@ -32,7 +31,6 @@ istream& operator >> (istream& ins, Products& product)
 ostream& operator << (ostream& outs, const Products& product)
 {
     outs << product._productName << ", ";
-    //outs << topping._toppingType << ", ";
     outs << product._productPrice << " kr." << endl;
     return outs;
 }

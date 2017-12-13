@@ -33,8 +33,6 @@ Toppings AdminServices::CharToTopping(char input){
 void AdminServices::registerProduct(vector<Products> product, int size)
 {
     _productrepo.addProduct(product, size);
-   // vector<> toppings;
-   // _toppingrepo.addTopping(toppings, size);
 }
 
 void AdminServices::readProduct()

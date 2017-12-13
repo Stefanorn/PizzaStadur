@@ -1,11 +1,12 @@
 #ifndef PIZZAMENU_H
 #define PIZZAMENU_H
 #include "Toppings.h"
+#include "Pizza.h"
 #include "PizzaExeptions.h"
 #include "Enums.h"
 #include <iostream>
 #include "PizzaExeptions.h"
-
+#include <vector>
 class PizzaMenu
 {
     public:
@@ -13,6 +14,7 @@ class PizzaMenu
         friend istream& operator >> (istream& ins, PizzaMenu& pizza);
         friend ostream& operator << (ostream& outs, const PizzaMenu& pizza);
         void addTopping( Toppings );
+        Pizza getPizza();
         string getName();
         char getKey();
         pizzaBase getBase();

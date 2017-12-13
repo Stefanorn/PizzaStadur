@@ -28,6 +28,8 @@ class SalesServices
 
         vector<ToppingsMenuItem> GetToppingsMenu();
         void addToppingToPizza( char index );
+
+        Pizza selectPizzaFromMenu( char input );
         //void AssignOrderToPlace();
 
     private:

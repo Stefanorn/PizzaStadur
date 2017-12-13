@@ -78,6 +78,12 @@ void SalesUI::createOrder(){
                 for(unsigned int i = 0; i < pzMenu.size(); i++){
                     cout << pzMenu[i];
                 }
+                cout << "Enter hotkey to select pizza from menu : ";
+                char input;
+                cin >> input;
+                Pizza pz = service.selectPizzaFromMenu( input );
+                pz.tagPizzaToOrder( orderNo );
+                service.CommitPizza(pz);
         }
         else if(input == '3'){
             vector<Products> products = service.ReturnAllProducts();

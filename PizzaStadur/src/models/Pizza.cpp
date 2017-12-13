@@ -1,6 +1,7 @@
 #include "Pizza.h"
 
 Pizza::Pizza(){
+    _pizzaPrice = 0;
     _toppingIndex = 0;
     _orderIdNumber = -1;
     _pizzaID = -1;
@@ -8,6 +9,14 @@ Pizza::Pizza(){
     _size = SMALL;
     _basePrice = 0;
     _sizePrice = 0;
+}
+Pizza::Pizza( pizzaBase base, pizzaSize size, double price){
+    _toppingIndex = 0;
+    _orderIdNumber = -1;
+    _pizzaID = -1;
+    _base = base;
+    _size = size;
+    _pizzaPrice = price;
 }
 
 istream& operator >> (istream& ins, Pizza& pizza){
@@ -128,10 +137,15 @@ void Pizza::setBasePrice(double price){
 }
 
 void Pizza::setSizePrice(double price){
-
+    _pizzaPrice = price;
 }
 
 double Pizza::getPrice() const{
+
+    if( _pizzaPrice ){
+        return _pizzaPrice;
+    }
+
     double total = 0;
     //if (pizza name er valid){
         if (_base == 1){

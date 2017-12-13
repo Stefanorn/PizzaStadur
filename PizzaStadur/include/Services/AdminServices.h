@@ -21,7 +21,7 @@ class AdminServices
         AdminServices();
         void registerToppings( ToppingsMenuItem item );
         void registerPizza(PizzaMenu,vector<Toppings>);
-        void registerProduct(vector<Products> product, int size);
+        void registerProduct(Products product);
         void readProduct();
         void editMenuPrices(double price);
         void editBasePrices(double price);

@@ -24,7 +24,7 @@ int Toppings::getToppingID()
     return _toppingID;
 }
 
-double Toppings::getToppingPrice()
+double Toppings::getToppingPrice() const
 {
     return _toppingPrice;
 }

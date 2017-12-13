@@ -13,7 +13,7 @@ class Toppings
         Toppings( string toppingName, double toppingPrice , int pizzaToToppingId);
         string getToppingName();
         int getToppingID();
-        double getToppingPrice();
+        double getToppingPrice() const;
         friend istream& operator >> (istream& ins, Toppings& topping);
         friend ostream& operator << (ostream& outs, const Toppings& topping);
     private:

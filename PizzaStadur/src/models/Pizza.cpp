@@ -173,12 +173,9 @@ double Pizza::getPrice() const{
         else if (_size == 3){
             total += 600;
         }
-        else{
-            //throw SomeException;
-        }
-
-
-    //}
+    for(int i = 0; i < _toppingIndex; i++){
+        total += _toppingsOnPizza[i].getToppingPrice();
+    }
 
     return total;
 }

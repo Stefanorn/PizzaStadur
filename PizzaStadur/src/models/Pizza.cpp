@@ -106,11 +106,11 @@ ostream& operator << (ostream& outs, const Pizza& pizza){
     }
 
     outs << "Price: " << pizza.getPrice() << " kr." << endl;
-    outs << "Toppings \n ----------------------";
+    outs << endl << "Toppings: " << endl;
     for(int i = 0; i < pizza._toppingIndex; i++){
         outs << pizza._toppingsOnPizza[i];
     }
-    outs << "--------------------------"<< endl;
+    outs << endl << endl;
     return outs;
 }
 

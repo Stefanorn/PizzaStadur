@@ -5,16 +5,18 @@ DeliveryPlaces::DeliveryPlaces()
     _name[0] = '\0';
 }
 
-string DeliveryPlaces::getName()
+string DeliveryPlaces::getName() const
 {
     return _name;
 }
-char DeliveryPlaces::GetKey(){
+
+char DeliveryPlaces::GetKey() const
+{
     return _hotkey;
 }
 
-istream& operator >> (istream& in, DeliveryPlaces& places){
-
+istream& operator >> (istream& in, DeliveryPlaces& places)
+{
     cout << "Enter name of delivery place : " ;
     in >> places._name;
     cout << "Enter hotkey for your place  : ";
@@ -27,7 +29,6 @@ ostream& operator << (ostream& out, const DeliveryPlaces& places)
     out << "To deliver to " << places._name ;
     out << " Press '"  << places._hotkey << "'" << endl;
     return out;
-
 }
 
 bool operator == ( const DeliveryPlaces& leftSide, const DeliveryPlaces& rightSide ){

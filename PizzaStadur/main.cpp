@@ -45,11 +45,14 @@ int main()
             cout << "This will delete all data from the system." << endl;
             cin >> input;
             if(input == 'y'){
-                if(!remove("orders.bin")) cout << "remove all orders\n";
-                if(!remove("pizza.bin")) cout << "remove all pizza\n";
-                if(!remove("toppings.bin")) cout << "remove all topping\n";
-                if(!remove("toppingsMenu.bin")) cout << "remove all toppingsMenu\n";
-                if(!remove("places.bin")) cout << "remove all places\n";
+                if(!remove("orders.bin")) cout << "Removing all orders from file..." << endl;
+                if(!remove("pizza.bin")) cout << "Removing all pizzas from file..." << endl;
+                if(!remove("toppings.bin")) cout << "Removing all toppings from file..." << endl;
+                if(!remove("toppingsMenu.bin")) cout << "Removing all menus from file..." << endl;
+                if(!remove("places.bin")) cout << "Removing all places from file..." << endl;
+                if(!remove("products.bin")) cout << "Removing all products from file..." << endl;
+                if(!remove("PizzMenuItems.bin"));
+                cout << "Resetting program..." << endl;
             }
             else if(input == 'n'){
                 cout << "Action aborted" << endl;

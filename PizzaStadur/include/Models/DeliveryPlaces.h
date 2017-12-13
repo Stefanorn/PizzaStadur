@@ -10,8 +10,8 @@ class DeliveryPlaces
 {
     public:
         DeliveryPlaces();
-        string getName();
-        char GetKey();
+        string getName() const;
+        char GetKey() const;
         friend istream& operator >> (istream& in, DeliveryPlaces& places);
         friend ostream& operator << (ostream& out, const DeliveryPlaces& places);
         friend bool operator == ( const DeliveryPlaces& leftSide, const DeliveryPlaces& rightSide );

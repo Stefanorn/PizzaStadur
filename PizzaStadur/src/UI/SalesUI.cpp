@@ -102,14 +102,27 @@ void SalesUI::createOrder(){
             cout << "Invalid Input " << endl;
         }
     }
-    cout << "Press y to confirm your order: ";
+    cout << "Delivery or pick-up (d/p)? ";
     char input;
+    cin >> input;
+    while(true){
+        if(input == 'd' || input == 'p'){
+            service.DeliveredOrPickedUp(newOrder, input);
+            break;
+        }
+        else{
+            cout << "Just press 'p' or 'd', PLEASE!" << endl; ;
+            cin >> input;
+        }
+    }
+    cout << "Press y to confirm your order: ";
     cin >> input;
     if(input == 'y'){
         service.CommitOrder(newOrder);
+        cout << "Your order is being processed" << endl;
     }
     else{
-        cout << "Order was aborted!";
+        cout << "Order was aborted!" << endl;
     }
 }
 

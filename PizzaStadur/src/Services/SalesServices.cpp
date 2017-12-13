@@ -75,6 +75,9 @@ vector<Products> SalesServices::ReturnAllProducts(){
     return prodRepo.returnProducts();
 }
 
+void SalesServices::DeliveredOrPickedUp(Pontun order, char input) const{
+    order.DeliveryOrPickUp(input);
+}
 
 DeliveryPlaces SalesServices::GetDeliveryPlace(char index){
     vector<DeliveryPlaces> allplaces = plcRepo.ReturnAllPlaces();
@@ -105,4 +108,6 @@ Products SalesServices::selectProduct(char input){
     for(unsigned int i = 0; i < product.size(); i++){
         //product[i].getProductID;
     }
+    Products prod;
+    return prod;
 }

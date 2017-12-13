@@ -23,6 +23,7 @@ class orderRepo
         vector<Pontun> ReturnAllOrders();
 
         int getOrderNo();
+
     private:
         int _orderNo;
         void ReadFromFile();

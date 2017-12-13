@@ -7,10 +7,7 @@ class SalesUI {
     public:
         SalesUI();
 
-    protected:
-
     private:
-
         DeliveryPlaces _selectedDeliveryPlace;
         SalesServices service;
         void createOrder();

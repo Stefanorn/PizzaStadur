@@ -15,9 +15,8 @@ class SalesServices
     public:
         SalesServices();
 
-
+        void DeliveredOrPickedUp(Pontun order, char input) const;
         Toppings CharToTopping(char input);
-
         Pontun returnAOrder( int orderNo );
         void CommitOrder(Pontun order);
         void CommitPizza( Pizza pizza );
@@ -37,7 +36,6 @@ class SalesServices
         //void AssignOrderToPlace();
 
     private:
-
         DeliveryPlaces _deliveryPlace;
         PlacesRepo plcRepo;
         ToppingMenuRepo topMenuRepo;

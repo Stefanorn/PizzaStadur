@@ -7,10 +7,10 @@ PizzaMenu::PizzaMenu(){
 istream& operator >> (istream& ins, PizzaMenu& pizza){
     bool base = false, pSize = false;
 
-    cout << "enter Name of pizza : ";
+    cout << "Enter name of pizza : ";
     ins >> pizza._name;
     char input;
-    cout << "Enter hotkey for youre menu Item : ";
+    cout << "Enter hotkey for your pizza : ";
     ins >> pizza._hotkey;
 
     while (base == false)
@@ -75,7 +75,7 @@ ostream& operator << (ostream& outs, const PizzaMenu& pizza){
     for(int i = 0; i < pizza._toppingIndex; i++ ){
         outs << pizza._toppings[i];
     }
-    outs << " Base : " ;
+    outs << "Base : " ;
     switch (pizza._base){
         case PAN : outs << "pan"; break;
         case REGULAR : outs << "regular"; break;
@@ -84,7 +84,7 @@ ostream& operator << (ostream& outs, const PizzaMenu& pizza){
         default : break;
     }
 
-    outs << endl << "size : ";
+    outs << endl << "Size : ";
     switch (pizza._size){
         case LARGE : outs << "large"; break;
         case SMALL : outs << "small"; break;
@@ -110,15 +110,19 @@ void PizzaMenu::addTopping( Toppings item ){
 string PizzaMenu::getName(){
     return _name;
 }
+
 char PizzaMenu::getKey(){
     return _hotkey;
 }
+
 pizzaBase PizzaMenu::getBase(){
     return _base;
 }
+
 pizzaSize PizzaMenu::getSize(){
     return _size;
 }
+
 Pizza PizzaMenu::getPizza(){
 
     Pizza temp(_base, _size, _price);

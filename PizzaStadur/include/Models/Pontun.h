@@ -23,6 +23,7 @@ class Pontun
         void deliverOrder();
         void ComputeTotalPrice(double price);
         int GetOrderNo() const;
+        void DeliveryOrPickUp(char input);
 
         DeliveryPlaces getDeliveryPlace();
 
@@ -33,6 +34,7 @@ class Pontun
         bool _isReady;
         bool _hasBeenDelivered;
         int _orderNumber;
+        bool _isDelivered;
 };
 
 #endif // PONTUN_H

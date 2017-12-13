@@ -20,7 +20,8 @@ class AdminServices
         AdminServices();
         void registerToppings( ToppingsMenuItem item );
         void registerPizza(PizzaMenu,vector<Toppings>);
-        void registerProduct(int size);
+        void registerProduct(vector<Products> product, int size);
+        void readProduct();
         void editMenuPrices(double price);
         void editBasePrices(double price);
         void editSizePrices(double price);

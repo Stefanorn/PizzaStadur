@@ -3,7 +3,6 @@
 #include "orderRepo.h"
 #include "pizzaRepo.h"
 #include "ToppingMenuRepo.h"
-#include "ToppingsRepo.h"
 #include "PizzaExeptions.h"
 #include "PlacesRepo.h"
 #include "pizzaRepo.h"
@@ -15,6 +14,10 @@ class SalesServices
 {
     public:
         SalesServices();
+
+
+        Toppings CharToTopping(char input);
+
         Pontun returnAOrder( int orderNo );
         void CommitOrder(Pontun order);
         void CommitPizza( Pizza pizza );
@@ -38,7 +41,6 @@ class SalesServices
         DeliveryPlaces _deliveryPlace;
         PlacesRepo plcRepo;
         ToppingMenuRepo topMenuRepo;
-        ToppingsRepo topRepo;
         orderRepo ordRepo;
         pizzaRepo pzRepo;
         PizzaMenuRepo pizzaMenuRepo;

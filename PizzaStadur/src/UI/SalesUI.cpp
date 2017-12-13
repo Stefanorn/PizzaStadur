@@ -52,7 +52,6 @@ void SalesUI::createOrder(){
             Pizza pz;
             cin >> pz;
             pz.tagPizzaToOrder( orderNo );
-            service.CommitPizza( pz );
             cout << "Adding Toppings to your pizza " << endl;
             vector <ToppingsMenuItem> allToppings = service.GetToppingsMenu();
             while(true){
@@ -65,8 +64,11 @@ void SalesUI::createOrder(){
                         break;
                     }
                     cout << "Adding topping to pizza" << endl;
-                    service.addToppingToPizza( input );
+                    Toppings tp = service.CharToTopping(input);
+                    pz.addToppings( tp );
+
             }
+            service.CommitPizza( pz );
         }
         else if(input == 'q'){
             break;
@@ -122,10 +124,6 @@ void SalesUI::GetInfoAboutOrder(){
         vector<Pizza> pz = service.GetPizzaByOrderID(orderNo);
         for(unsigned int i = 0; i < pz.size(); i++){
             cout << pz[i];
-            vector<Toppings> tp = service.getToppingsByPizzaID( orderNo );
-            for(unsigned int j = 0; j < tp.size(); j++){
-                cout << tp[j];
-            }
         }
         //service.GetOrderPrice();
     }

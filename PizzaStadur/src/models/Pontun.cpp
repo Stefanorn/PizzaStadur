@@ -70,9 +70,14 @@ ostream& operator << (ostream& out, const Pontun& pontun){
     else{
         out << "has not been delivered" << endl;
     }
+    out << pontun._place;
     return out;
 }
 istream& operator >> (istream& in, Pontun& order){
 
     return in;
+}
+
+DeliveryPlaces Pontun::getDeliveryPlace(){
+    return _place;
 }

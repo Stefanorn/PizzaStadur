@@ -38,6 +38,7 @@ int SalesServices::OrderNumber(){
 Pontun SalesServices::returnAOrder( int orderNo ){
     vector<Pontun> allOrders = ordRepo.ReturnAllOrders();
     for(unsigned int i = 0; i < allOrders.size(); i++ ){
+         cout << allOrders[i];
         if(allOrders[i].GetOrderNo() == orderNo){
             return allOrders[i];
         }

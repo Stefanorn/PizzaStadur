@@ -24,8 +24,9 @@ class Pontun
         void ComputeTotalPrice(double price);
         int GetOrderNo() const;
 
+        DeliveryPlaces getDeliveryPlace();
+
     private:
-        char _places[32];
         DeliveryPlaces _place;
         double _price;
         bool _hasBeenPaid;

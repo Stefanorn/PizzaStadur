@@ -12,6 +12,9 @@ class StaffUI
     private:
         void PayForOrder();
         void DeliverOrder();
+
+        DeliveryPlaces _selectedDeliveryPlace;
+        void selectDeliveryPlace();
         staffServices service;
 };
 

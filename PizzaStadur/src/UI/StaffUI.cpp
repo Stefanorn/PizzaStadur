@@ -1,6 +1,10 @@
 #include "StaffUI.h"
 
 StaffUI::StaffUI(){
+
+
+    selectDeliveryPlace();
+
     while(true){
         cout << "Press 1 to pay for order, " << endl;
         cout << "press 2 to deliver order " << endl;
@@ -84,5 +88,21 @@ void StaffUI::DeliverOrder(){
             cout << "Failed to pay for order" << endl;
             system("pause");
         }
+}
+
+
+void StaffUI::selectDeliveryPlace(){
+
+    vector<DeliveryPlaces> allPlaces = service.GetAllPlaces();
+    for(unsigned int i = 0; i < allPlaces.size(); i++){
+
+        cout << allPlaces[i];
+    }
+    cout << "Select a PizzaPlace " << endl;
+    char input;
+    cin >> input;
+
+    _selectedDeliveryPlace = service.GetDeliveryPlace(input);
+
 }
 

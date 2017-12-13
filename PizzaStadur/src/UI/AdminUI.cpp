@@ -27,7 +27,7 @@ void AdminUI::mainMenu(){
             while(cin.fail()){
                 cin.clear();
                 cin.ignore();
-                cout << "Incorrect Input" << endl
+                cout << "Invalid input" << endl
                 << "How many toppings would you like to register? " ;
                 cin >> size;
             }
@@ -71,15 +71,24 @@ void AdminUI::mainMenu(){
             do{
             cout << "How many products would you like to register? " << endl;
             cin >> size;
-            cout << "Please enter the product you would like to add, followed by its price:" << endl;
-            vector<Products> product(size);
-            for(unsigned int i = 0; i < product.size(); i++){
-                cout << "Product " << i + 1 << endl;
-                cin >> product[i];
-                cout << endl;
+            while(cin.fail()){
+                cin.clear();
+                cin.ignore();
+                cout << "Invalid input" << endl;
+                cout << "How many products would you like to register? " << endl;
+                cin >> size;
             }
 
-            _adminService.registerProduct(product, size);
+            cout << "Please enter the product you would like to add, followed by its price:" << endl;
+            //vector<Products> product(size);
+            for(int i = 0; i < size; i++){
+                Products product;
+                cout << "Product " << i + 1 << endl;
+                cin >> product;
+                cout << endl;
+                _adminService.registerProduct(product);
+            }
+
             cout << "Would you like to add other products (y/n)?" << endl;
             cin >> input;
             }

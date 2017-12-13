@@ -43,16 +43,14 @@ void ProductRepo::readFile()
     }
 }
 
-void ProductRepo::addProduct(vector<Products> product, int size)
+void ProductRepo::addProduct(Products product)
 {
     ofstream fout;
     fout.open("products.bin", ios::binary|ios::app);
-    fout.write((char*)(&product), sizeof(Products)* size);
+    fout.write((char*)(&product), sizeof(Products));
     fout.close();
 
-    _prod.reserve(_prod.size() + product.size());
-    _prod.insert(_prod.end(), product.begin(), product.end());
-    product.clear();
+    _prod.push_back(product);
 }
 
 vector<Products> ProductRepo::returnProducts()

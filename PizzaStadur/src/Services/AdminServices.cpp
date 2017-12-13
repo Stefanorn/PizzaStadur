@@ -29,9 +29,9 @@ Toppings AdminServices::CharToTopping(char input){
     }
     throw invalidToppingHotkey();
 }
-void AdminServices::registerProduct(vector<Products> product, int size)
+void AdminServices::registerProduct(Products product)
 {
-    _productrepo.addProduct(product, size);
+    _productrepo.addProduct(product);
 }
 
 void AdminServices::readProduct()

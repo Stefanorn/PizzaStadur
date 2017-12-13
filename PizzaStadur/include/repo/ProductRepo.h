@@ -10,7 +10,7 @@ class ProductRepo
     public:
         ProductRepo();
         void overwriteFile(vector<Products> product);
-        void addProduct(vector<Products> product, int size);
+        void addProduct(Products product);
         vector<Products> returnProducts();
         void readFile(); ///Færði í public úr private til að geta fengið aðgang úr öðrum klasa
         // friend ostream& operator << (ostream& outs, const );

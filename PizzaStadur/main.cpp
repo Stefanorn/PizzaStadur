@@ -41,11 +41,22 @@ int main()
         }
 
         else if (input == '6'){
-            if(!remove("orders.bin")) cout << "remove all orders\n";
-            if(!remove("pizza.bin")) cout << "remove all pizza\n";
-            if(!remove("toppings.bin")) cout << "remove all topping\n";
-            if(!remove("toppingsMenu.bin")) cout << "remove all toppingsMenu\n";
-            if(!remove("places.bin")) cout << "remove all places\n";
+            cout << "Are you sure you want to proceed? (y/n)" << endl;
+            cout << "This will delete all data from the system." << endl;
+            cin >> input;
+            if(input == 'y'){
+                if(!remove("orders.bin")) cout << "remove all orders\n";
+                if(!remove("pizza.bin")) cout << "remove all pizza\n";
+                if(!remove("toppings.bin")) cout << "remove all topping\n";
+                if(!remove("toppingsMenu.bin")) cout << "remove all toppingsMenu\n";
+                if(!remove("places.bin")) cout << "remove all places\n";
+            }
+            else if(input == 'n'){
+                cout << "Action aborted" << endl;
+            }
+            else{
+                cout << "Invalid input. Action aborted." << endl;
+            }
             system("PAUSE");
         }
 

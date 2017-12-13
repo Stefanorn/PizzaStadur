@@ -89,8 +89,8 @@ void AdminUI::mainMenu(){
             system("CLS");
             cout << "What prices would you like to change?" << endl << endl;
             cout << "Press 1 for menu items" << endl;
-            cout << "Press 2 for pizza bases" << endl;
-            cout << "Press 3 for pizza sizes" << endl;
+            cout << "Press 2 for pizza bases (OUT OF ORDER)" << endl;
+            cout << "Press 3 for pizza sizes (OUT OF ORDER)" << endl;
             cout << "Press 4 for toppings" << endl;
             cin >> input;
             double newPrice = 0;
@@ -106,7 +106,7 @@ void AdminUI::mainMenu(){
                 system("PAUSE");
             }
 
-            else if(input == '2'){
+            /*else if(input == '2'){
                 cout << "Please select a base from the menu" << endl;
                 /// cout << bases;
                 cin >> input;
@@ -126,7 +126,7 @@ void AdminUI::mainMenu(){
                 _adminService.editSizePrices(newPrice);
                 cout << "The size's price has been successfully changed!" << endl;
                 system("PAUSE");
-            }
+            }*/
 
             else if(input == '4'){
                 cout << "Please select a topping from the menu" << endl;

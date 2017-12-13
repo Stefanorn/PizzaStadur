@@ -80,7 +80,11 @@ void SalesUI::createOrder(){
                 }
         }
         else if(input == '3'){
-            cout << "merp";
+            vector<Products> products = service.ReturnAllProducts();
+            for(unsigned int i = 0; i < products.size(); i++){
+                cout << i + 1 << ": " << products[i];
+            }
+            cout << "Please select a product from the list above: ";
         }
         else {
             cout << "Invalid Input " << endl;

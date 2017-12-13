@@ -8,6 +8,7 @@
 #include "PlacesRepo.h"
 #include "pizzaRepo.h"
 #include "PizzaMenuRepo.h"
+#include "ProductRepo.h"
 
 
 class SalesServices
@@ -21,7 +22,7 @@ class SalesServices
         vector<Pizza> GetPizzaByOrderID(int orderNumber);
         vector<Toppings> getToppingsByPizzaID(int pizzaOrderNumber);
         vector <PizzaMenu> ReturnPizzaMenu();
-
+        vector<Products> ReturnAllProducts();
         vector<DeliveryPlaces> GetAllPlaces();
         DeliveryPlaces GetDeliveryPlace(char index);
 
@@ -38,6 +39,7 @@ class SalesServices
         orderRepo ordRepo;
         pizzaRepo pzRepo;
         PizzaMenuRepo pizzaMenuRepo;
+        ProductRepo prodRepo;
 };
 
 #endif // SALESSERVICES_H

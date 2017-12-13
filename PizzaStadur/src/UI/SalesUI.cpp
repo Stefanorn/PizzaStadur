@@ -42,8 +42,7 @@ void SalesUI::createOrder(){
     Pontun newOrder(orderNo, _selectedDeliveryPlace);
     while(true)
         {
-        cout << "Do you want to add a new item to your order." << endl
-             << "Press '1' to select pizza from menu" << endl
+             cout << "Press '1' to select pizza from menu" << endl
              << "Press '2' to make new pizza" << endl
              << "Press '3' to add something else " << endl
              << "press 'q' to quit" << endl;
@@ -91,6 +90,11 @@ void SalesUI::createOrder(){
                 cout << i + 1 << ": " << products[i];
             }
             cout << "Please select a product from the list above: ";
+            char input;
+            cin >> input;
+            Products prod;
+            prod.tagProductToOrder(orderNo);
+            service.selectProduct(input);
         }
         else {
             cout << "Invalid Input " << endl;

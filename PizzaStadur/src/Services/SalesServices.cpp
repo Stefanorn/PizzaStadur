@@ -125,3 +125,10 @@ Pizza SalesServices::selectPizzaFromMenu( char input ){
     }
     throw invalidPizzaSelection();
 }
+
+Products SalesServices::selectProduct(char input){
+    vector<Products> product = prodRepo.returnProducts();
+    for(unsigned int i = 0; i < product.size(); i++){
+        //product[i].getProductID;
+    }
+}

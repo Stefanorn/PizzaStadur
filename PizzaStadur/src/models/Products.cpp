@@ -4,6 +4,7 @@ Products::Products()
 {
     _productName[0] = '\0';
     _productPrice = 0;
+    _productID = 0;
 }
 
 string Products::getProductName()
@@ -19,6 +20,11 @@ int Products::getProductID()
 double Products::getProductPrice()
 {
     return _productPrice;
+}
+
+void Products::tagProductToOrder(int orderNo)
+{
+    _productID = orderNo;
 }
 
 istream& operator >> (istream& ins, Products& product)

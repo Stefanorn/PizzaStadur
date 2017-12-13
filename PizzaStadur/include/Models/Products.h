@@ -3,6 +3,7 @@
 
 #include <string>
 #include <iostream>
+#include <vector>
 
 using namespace std;
 
@@ -15,6 +16,7 @@ class Products
         int getProductID();
         friend istream& operator >> (istream& ins, Products& product);
         friend ostream& operator << (ostream& outs, const Products& product);
+        vector<Products> returnAllProducts();
 
     private:
         char _productName[32];

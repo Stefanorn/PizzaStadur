@@ -94,7 +94,7 @@ vector<DeliveryPlaces> SalesServices::GetAllPlaces(){
 }
 
 vector <PizzaMenu> SalesServices::ReturnPizzaMenu(){
-    pizzaMenuRepo.ReturnAllPizzaMenu();
+    return pizzaMenuRepo.ReturnAllPizzaMenu();
 }
 
 DeliveryPlaces SalesServices::GetDeleveryPlace(char index){

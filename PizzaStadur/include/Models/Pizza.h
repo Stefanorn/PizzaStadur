@@ -6,6 +6,7 @@
 #include "Enums.h"
 #include "PizzaExeptions.h"
 #include "DeliveryPlaces.h"
+#include "Toppings.h"
 
 using namespace std;
 
@@ -26,10 +27,14 @@ class Pizza
         void setBasePrice(double price);
         void setSizePrice(double price);
 
+        void addToppings(Toppings topping);
+
         DeliveryPlaces _place;
         /// TODO: Gera þetta að private breytu og búa til get fall.
 
     private:
+        Toppings _toppingsOnPizza[16];
+        int _toppingIndex;
         int _orderIdNumber;
         int _pizzaID;
         bool _isPizzaBaked;

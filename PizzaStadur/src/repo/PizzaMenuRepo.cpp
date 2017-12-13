@@ -2,7 +2,7 @@
 
 PizzaMenuRepo::PizzaMenuRepo()
 {
-    //ctor
+    ReadFromFile();
 }
 
 

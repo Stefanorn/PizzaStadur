@@ -79,7 +79,7 @@ void AdminUI::mainMenu(){
                 cout << endl;
             }
 
-            _adminService.registerProduct(size);
+            _adminService.registerProduct(product, size);
             cout << "Would you like to add other products (y/n)?" << endl;
             cin >> input;
             }

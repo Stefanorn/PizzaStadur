@@ -1,6 +1,7 @@
 #include "Pizza.h"
 
 Pizza::Pizza(){
+    _toppingIndex = 0;
     _orderIdNumber = -1;
     _pizzaID = -1;
     _base = REGULAR;
@@ -96,6 +97,11 @@ ostream& operator << (ostream& outs, const Pizza& pizza){
     }
 
     outs << "Price: " << pizza.getPrice() << " kr." << endl;
+    outs << "Toppings \n ----------------------";
+    for(int i = 0; i < pizza._toppingIndex; i++){
+        outs << pizza._toppingsOnPizza[i];
+    }
+    outs << "--------------------------"<< endl;
     return outs;
 }
 
@@ -169,4 +175,12 @@ void Pizza::bakePizza(){
 
 bool Pizza::isPizzaBaked(){
     return _isPizzaBaked;
+}
+
+void Pizza::addToppings(Toppings topping){
+    if(_toppingIndex > 15){
+        throw toManyToppingsExeptions();
+    }
+    _toppingsOnPizza[_toppingIndex] = topping;
+    _toppingIndex++;
 }

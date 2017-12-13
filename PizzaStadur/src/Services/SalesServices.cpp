@@ -93,6 +93,11 @@ vector<DeliveryPlaces> SalesServices::GetAllPlaces(){
     return plcRepo.ReturnAllPlaces();
 }
 
+vector <PizzaMenu> SalesServices::ReturnPizzaMenu(){
+    return pizzaMenuRepo.ReturnAllPizzaMenu();
+}
+
+
 DeliveryPlaces SalesServices::GetDeliveryPlace(char index){
     vector<DeliveryPlaces> allplaces = plcRepo.ReturnAllPlaces();
     for(unsigned int i = 0; i < allplaces.size(); i++){

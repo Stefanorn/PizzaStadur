@@ -73,7 +73,11 @@ void SalesUI::createOrder(){
             break;
         }
         else if(input == '1'){
-            cout << "derp";
+                vector<PizzaMenu> pzMenu = service.ReturnPizzaMenu();
+                cout << pzMenu.size();
+                for(unsigned int i = 0; i < pzMenu.size(); i++){
+                    cout << pzMenu[i];
+                }
         }
         else if(input == '3'){
             cout << "merp";

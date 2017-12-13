@@ -17,6 +17,7 @@ void AdminServices::registerPizza(PizzaMenu pizza,
         pizza.addTopping(tp[i]);
     }
     cout << pizza;
+    _pizzaMenuRepo.WriteToFile(pizza);
 
 }
 

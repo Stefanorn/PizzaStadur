@@ -110,3 +110,14 @@ DeliveryPlaces SalesServices::GetDeliveryPlace(char index){
     }
     throw InvalidDeliveryPlaceInput();
 }
+
+
+Pizza SalesServices::selectPizzaFromMenu( char input ){
+    vector<PizzaMenu> PizzaMenu = pizzaMenuRepo.ReturnAllPizzaMenu();
+    for(unsigned int i = 0; i < PizzaMenu.size(); i++ ){
+        if(PizzaMenu[i].getKey() == input){
+            return Pizza(PizzaMenu[i].getPizza());
+        }
+    }
+    throw invalidPizzaSelection();
+}

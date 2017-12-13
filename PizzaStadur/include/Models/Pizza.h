@@ -15,6 +15,7 @@ class Pizza
 {
     public:
         Pizza();
+        Pizza( pizzaBase base, pizzaSize size, double price);
         friend istream& operator >> (istream& ins, Pizza& pizza);
         friend ostream& operator << (ostream& outs, const Pizza& pizza);
         void tagPizzaToOrder(int orderNo);
@@ -27,12 +28,14 @@ class Pizza
         void setBasePrice(double price);
         void setSizePrice(double price);
 
+
+
         void addToppings(Toppings topping);
 
         DeliveryPlaces _place;
-        /// TODO: Gera þetta að private breytu og búa til get fall.
 
     private:
+        double _pizzaPrice;
         Toppings _toppingsOnPizza[16];
         int _toppingIndex;
         int _orderIdNumber;

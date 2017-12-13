@@ -119,3 +119,12 @@ pizzaBase PizzaMenu::getBase(){
 pizzaSize PizzaMenu::getSize(){
     return _size;
 }
+Pizza PizzaMenu::getPizza(){
+
+    Pizza temp(_base, _size, _price);
+    for(int i = 0; i < _toppingIndex; i++){
+        temp.addToppings(_toppings[i]);
+    }
+
+    return temp;
+}

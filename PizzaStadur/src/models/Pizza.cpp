@@ -19,8 +19,10 @@ istream& operator >> (istream& ins, Pizza& pizza){
     while (base == false)
     {
         cout << "Enter base type: " << endl;
-        cout << "Press 1 for Regular \nPress 2 for thin " << endl;
-        cout << "Press 3 for Pan \nPress 4 for Spelt" << endl;
+        cout << "Press 1 for Regular" << endl;
+        cout << "Press 2 for Thin" << endl;
+        cout << "Press 3 for Pan" << endl;
+        cout << "Press 4 for Spelt" << endl;
         ins >> input;
         try
         {
@@ -41,7 +43,9 @@ istream& operator >> (istream& ins, Pizza& pizza){
     while (pSize == false)
     {
         cout << "Enter size of pizza: " << endl;
-        cout << "Press 1 for small\nPress 2 for medium\nPress 3 for large" << endl;
+        cout << "Press 1 for small" << endl;
+        cout << "Press 2 for medium" << endl;
+        cout << "Press 3 for large" << endl;
         ins >> input;
         try
         {
@@ -107,7 +111,7 @@ double Pizza::getPrice() const{
         else if (_base == 3){
             total += 1500;
         }
-        else if (_base == 5){
+        else if (_base == 4){
             total += 900;
         }
         else{
@@ -136,6 +140,7 @@ double Pizza::getPrice() const{
 void Pizza::bakePizza(){
     _isPizzaBaked = true;
 }
+
 bool Pizza::isPizzaBaked(){
     return _isPizzaBaked;
 }

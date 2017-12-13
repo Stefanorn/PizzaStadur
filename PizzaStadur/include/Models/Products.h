@@ -1,6 +1,7 @@
 #ifndef PRODUCTS_H
 #define PRODUCTS_H
 
+#include<cstring>
 #include <string>
 #include <iostream>
 #include <vector>
@@ -14,9 +15,9 @@ class Products
         string getProductName();
         double getProductPrice();
         int getProductID();
+        void tagProductToOrder(int orderNo);
         friend istream& operator >> (istream& ins, Products& product);
         friend ostream& operator << (ostream& outs, const Products& product);
-        vector<Products> returnAllProducts();
 
     private:
         char _productName[32];

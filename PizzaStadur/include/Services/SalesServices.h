@@ -33,6 +33,7 @@ class SalesServices
         void addToppingToPizza( char index );
 
         Pizza selectPizzaFromMenu( char input );
+        Products selectProduct(char input);
         //void AssignOrderToPlace();
 
     private:

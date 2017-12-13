@@ -42,10 +42,14 @@ void SalesUI::createOrder(){
     Pontun newOrder(orderNo, _selectedDeliveryPlace);
     while(true)
         {
-        cout << "Do you want to add pizza to order y/n" << endl;
+        cout << "Do you want to add a new item to your order." << endl
+             << "Press '1' to select pizza from menu" << endl
+             << "Press '2' to make new pizza" << endl
+             << "Press '3' to add something else " << endl
+             << "press 'q' to quit" << endl;
         char input;
         cin >> input;
-        if(input == 'y'){
+        if(input == '2'){
             Pizza pz;
             cin >> pz;
             pz.tagPizzaToOrder( orderNo );
@@ -65,8 +69,14 @@ void SalesUI::createOrder(){
                     service.addToppingToPizza( input );
             }
         }
-        else if(input == 'n'){
+        else if(input == 'q'){
             break;
+        }
+        else if(input == '1'){
+            cout << "derp";
+        }
+        else if(input == '3'){
+            cout << "merp";
         }
         else {
             cout << "Invalid Input " << endl;

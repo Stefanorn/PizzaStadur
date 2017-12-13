@@ -10,6 +10,8 @@ istream& operator >> (istream& ins, PizzaMenu& pizza){
     cout << "enter Name of pizza : ";
     ins >> pizza._name;
     char input;
+    cout << "Enter hotkey for youre menu Item : ";
+    ins >> pizza._hotkey;
 
     while (base == false)
     {
@@ -70,9 +72,10 @@ ostream& operator << (ostream& outs, const PizzaMenu& pizza){
     outs << "Menu item name " << pizza._name << endl;
     outs << "Price " << pizza._price << " kr." << endl;
     outs << "Toppings : " << endl;
-    for(int i = 0; i < pizza._toppingIndex; i ++){
-        outs << pizza._toppings << endl;
+    for(int i = 0; i < pizza._toppingIndex; i++ ){
+        outs << pizza._toppings[i];
     }
+    outs << " Base : " ;
     switch (pizza._base){
         case PAN : outs << "pan"; break;
         case REGULAR : outs << "regular"; break;
@@ -80,10 +83,10 @@ ostream& operator << (ostream& outs, const PizzaMenu& pizza){
         case THIN : outs << "thin"; break;
         default : break;
     }
-    outs << " base." << endl;
-    outs << "size ";
+
+    outs << endl << "size : ";
     switch (pizza._size){
-        case LARGE : outs << "larg"; break;
+        case LARGE : outs << "large"; break;
         case SMALL : outs << "small"; break;
         case MEDIUM : outs << "medium"; break;
         default : break;

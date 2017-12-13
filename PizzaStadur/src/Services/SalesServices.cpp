@@ -1,7 +1,6 @@
 #include "SalesServices.h"
 
-SalesServices::SalesServices()
-{
+SalesServices::SalesServices(){
     //ctor
 }
 
@@ -92,6 +91,10 @@ vector<Toppings> SalesServices::getToppingsByPizzaID(int id){
 
 vector<DeliveryPlaces> SalesServices::GetAllPlaces(){
     return plcRepo.ReturnAllPlaces();
+}
+
+vector <PizzaMenu> SalesServices::ReturnPizzaMenu(){
+    pizzaMenuRepo.ReturnAllPizzaMenu();
 }
 
 DeliveryPlaces SalesServices::GetDeleveryPlace(char index){

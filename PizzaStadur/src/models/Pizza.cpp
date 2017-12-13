@@ -6,6 +6,8 @@ Pizza::Pizza(){
     _name[0] = '\0';
     _base = REGULAR;
     _size = SMALL;
+    _basePrice = 0;
+    _sizePrice = 0;
 }
 
 istream& operator >> (istream& ins, Pizza& pizza){
@@ -74,12 +76,25 @@ void Pizza::tagPizzaToOrder(int orderNo){
 int Pizza::getPizzaToOrderId(){
     return _orderIdNumber;
 }
+
 void Pizza::setPizzaID(int id){
      _pizzaID = id;
 }
+
 int Pizza::getPizzaID(){
     return _pizzaID;
 }
+
+void Pizza::setBasePrice(double price){
+    if(_base == 1){
+        _basePrice = price;
+    }
+}
+
+void Pizza::setSizePrice(double price){
+
+}
+
 double Pizza::getPrice() const{
     double total = 0;
     //if (pizza name er valid){

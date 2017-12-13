@@ -15,15 +15,11 @@ class Pontun
         Pontun();
         friend ostream& operator << (ostream& out, const Pontun& pontun);
         friend istream& operator >> (istream& in, Pontun& order);
-        // Viðskiptavinur borgar fyrir pizzuna
         bool IsOrderPaid();
-        void payOrder();
-        //Pizzan er reddy þegar hún er bokuð og búið að borga
         bool isOrderReady();
-        void makeOrderReady();
-        // Það er bara hægt að delevera pizzur sem eru borgaðar
-        // og bakaðar
         bool IsOrderDelivered();
+        void payOrder();
+        void makeOrderReady();
         void deliverOrder();
         void ComputeTotalPrice(double price);
         int GetOrderNo() const;

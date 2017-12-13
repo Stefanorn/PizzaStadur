@@ -12,9 +12,7 @@ class PizzaMenu
         PizzaMenu();
         friend istream& operator >> (istream& ins, PizzaMenu& pizza);
         friend ostream& operator << (ostream& outs, const PizzaMenu& pizza);
-
         void addTopping( Toppings );
-
         string getName();
         char getKey();
         pizzaBase getBase();
@@ -23,12 +21,9 @@ class PizzaMenu
     private:
         char _name[32];
         char _hotkey;
-
         Toppings _toppings[16];
         int _toppingIndex;
-
         double _price;
-
         pizzaBase _base;
         pizzaSize _size;
 

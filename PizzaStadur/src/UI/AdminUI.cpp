@@ -86,7 +86,62 @@ void AdminUI::mainMenu(){
             while(input == 'y');
         }
         else if(input == '4'){
-            _adminService.editPrices();
+            system("CLS");
+            cout << "What prices would you like to change?" << endl << endl;
+            cout << "Press 1 for menu items" << endl;
+            cout << "Press 2 for pizza bases" << endl;
+            cout << "Press 3 for pizza sizes" << endl;
+            cout << "Press 4 for toppings" << endl;
+            cin >> input;
+            double newPrice = 0;
+
+            if(input == '1'){
+                cout << "Please select an item from the menu" << endl;
+                /// cout << menu;
+                cin >> input;
+                cout << "Enter the item's new price " << endl;
+                cin >> newPrice;
+                _adminService.editMenuPrices(newPrice);
+                cout << "The item's price has been successfully changed!" << endl;
+                system("PAUSE");
+            }
+
+            else if(input == '2'){
+                cout << "Please select a base from the menu" << endl;
+                /// cout << bases;
+                cin >> input;
+                cout << "Enter the base's new price " << endl;
+                cin >> newPrice;
+                _adminService.editBasePrices(newPrice);
+                cout << "The base's price has been successfully changed!" << endl;
+                system("PAUSE");
+            }
+
+            else if(input == '3'){
+                cout << "Please select a size from the menu" << endl;
+                /// cout << sizes;
+                cin >> input;
+                cout << "Enter the size's new price " << endl;
+                cin >> newPrice;
+                _adminService.editSizePrices(newPrice);
+                cout << "The size's price has been successfully changed!" << endl;
+                system("PAUSE");
+            }
+
+            else if(input == '4'){
+                cout << "Please select a topping from the menu" << endl;
+                /// cout << toppings;
+                cin >> input;
+                cout << "Enter the topping's new price " << endl;
+                cin >> newPrice;
+                _adminService.editToppingPrices(newPrice);
+                cout << "The topping's price has been successfully changed!" << endl;
+                system("PAUSE");
+            }
+
+            else{
+                //throw SomeException;
+            }
         }
         else if(input == '5'){
             cout << "How many places would you like to add?";

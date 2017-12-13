@@ -20,7 +20,6 @@ int main()
 
         if (input == '1'){
             SalesUI run;
-
         }
 
         else if (input == '2'){

@@ -5,13 +5,13 @@ Toppings::Toppings()
     _toppingName[0] = '\0';
     _toppingPrice = 200;
 }
+
 Toppings::Toppings( string toppingName, double toppingPrice , int pizzaToToppingId){
 
     toppingName[31] = '\0';
     strcpy (_toppingName, toppingName.c_str());
     _toppingPrice = toppingPrice;
     _toppingID = pizzaToToppingId;
-
 }
 
 string Toppings::getToppingName()
@@ -31,7 +31,6 @@ double Toppings::getToppingPrice()
 
 istream& operator >> (istream& ins, Toppings& topping) {
     ins >> topping._toppingName;
-    //ins >> topping._toppingType;
     ins >> topping._toppingPrice;
     return ins;
 }
@@ -39,8 +38,6 @@ istream& operator >> (istream& ins, Toppings& topping) {
 ostream& operator << (ostream& outs, const Toppings& topping)
 {
     outs << topping._toppingName << ", ";
-    //outs << topping._toppingType << ", ";
     outs << topping._toppingPrice << " kr." << endl;
     return outs;
 }
-

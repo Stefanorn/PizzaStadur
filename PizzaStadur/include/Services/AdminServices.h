@@ -21,7 +21,10 @@ class AdminServices
         void registerToppings( ToppingsMenuItem item );
         void registerPizza(PizzaMenu,vector<Toppings>);
         void registerProduct(int size);
-        void editPrices();
+        void editMenuPrices(double price);
+        void editBasePrices(double price);
+        void editSizePrices(double price);
+        void editToppingPrices(double price);
         void registerPlaces( DeliveryPlaces deliveryPlace);
         Toppings CharToTopping(char input);
         vector<ToppingsMenuItem> returnToppingsMenu();

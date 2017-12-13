@@ -35,7 +35,22 @@ void AdminServices::registerProduct(int size)
    // _toppingrepo.addTopping(toppings, size);
 }
 
-void AdminServices::editPrices()
+void AdminServices::editMenuPrices(double price)
+{
+
+}
+
+void AdminServices::editBasePrices(double price)
+{
+
+}
+
+void AdminServices::editSizePrices(double price)
+{
+
+}
+
+void AdminServices::editToppingPrices(double price)
 {
 
 }

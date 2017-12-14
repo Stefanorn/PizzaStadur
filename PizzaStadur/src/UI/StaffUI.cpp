@@ -68,7 +68,7 @@ void StaffUI::DeliverOrder(){
     for(unsigned int i = 0; i < orders.size(); i++){
         cout << orders[i];
     }
-    cout << "---------------------------------------------" << endl;
+    cout << endl <<"---------------------------------------------" << endl;
     cout << "Select an order to deliver " << endl;
 
     try {

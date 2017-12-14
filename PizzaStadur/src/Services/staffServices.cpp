@@ -44,8 +44,8 @@ Pontun staffServices::DeliverOrder(int orderNo){
     for(unsigned int i = 0; i < orders.size(); i++){
         if( orders[i].GetOrderNo() == orderNo  && orders[i].getDeliveryPlace() == _deliveryPlace ){
 
-            repo.RewriteFile( orders );
             orders[i].deliverOrder();
+            repo.RewriteFile( orders );
             return orders[i];
         }
     }

@@ -22,6 +22,10 @@ int main()
             try {
                 SalesUI run;
             }
+            catch (InvalidDeliveryPlaceInput){
+                cout << "Oops, that delivery place does not exist! Try again" << endl;
+                system("PAUSE");
+            }
             catch (nothingInFile) {
                 cout << "No delivery places found, returning to main menu" << endl;
                 system("PAUSE");
@@ -29,12 +33,32 @@ int main()
         }
 
         else if (input == '2'){
-            BakerUI bakerui;
-            bakerui.mainMenu();
+            try {
+                BakerUI bakerui;
+                bakerui.mainMenu();
+            }
+            catch (InvalidDeliveryPlaceInput){
+                cout << "Oops, that delivery place does not exist! Try again" << endl;
+                system("PAUSE");
+            }
+            catch (nothingInFile) {
+                cout << "No delivery places found, returning to main menu" << endl;
+                system("PAUSE");
+            }
         }
 
         else if (input == '3'){
-            StaffUI run;
+            try {
+                StaffUI run;
+            }
+            catch (InvalidDeliveryPlaceInput){
+                cout << "Oops, that delivery place does not exist! Try again" << endl;
+                system("PAUSE");
+            }
+            catch (nothingInFile) {
+                cout << "No delivery places found, returning to main menu" << endl;
+                system("PAUSE");
+            }
         }
 
         else if (input == '4'){

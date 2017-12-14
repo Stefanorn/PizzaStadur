@@ -60,22 +60,11 @@ void BakerUI::selectDeliveryPlace(){
 
         cout << allPlaces[i];
     }
-
-    bool place = false;
     if (allPlaces.size() > 0) {
-        while(place == false){
-            try {
-                cout << "Select a PizzaPlace" << endl;
-                char input;
-                cin >> input;
-                _selectedDeliveryPlace = bakerService.GetDeleveryPlace(input);
-                place = true;
-            }
-            catch (InvalidDeliveryPlaceInput){
-                cout << "Oops, that delivery place does not exist! Try again" << endl;
-                place = false;
-            }
-        }
+            cout << "Select a PizzaPlace" << endl;
+            char input;
+            cin >> input;
+            _selectedDeliveryPlace = bakerService.GetDeleveryPlace(input);
     }
     else if (allPlaces.size() == 0){
         throw nothingInFile();

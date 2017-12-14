@@ -100,3 +100,7 @@ istream& operator >> (istream& in, Pontun& order){
 DeliveryPlaces Pontun::getDeliveryPlace(){
     return _place;
 }
+
+bool Pontun::returnIsDelivered(){
+    return _isDelivered;
+}

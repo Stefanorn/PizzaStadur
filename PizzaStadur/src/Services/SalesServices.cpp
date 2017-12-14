@@ -85,8 +85,9 @@ vector<Products> SalesServices::ReturnAllProducts(){
     return prodRepo.returnProducts();
 }
 
-void SalesServices::DeliveredOrPickedUp(Pontun order, char input) const{
+Pontun SalesServices::DeliveredOrPickedUp(Pontun order, char input){
     order.DeliveryOrPickUp(input);
+    return order;
 }
 
 DeliveryPlaces SalesServices::GetDeliveryPlace(char index){

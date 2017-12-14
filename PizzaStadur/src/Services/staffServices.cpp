@@ -39,17 +39,17 @@ bool staffServices::PayForOrder(int orderNo){
     return false;
 }
 
-bool staffServices::DeliverOrder(int orderNo){
+Pontun staffServices::DeliverOrder(int orderNo){
     vector<Pontun> orders = repo.ReturnAllOrders();
     for(unsigned int i = 0; i < orders.size(); i++){
         if( orders[i].GetOrderNo() == orderNo  && orders[i].getDeliveryPlace() == _deliveryPlace ){
-            orders[i].deliverOrder();
+
             repo.RewriteFile( orders );
-            return true;
+            orders[i].deliverOrder();
+            return orders[i];
         }
     }
     throw NoOrderToReturnExeption();
-    return false;
 }
 
 

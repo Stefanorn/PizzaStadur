@@ -80,14 +80,15 @@ void StaffUI::DeliverOrder(){
         cin.clear();
         cin.ignore();
       }
-        if(service.DeliverOrder(input)){
+       Pontun order = service.DeliverOrder(input);
+
+        if( order.returnIsDelivered() ){
             cout << "Order number " << input << " has been delivered" << endl;
-            system("pause");
-        }
-        else{
-            cout << "Failed to pay for order" << endl;
-            system("pause");
-        }
+            }
+            else{
+                cout << "Order number " << input << " has been picked up" << endl;
+            }
+        system("PAUSE");
 }
 
 

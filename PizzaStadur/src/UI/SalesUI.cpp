@@ -87,16 +87,19 @@ void SalesUI::createOrder(){
                 service.CommitPizza(pz);
         }
         else if(input == '3'){
+
+
             vector<Products> products = service.ReturnAllProducts();
             for(unsigned int i = 0; i < products.size(); i++){
-                cout << i + 1 << ": " << products[i];
+                cout << products[i] << endl;
             }
             cout << "Please select a product from the list above: ";
             char input;
             cin >> input;
-            Products prod;
-           // prod.tagProductToOrder(orderNo);
-            service.selectProduct(input);
+            productOnFile prod = service.selectProduct(input);
+            prod.tagProductToOrder( orderNo );
+            service.commitProduct( prod );
+
         }
         else {
             cout << "Invalid Input " << endl;

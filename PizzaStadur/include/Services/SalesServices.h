@@ -8,7 +8,8 @@
 #include "pizzaRepo.h"
 #include "PizzaMenuRepo.h"
 #include "ProductRepo.h"
-
+#include "productOnFile.h"
+#include "ProductOnFileRepo.h"
 
 class SalesServices
 {
@@ -18,6 +19,8 @@ class SalesServices
         void DeliveredOrPickedUp(Pontun order, char input) const;
         Toppings CharToTopping(char input);
         Pontun returnAOrder( int orderNo );
+
+        void commitProduct(productOnFile prod);
         void CommitOrder(Pontun order);
         void CommitPizza( Pizza pizza );
         int OrderNumber();
@@ -32,7 +35,7 @@ class SalesServices
         void addToppingToPizza( char index );
 
         Pizza selectPizzaFromMenu( char input );
-        Products selectProduct(char input);
+        productOnFile selectProduct(char input);
         //void AssignOrderToPlace();
 
     private:
@@ -43,6 +46,7 @@ class SalesServices
         pizzaRepo pzRepo;
         PizzaMenuRepo pizzaMenuRepo;
         ProductRepo prodRepo;
+        ProductOnFileRepo producFileRepo;
 };
 
 #endif // SALESSERVICES_H

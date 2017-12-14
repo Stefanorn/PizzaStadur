@@ -25,6 +25,9 @@ void SalesServices::CommitOrder(Pontun order){
    ordRepo.WriteOrderToFile( order );
 }
 
+void SalesServices::commitProduct(productOnFile prod){
+    producFileRepo.writeProdToFile(prod);
+}
 
 void SalesServices::CommitPizza(Pizza pizza){
     pizza.setPizzaID( pzRepo.MakePizzaID() );
@@ -103,11 +106,14 @@ Pizza SalesServices::selectPizzaFromMenu( char input ){
     throw invalidPizzaSelection();
 }
 
-Products SalesServices::selectProduct(char input){
+productOnFile SalesServices::selectProduct(char input){
     vector<Products> product = prodRepo.returnProducts();
     for(unsigned int i = 0; i < product.size(); i++){
-        //product[i].getProductID;
+        if( product[i].getKey() == input ){
+            productOnFile temp( product[i].getProductName(),
+                                product[i].getProductPrice() );
+            return temp;
+        }
     }
-    Products prod;
-    return prod;
+    throw InvalidProductHotkey();
 }

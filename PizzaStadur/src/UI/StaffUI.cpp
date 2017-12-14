@@ -1,7 +1,7 @@
 #include "StaffUI.h"
 
 StaffUI::StaffUI(){
-
+    system("CLS");
 
     selectDeliveryPlace();
 
@@ -44,21 +44,18 @@ void StaffUI::PayForOrder(){
     }
     cout << "---------------------------------------------" << endl;
     cout << "Select order to pay for" << endl;
-
     int input;
     cin >> input;
-      if(cin.fail()){
-        cin.clear();
-        cin.ignore();
-      }
+    try {
         if(service.PayForOrder(input)){
             cout << "Order number " << input << " paid" << endl;
             system("pause");
         }
-        else{
-            cout << "Failed to pay for order" << endl;
-            system("pause");
-        }
+    }
+    catch (NoOrderToReturnExeption) {
+        cout << "Hmm, that order doesn't exist, please try again" << endl;
+        system("PAUSE");
+    }
 }
 void StaffUI::DeliverOrder(){
     vector<Pontun> orders = service.ReturnUnDeliveredOrder();
@@ -74,12 +71,9 @@ void StaffUI::DeliverOrder(){
     cout << "---------------------------------------------" << endl;
     cout << "Select order to deliver " << endl;
 
-    int input;
-    cin >> input;
-      if(cin.fail()){
-        cin.clear();
-        cin.ignore();
-      }
+    try {
+        int input;
+        cin >> input;
        Pontun order = service.DeliverOrder(input);
 
         if( order.returnIsDelivered() ){
@@ -89,6 +83,11 @@ void StaffUI::DeliverOrder(){
                 cout << "Order number " << input << " has been picked up" << endl;
             }
         system("PAUSE");
+    }
+    catch (NoOrderToReturnExeption) {
+        cout << "Hmm, that order doesn't exist, please try again" << endl;
+        system("PAUSE");
+    }
 }
 
 
@@ -100,7 +99,7 @@ void StaffUI::selectDeliveryPlace(){
         cout << allPlaces[i];
     }
     if (allPlaces.size() > 0) {
-        cout << "Select a PizzaPlace " << endl;
+        cout << "Select a Pizza place " << endl;
         char input;
         cin >> input;
         _selectedDeliveryPlace = service.GetDeliveryPlace(input);

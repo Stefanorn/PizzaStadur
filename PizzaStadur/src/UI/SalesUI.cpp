@@ -29,7 +29,7 @@ SalesUI::SalesUI(){
             return;
         }
         else {
-            cout << "Invalid input " << endl;
+            cout << "That's not the right command! Try again! " << endl;
             system("PAUSE");
             system("CLS");
         }
@@ -59,7 +59,7 @@ void SalesUI::createOrder(){
                 for(unsigned int i = 0; i < pzMenu.size(); i++){
                     cout << pzMenu[i] << endl << "-------------------------------" << endl;
                 }
-                cout << "Enter hot-key to select pizza from menu : ";
+                cout << "Enter hot-key to select pizza from menu: ";
                 char input;
                 try{
                 cin >> input;
@@ -69,7 +69,7 @@ void SalesUI::createOrder(){
                // service.CommitPizza(pz);
                 }
                 catch (invalidPizzaSelection){
-                    cout << "Invalid pizza hotkey pleace enter correct pizza hotkey!!!";
+                    cout << "Invalid pizza hot-key please enter correct pizza hot-key!!!";
                     system("PAUSE");
                 }
                 system("CLS");
@@ -85,7 +85,7 @@ void SalesUI::createOrder(){
                     for(unsigned int i = 0; i < allToppings.size(); i++){
                         cout << allToppings[i];
                     }
-                    cout << "Select Topping or press 'q' to quit: " << endl;
+                    cout << "Select Topping or press 'q' to quit: ";
                     cin >> input;
                     if(input == 'q'){
                         break;
@@ -97,10 +97,10 @@ void SalesUI::createOrder(){
                     }
                     catch ( invalidToppingHotkey ){
                         system("CLS");
-                        cout << "Pease enter a valid toppings hot-key !!!" << endl;
+                        cout << "Please enter a valid toppings hot-key!!!" << endl;
                     }
                     catch(toManyToppingsExeptions){
-                        cout << "to many toppings on youre pizza system overload, cant handle pizza with so many toppings !!!! " << endl;
+                        cout << "Too many toppings on your pizza! System overload! System can't handle pizza with so many toppings!!!! " << endl;
                         for(int i = 0; i < 40; i++){
                             cout << "ERROR !! ";
                         }
@@ -130,14 +130,14 @@ void SalesUI::createOrder(){
                // service.commitProduct( prod );
             }
             catch(InvalidProductHotkey){
-                cout << "InvalidProduct hotkey pleace enter a valid product";
+                cout << "Invalid product hot-key please enter a valid product";
                 system("PAUSE");
             }
             system("CLS");
         }
         else {
             system("CLS");
-            cout << "Invalid Input " << endl;
+            cout << "Oops, that's not the right command " << endl;
         }
     }
     cout << "Delivery or pick-up (d/p)? ";

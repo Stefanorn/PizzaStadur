@@ -18,8 +18,14 @@ int main()
         char input;
         cin >> input;
 
-        if (input == '1'){
-            SalesUI run;
+        if (input == '1') {
+            try {
+                SalesUI run;
+            }
+            catch (nothingInFile) {
+                cout << "No delivery places found, returning to main menu" << endl;
+                system("PAUSE");
+            }
         }
 
         else if (input == '2'){

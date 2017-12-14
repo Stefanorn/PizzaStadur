@@ -1,7 +1,6 @@
 #include "SalesUI.h"
 
-SalesUI::SalesUI()
-{
+SalesUI::SalesUI(){
     system("CLS");
     selectDeliveryPlace();
     system("CLS");
@@ -84,8 +83,15 @@ void SalesUI::createOrder(){
                         break;
                     }
                     cout << "Adding topping to pizza" << endl;
-                    Toppings tp = service.CharToTopping(input);
-                    pz.addToppings( tp );
+                    try{
+                        Toppings tp = service.CharToTopping(input);
+                        pz.addToppings( tp );
+                    }
+                    catch ( invalidToppingHotkey ){
+                        system("CLS");
+                        cout << "Pease enter a valid toppings hot-key !!!" << endl;
+                    }
+
 
             }
             service.CommitPizza( pz );

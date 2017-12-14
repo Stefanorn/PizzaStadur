@@ -39,7 +39,7 @@ void SalesServices::CommitOrder(Pontun order){
 }
 
 void SalesServices::commitProduct(productOnFile prod){
-    producFileRepo.writeProdToFile(prod);
+    producFileRepo.writeProdToFile( prod );
 }
 
 void SalesServices::CommitPizza(Pizza pizza){
@@ -125,6 +125,7 @@ productOnFile SalesServices::selectProduct(char input){
         if( product[i].getKey() == input ){
             productOnFile temp( product[i].getProductName(),
                                 product[i].getProductPrice() );
+
             return temp;
         }
     }

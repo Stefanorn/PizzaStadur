@@ -19,7 +19,13 @@ int main()
         cin >> input;
 
         if (input == '1'){
-            SalesUI run;
+            try{
+                SalesUI run;
+            }
+            catch (InvalidDeliveryPlaceInput){
+            cout << "Pleace enter a valid piazza place deliveri place" << endl;
+            system("PAUSE");
+            }
         }
 
         else if (input == '2'){

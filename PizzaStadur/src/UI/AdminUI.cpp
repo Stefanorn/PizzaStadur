@@ -59,9 +59,15 @@ void AdminUI::mainMenu(){
             }
             vector<Toppings> inputs;
             for(int i = 0; i < size; i++){
-                cin >> input;
-                Toppings temp = _adminService.CharToTopping(input);
-                inputs.push_back(temp);
+                try{
+                    cin >> input;
+                    Toppings temp = _adminService.CharToTopping(input);
+                    inputs.push_back(temp);
+                }
+                catch(invalidToppingHotkey){
+                    cout << "Invalit toppings!!" << endl;
+                    system("PAUSE");
+                }
             }
             _adminService.registerPizza( temp,inputs );
             system("PAUSE");

@@ -60,10 +60,16 @@ void SalesUI::createOrder(){
                 }
                 cout << "Enter hot-key to select pizza from menu : ";
                 char input;
+                try{
                 cin >> input;
                 Pizza pz = service.selectPizzaFromMenu( input );
                 pz.tagPizzaToOrder( orderNo );
                 service.CommitPizza(pz);
+                }
+                catch (invalidPizzaSelection){
+                    cout << "Invalid pizza hotkey pleace enter correct pizza hotkey!!!";
+                    system("PAUSE");
+                }
                 system("CLS");
         }
         else if(input == '2'){

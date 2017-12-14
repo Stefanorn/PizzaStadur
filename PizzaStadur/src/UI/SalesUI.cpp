@@ -200,16 +200,10 @@ void SalesUI::selectDeliveryPlace(){
         cout << allPlaces[i];
     }
     if (allPlaces.size() > 0) {
-        try {
-            cout << "Select a PizzaPlace " << endl;
-            char input;
-            cin >> input;
-            _selectedDeliveryPlace = service.GetDeliveryPlace(input);
-        }
-        catch (InvalidDeliveryPlaceInput){
-            cout << "Oops, that delivery place does not exist! Try again" << endl;
-            return;
-        }
+        cout << "Select a PizzaPlace " << endl;
+        char input;
+        cin >> input;
+        _selectedDeliveryPlace = service.GetDeliveryPlace(input);
     }
     else if (allPlaces.size() == 0){
        throw nothingInFile();

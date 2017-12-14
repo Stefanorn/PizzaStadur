@@ -210,7 +210,7 @@
 	<cstring>
 	<iostream>
 
-1513078912 source:c:\users\tinna\documents\verklegt námskeið 1\pizzastadur\pizzastadur\src\repo\placesrepo.cpp
+1513268538 source:c:\users\tinna\documents\verklegt námskeið 1\pizzastadur\pizzastadur\src\repo\placesrepo.cpp
 	"PlacesRepo.h"
 
 1513090172 c:\users\tinna\documents\verklegt námskeið 1\pizzastadur\pizzastadur\include\repo\placesrepo.h
@@ -272,14 +272,14 @@
 	"Pizza.h"
 	"AdminServices.h"
 
-1513263854 source:c:\users\tinna\documents\verklegt námskeið 1\pizzastadur\pizzastadur\src\ui\staffui.cpp
+1513269095 source:c:\users\tinna\documents\verklegt námskeið 1\pizzastadur\pizzastadur\src\ui\staffui.cpp
 	"StaffUI.h"
 
 1513251528 c:\users\tinna\documents\verklegt námskeið 1\pizzastadur\pizzastadur\include\ui\staffui.h
 	<stdlib.h>
 	"staffServices.h"
 
-1513251528 source:c:\users\tinna\documents\verklegt námskeið 1\pizzastadur\pizzastadur\main.cpp
+1513268982 source:c:\users\tinna\documents\verklegt námskeið 1\pizzastadur\pizzastadur\main.cpp
 	"StaffUI.h"
 	"BakerUI.h"
 	"SalesUI.h"
@@ -334,10 +334,10 @@
 1513090172 source:c:\users\tinna\documents\verklegt námskeið 1\pizzastadur\pizzastadur\src\services\bakerservices.cpp
 	"BakerServices.h"
 
-1513262372 source:c:\users\tinna\documents\verklegt námskeið 1\pizzastadur\pizzastadur\src\services\salesservices.cpp
+1513268538 source:c:\users\tinna\documents\verklegt námskeið 1\pizzastadur\pizzastadur\src\services\salesservices.cpp
 	"SalesServices.h"
 
-1513266430 source:c:\users\tinna\documents\verklegt námskeið 1\pizzastadur\pizzastadur\src\ui\bakerui.cpp
+1513268538 source:c:\users\tinna\documents\verklegt námskeið 1\pizzastadur\pizzastadur\src\ui\bakerui.cpp
 	"BakerUI.h"
 
 1513263854 source:c:\users\tinna\documents\verklegt námskeið 1\pizzastadur\pizzastadur\src\ui\salesui.cpp
@@ -397,6 +397,6 @@
 1513266576 source:c:\users\tinna\documents\verklegt námskeið 1\pizzastadur\pizzastadur\src\models\productonfile.cpp
 	"productOnFile.h"
 
-1513257428 source:c:\users\tinna\documents\verklegt námskeið 1\pizzastadur\pizzastadur\src\repo\productonfilerepo.cpp
+1513268538 source:c:\users\tinna\documents\verklegt námskeið 1\pizzastadur\pizzastadur\src\repo\productonfilerepo.cpp
 	"ProductOnFileRepo.h"
 

@@ -41,8 +41,9 @@ void SalesUI::createOrder(){
     int orderNo = service.OrderNumber();
     cout << "Making Order number " << orderNo << endl;
     Pontun newOrder(orderNo, _selectedDeliveryPlace);
-    while(true)
-        {
+    vector<Pizza> pizzasInOrder;
+    vector<productOnFile> productsInOrder;
+    while(true){
              cout << "Press '1' to select pizza from menu" << endl
              << "Press '2' to make new pizza" << endl
              << "Press '3' to add something else " << endl
@@ -64,7 +65,8 @@ void SalesUI::createOrder(){
                 cin >> input;
                 Pizza pz = service.selectPizzaFromMenu( input );
                 pz.tagPizzaToOrder( orderNo );
-                service.CommitPizza(pz);
+                pizzasInOrder.push_back(pz);
+               // service.CommitPizza(pz);
                 }
                 catch (invalidPizzaSelection){
                     cout << "Invalid pizza hotkey pleace enter correct pizza hotkey!!!";
@@ -107,7 +109,8 @@ void SalesUI::createOrder(){
 
 
             }
-            service.CommitPizza( pz );
+            //service.CommitPizza( pz );
+            pizzasInOrder.push_back(pz);
             system("CLS");
         }
         else if(input == '3'){
@@ -122,7 +125,9 @@ void SalesUI::createOrder(){
             try{
                 productOnFile prod = service.selectProduct(input);
                 prod.tagProductToOrder( orderNo );
-                service.commitProduct( prod );
+
+                productsInOrder.push_back(prod);
+               // service.commitProduct( prod );
             }
             catch(InvalidProductHotkey){
                 cout << "InvalidProduct hotkey pleace enter a valid product";
@@ -155,6 +160,12 @@ void SalesUI::createOrder(){
     cout << "Press y to confirm your order: ";
     cin >> input;
     if(input == 'y'){
+        for(unsigned int i = 0; i < pizzasInOrder.size(); i++){
+            service.CommitPizza(pizzasInOrder[i]);
+        }
+        for(unsigned int i = 0; i < productsInOrder.size(); i++){
+            service.commitProduct( productsInOrder[i]);
+        }
         service.CommitOrder(newOrder);
         cout << "Your order is being processed" << endl;
     }

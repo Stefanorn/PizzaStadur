@@ -155,7 +155,7 @@ void SalesUI::createOrder(){
     }
     system("CLS");
     newOrder = service.computeTotalPrice(newOrder, pizzasInOrder, productsInOrder  );
-    PrintOrder(newOrder);
+    PrintOrder(newOrder, pizzasInOrder, productsInOrder);
 
     cout << "Press y to confirm your order: ";
     cin >> input;
@@ -190,7 +190,7 @@ void SalesUI::GetInfoAboutOrder(){
     }
 }
 
-void SalesUI::PrintOrder(Pontun order){
+void SalesUI::PrintOrder(Pontun order ){
         cout << "--------------------------------------------" << endl;
         cout << order << endl;
         cout << "--------------------------------------------" << endl;
@@ -202,6 +202,24 @@ void SalesUI::PrintOrder(Pontun order){
         }
         cout << "--------------------------------------------" << endl;
         vector<productOnFile> prod = service.getProductByID(order.GetOrderNo());
+        for(unsigned int i = 0; i < prod.size(); i++){
+            cout << prod[i] << endl;
+            cout << "____" << endl;
+        }
+        cout << endl << "--------------------------------------------" << endl;
+}
+void SalesUI::PrintOrder(Pontun order, vector<Pizza> pz, vector<productOnFile> prod ){
+        cout << "--------------------------------------------" << endl;
+        cout << order << endl;
+        cout << "--------------------------------------------" << endl;
+        service.GetPizzaByOrderID(order.GetOrderNo());
+        //ATH þetta virkar bara því ég er buin að commita pizzurnar og productinn
+        for(unsigned int i = 0; i < pz.size(); i++){
+            cout << pz[i] << endl;
+            cout << "____" << endl;
+        }
+        cout << "--------------------------------------------" << endl;
+        service.getProductByID(order.GetOrderNo());
         for(unsigned int i = 0; i < prod.size(); i++){
             cout << prod[i] << endl;
             cout << "____" << endl;

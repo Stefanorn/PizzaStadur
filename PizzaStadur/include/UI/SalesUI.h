@@ -14,6 +14,7 @@ class SalesUI {
         void GetInfoAboutOrder();
         void selectDeliveryPlace();
         void PrintOrder(Pontun order);
+        void PrintOrder(Pontun order, vector<Pizza> pz, vector<productOnFile> prod );
 };
 
 #endif // SALESUI_H

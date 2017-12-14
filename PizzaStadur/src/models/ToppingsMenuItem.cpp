@@ -8,7 +8,7 @@ istream& operator >> (istream& ins, ToppingsMenuItem& toppingsMenuItem){
     ins.sync();
     getline(ins, name);
     strcpy(toppingsMenuItem._name ,name.c_str());
-    //toppingsMenuItem._name[31] = '\0';
+    toppingsMenuItem._name[31] = '\0';
     //ins.ignore();
     cout << "Enter hotkey for item : ";
     ins >> toppingsMenuItem._hotkey;

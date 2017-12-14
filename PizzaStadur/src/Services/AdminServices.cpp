@@ -32,12 +32,12 @@ Toppings AdminServices::CharToTopping(char input){
 }
 void AdminServices::registerProduct(Products product)
 {
-    _productrepo.addProduct(product);
+    _productMenuRepo.addProduct(product);
 }
 
 void AdminServices::readProduct()
 {
-    _productrepo.readFile();
+    _productMenuRepo.readFile();
 }
 
 void AdminServices::editMenuPrices(double price)

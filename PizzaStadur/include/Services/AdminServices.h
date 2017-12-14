@@ -12,6 +12,7 @@
 #include "ToppingMenuRepo.h"
 #include "ProductRepo.h"
 #include "PizzaMenuRepo.h"
+#include "ProductOnFileRepo.h"
 
 
 
@@ -32,10 +33,12 @@ class AdminServices
         vector<ToppingsMenuItem> returnToppingsMenu();
 
     private:
+
+        ProductOnFileRepo _productsRepo;
         PizzaMenuRepo _pizzaMenuRepo;
         ToppingMenuRepo _toppingsMenuRepo;
         PlacesRepo _placesrepo;
-        ProductRepo _productrepo;
+        ProductRepo _productMenuRepo;
 };
 
 #endif // ADMINSERVICES_H

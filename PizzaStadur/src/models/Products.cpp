@@ -4,7 +4,7 @@ Products::Products()
 {
     _productName[0] = '\0';
     _productPrice = 0;
-    _productID = 0;
+    _hotkey = '\0';
 }
 
 string Products::getProductName()
@@ -12,9 +12,8 @@ string Products::getProductName()
     return _productName;
 }
 
-int Products::getProductID()
-{
-    return _productID;
+char Products::getKey(){
+    return _hotkey;
 }
 
 double Products::getProductPrice()
@@ -22,22 +21,28 @@ double Products::getProductPrice()
     return _productPrice;
 }
 
-void Products::tagProductToOrder(int orderNo)
-{
-    _productID = orderNo;
-}
-
 istream& operator >> (istream& ins, Products& product)
 {
-    ins >> product._productName;
+    string name;
+    cout << "Enter the name of product " << endl ;
+    ins.sync();
+    getline(ins, name);
+    strcpy(product._productName ,name.c_str());
+    product._productName[31] = '\0';
+
+    cout << "Pick a hotkey to quicly select your product from menu ";
+    ins >> product._hotkey;
+    cout << "Enter the price of produckt : ";
     ins >> product._productPrice;
+
     return ins;
 }
 
 ostream& operator << (ostream& outs, const Products& product)
 {
-    outs << product._productName << ", ";
-    outs << product._productPrice << " kr." << endl;
+    outs << "Product : " << product._productName << endl;
+    outs << "  Price : " << product._productPrice << " kr." << endl;
+    outs << "Press '" << product._hotkey << "' to add this product to your order." << endl;
     return outs;
 }
 

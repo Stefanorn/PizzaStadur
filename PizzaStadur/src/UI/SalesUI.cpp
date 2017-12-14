@@ -95,7 +95,7 @@ void SalesUI::createOrder(){
             char input;
             cin >> input;
             Products prod;
-            prod.tagProductToOrder(orderNo);
+           // prod.tagProductToOrder(orderNo);
             service.selectProduct(input);
         }
         else {

@@ -26,9 +26,6 @@ void orderRepo::ReadFromFile(){
         cerr << "Could not find orders.bin" << endl;
     }
 
-   // _pantanir = new Pontun[ _numOfOrders ];
-   // Þegar ég geri new þá fæ ég nýan pointer þarf þá að afrita allt af gamla arrayinum yfir á nýa
-
     stream.close();
 }
 void orderRepo::RewriteFile( vector<Pontun> orders ){
@@ -37,29 +34,12 @@ void orderRepo::RewriteFile( vector<Pontun> orders ){
     stream.open("orders.bin", ios::binary);
     if(stream.is_open()){
         stream.seekp( stream.beg );
-        for(unsigned int i = 0; i < _orders.size(); i++){
+        for(unsigned int i = 0; i < orders.size(); i++){
             stream.write((char*)(&orders[i]), sizeof(Pontun));
         }
         stream.close();
     }
     _orders = orders;
-  /*
-    Finna hvar færslan er í skránni og yfir rita hana
-
-    þarf þá að taka inn
-    int orderNo, Pontun newOrder
-    ofstream stream;
-    stream.open("orders.bin", ios::binary|ios::app );
-    if(stream.is_open()){
-
-        stream.seekp(stream.beg);
-        stream.seekp(sizeof(Pontun) * orderNo );
-        stream.write((char*)(&newOrder), sizeof(Pontun));
-        stream.close();
-        return true;
-    }
-    stream.close();
-    return false;*/
 }
 void orderRepo::WriteOrderToFile( Pontun orderToWrite ){
 

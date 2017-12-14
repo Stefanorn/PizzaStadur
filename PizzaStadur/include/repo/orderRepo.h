@@ -9,8 +9,7 @@
 
 using namespace std;
 
-class orderRepo
-{
+class orderRepo {
     public:
         orderRepo();
         void WriteOrderToFile( Pontun orderToWrite );

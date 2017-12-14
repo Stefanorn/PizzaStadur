@@ -11,6 +11,7 @@ void ProductOnFileRepo::writeProdToFile( productOnFile prod ){
     stream.write((char*)(&prod), sizeof(productOnFile));
     stream.close();
 
+
     _prods.push_back(prod);
 
 }

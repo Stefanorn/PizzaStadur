@@ -1,7 +1,6 @@
 #include "SalesUI.h"
 
-SalesUI::SalesUI()
-{
+SalesUI::SalesUI(){
     system("CLS");
     selectDeliveryPlace();
     system("CLS");
@@ -84,8 +83,22 @@ void SalesUI::createOrder(){
                         break;
                     }
                     cout << "Adding topping to pizza" << endl;
-                    Toppings tp = service.CharToTopping(input);
-                    pz.addToppings( tp );
+                    try{
+                        Toppings tp = service.CharToTopping(input);
+                        pz.addToppings( tp );
+                    }
+                    catch ( invalidToppingHotkey ){
+                        system("CLS");
+                        cout << "Pease enter a valid toppings hot-key !!!" << endl;
+                    }
+                    catch(toManyToppingsExeptions){
+                        cout << "to many toppings on youre pizza system overload, cant handle pizza with so many toppings !!!! " << endl;
+                        for(int i = 0; i < 40; i++){
+                            cout << "ERROR !! ";
+                        }
+                        system("PAUSE");
+                    }
+
 
             }
             service.CommitPizza( pz );
@@ -100,9 +113,15 @@ void SalesUI::createOrder(){
             cout << "Please select a product from the list above: ";
             char input;
             cin >> input;
-            productOnFile prod = service.selectProduct(input);
-            prod.tagProductToOrder( orderNo );
-            service.commitProduct( prod );
+            try{
+                productOnFile prod = service.selectProduct(input);
+                prod.tagProductToOrder( orderNo );
+                service.commitProduct( prod );
+            }
+            catch(InvalidProductHotkey){
+                cout << "InvalidProduct hotkey pleace enter a valid product";
+                system("PAUSE");
+            }
             system("CLS");
         }
         else {

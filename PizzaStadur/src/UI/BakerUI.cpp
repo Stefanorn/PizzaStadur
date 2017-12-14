@@ -39,8 +39,9 @@ void BakerUI::mainMenu(){
             }
             if(unbakedPizzas.size() == 0) {
                 cout << "All the pizzas have been baked! Great job!" << endl;
-                system("PAUSE");
+
             }
+            system("PAUSE");
 
         }
         else if (input == '3'){

@@ -19,7 +19,6 @@ void PlacesRepo::_readFile(){
         for(int i = 0; i < size; i++){
             fin.read((char*)(&temp), sizeof(DeliveryPlaces));
             _places.push_back(temp);
-
         }
     }
     else{

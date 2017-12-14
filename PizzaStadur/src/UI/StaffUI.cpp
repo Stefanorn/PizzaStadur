@@ -6,8 +6,8 @@ StaffUI::StaffUI(){
     selectDeliveryPlace();
 
     while(true){
-        cout << "Press 1 to pay for order, " << endl;
-        cout << "press 2 to deliver order " << endl;
+        cout << "Press 1 to pay for an order, " << endl;
+        cout << "press 2 to deliver an order " << endl;
         cout << "press 3 to go back to the main menu " << endl;
         char input;
         cin >> input;
@@ -25,7 +25,7 @@ StaffUI::StaffUI(){
             return;
         }
         else {
-            cout << "Invalid input " << endl;
+            cout << "Oops, that's not the right command! " << endl;
             system("CLS");
         }
 
@@ -43,7 +43,7 @@ void StaffUI::PayForOrder(){
         cout << orders[i];
     }
     cout << "---------------------------------------------" << endl;
-    cout << "Select order to pay for" << endl;
+    cout << "Select an order to pay for" << endl;
     int input;
     cin >> input;
     try {
@@ -69,7 +69,7 @@ void StaffUI::DeliverOrder(){
         cout << orders[i];
     }
     cout << "---------------------------------------------" << endl;
-    cout << "Select order to deliver " << endl;
+    cout << "Select an order to deliver " << endl;
 
     try {
         int input;
@@ -99,7 +99,7 @@ void StaffUI::selectDeliveryPlace(){
         cout << allPlaces[i];
     }
     if (allPlaces.size() > 0) {
-        cout << "Select a Pizza place " << endl;
+        cout << "Select a pizza place " << endl;
         char input;
         cin >> input;
         _selectedDeliveryPlace = service.GetDeliveryPlace(input);

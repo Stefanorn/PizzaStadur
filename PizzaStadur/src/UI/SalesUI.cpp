@@ -7,7 +7,7 @@ SalesUI::SalesUI(){
 
     while(true)
     {
-        cout << "Press 1 to make a order " << endl;
+        cout << "Press 1 to make an order " << endl;
         cout << "Press 2 to get info about your order " << endl;
         cout << "press 3 to go back to the main menu" << endl;
         char input;
@@ -29,7 +29,7 @@ SalesUI::SalesUI(){
             return;
         }
         else {
-            cout << "That's not the right command! Try again! " << endl;
+            cout << "Oops, that's not the right command! " << endl;
             system("PAUSE");
             system("CLS");
         }
@@ -217,7 +217,7 @@ void SalesUI::selectDeliveryPlace(){
         cout << allPlaces[i];
     }
     if (allPlaces.size() > 0) {
-        cout << "Select a PizzaPlace " << endl;
+        cout << "Select a pizza place " << endl;
         char input;
         cin >> input;
         _selectedDeliveryPlace = service.GetDeliveryPlace(input);

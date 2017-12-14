@@ -8,8 +8,8 @@ BakerUI::BakerUI()
 void BakerUI::mainMenu(){
     while(true){
         system("CLS");
-        cout << "Press 1 to bake the pizza" << endl;
-        cout << "Press 2 to list all unbaked " << endl;
+        cout << "Press 1 to bake a pizza" << endl;
+        cout << "Press 2 to list all unbaked pizzas " << endl;
         cout << "Press 3 to quit" << endl;
         char input;
         cin >> input;
@@ -48,7 +48,7 @@ void BakerUI::mainMenu(){
             return;
         }
         else {
-            cout << "Oops, that wasn't the right command!" << endl;
+            cout << "Oops, that's not the right command! " << endl;
         }
     }
 }
@@ -61,7 +61,7 @@ void BakerUI::selectDeliveryPlace(){
         cout << allPlaces[i];
     }
     if (allPlaces.size() > 0) {
-            cout << "Select a PizzaPlace" << endl;
+            cout << "Select a pizza place" << endl;
             char input;
             cin >> input;
             _selectedDeliveryPlace = bakerService.GetDeleveryPlace(input);

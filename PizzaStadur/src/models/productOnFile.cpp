@@ -7,7 +7,7 @@ productOnFile::productOnFile(){
     _productToOrderID = -1;
 }
 productOnFile::productOnFile(string name, double price){
-//    _productName = name;
+    strcpy(_productName, name.c_str());
     _productPrice = price;
     _productToOrderID = -1 ;
 }

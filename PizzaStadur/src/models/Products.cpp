@@ -1,4 +1,5 @@
 #include "Products.h"
+#include <stdlib.h>
 
 Products::Products()
 {
@@ -9,7 +10,8 @@ Products::Products()
 
 string Products::getProductName()
 {
-    return _productName;
+    string temp = _productName;
+    return temp;
 }
 
 char Products::getKey(){

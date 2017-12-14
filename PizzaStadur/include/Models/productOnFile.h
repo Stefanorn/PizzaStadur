@@ -2,6 +2,10 @@
 #define PRODUCTONFILE_H
 #include <string>
 #include <iostream>
+
+#include <cstring>
+#include <string>
+
 using namespace std;
 
 class productOnFile

@@ -2,6 +2,7 @@
 #define DELIVERYPLACES_H
 
 #include <iostream>
+#include <cstring>
 #include <vector>
 
 using namespace std;

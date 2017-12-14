@@ -16,11 +16,18 @@ Toppings SalesServices::CharToTopping(char input){
 
 void SalesServices::CommitOrder(Pontun order){
     vector<Pizza> allPizza = pzRepo.ReturnAllPizzas();
+    vector<productOnFile> allProd = producFileRepo.ReturnAllProds();
+    int orderId = order.GetOrderNo();
     for(unsigned int i = 0; i < allPizza.size(); i++){
-        if( order.GetOrderNo() == allPizza[i].getPizzaToOrderId()){
+        if( orderId == allPizza[i].getPizzaToOrderId()){
             order.ComputeTotalPrice( allPizza[i].getPrice() );
             }
         }
+    for(unsigned int i = 0; i < allProd.size(); i++ ){
+        if( orderId ==  allProd[i].getID()){
+            order.ComputeTotalPrice( allProd[i].getProductPrice());
+        }
+    }
 
    ordRepo.WriteOrderToFile( order );
 }

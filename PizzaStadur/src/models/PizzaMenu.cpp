@@ -7,10 +7,14 @@ PizzaMenu::PizzaMenu(){
 istream& operator >> (istream& ins, PizzaMenu& pizza){
     bool base = false, pSize = false;
 
-    cout << "Enter name of pizza : ";
-    ins >> pizza._name;
+    string name;
+    cout << "Enter name of pizza: ";
+    ins.sync();
+    getline(ins, name);
+    strcpy( pizza._name, name.c_str() );
+    pizza._name[31] = '\0';
     char input;
-    cout << "Enter hotkey for your pizza : ";
+    cout << "Enter hotkey for your pizza: ";
     ins >> pizza._hotkey;
 
     while (base == false)

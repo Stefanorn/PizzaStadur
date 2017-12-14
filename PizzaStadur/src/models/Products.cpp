@@ -24,15 +24,15 @@ double Products::getProductPrice()
 istream& operator >> (istream& ins, Products& product)
 {
     string name;
-    cout << "Enter the name of product " << endl ;
+    cout << "Enter product: ";
     ins.sync();
     getline(ins, name);
     strcpy(product._productName ,name.c_str());
     product._productName[31] = '\0';
 
-    cout << "Pick a hotkey to quicly select your product from menu ";
+    cout << "Pick a hot-key to quickly select your product from menu ";
     ins >> product._hotkey;
-    cout << "Enter the price of produckt : ";
+    cout << "Enter the price of product: ";
     ins >> product._productPrice;
 
     return ins;

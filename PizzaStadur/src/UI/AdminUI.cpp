@@ -15,9 +15,9 @@ void AdminUI::mainMenu(){
         cout << "Press 1 to register new toppings" << endl
              << "Press 2 to register new menu items" << endl
              << "Press 3 to register new products" << endl
-             << "Press 4 to edit prices" << endl
-             << "Press 5 to register new places for delivery" << endl
-             << "Press 6 to go back to the main menu" << endl;
+           //  << "Press 4 to edit prices" << endl
+             << "Press 4 to register new places for delivery" << endl
+             << "Press 5 to go back to the main menu" << endl;
         cout << "------------------------------------------------" << endl;
         cin >> input;
 
@@ -94,7 +94,7 @@ void AdminUI::mainMenu(){
             }
             while(input == 'y');
         }
-        else if(input == '4'){
+        else if(false){
             system("CLS");
             cout << "What prices would you like to change?" << endl << endl;
             cout << "Press 1 for menu items" << endl;
@@ -131,7 +131,7 @@ void AdminUI::mainMenu(){
                 //throw SomeException;
             }
         }
-        else if(input == '5'){
+        else if(input == '4'){
             cout << "How many places would you like to add?";
             cin >> size;
             while(cin.fail()){
@@ -152,7 +152,7 @@ void AdminUI::mainMenu(){
             cin >> input;
 
         }
-        else if(input == '6'){
+        else if(input == '5'){
             break;
         }
         else{

@@ -17,8 +17,11 @@ char DeliveryPlaces::GetKey() const
 
 istream& operator >> (istream& in, DeliveryPlaces& places)
 {
+    string name;
     cout << "Enter name of delivery place : " ;
-    in >> places._name;
+    in.sync();
+    getline(in, name);
+    strcpy( places._name, name.c_str() );
     cout << "Enter hotkey for your place  : ";
     in >> places._hotkey;
     return in;

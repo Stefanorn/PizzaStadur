@@ -2,7 +2,7 @@
 
 SalesUI::SalesUI()
 {
-
+    system("CLS");
     selectDeliveryPlace();
     system("CLS");
 
@@ -14,11 +14,13 @@ SalesUI::SalesUI()
         char input;
         cin >> input;
         if(input == '1'){
+            system("CLS");
             createOrder();
             system("PAUSE");
             system("CLS");
         }
         else if(input == '2') {
+            system("CLS");
             GetInfoAboutOrder();
             system("PAUSE");
             system("CLS");
@@ -36,7 +38,7 @@ SalesUI::SalesUI()
 }
 
 void SalesUI::createOrder(){
-
+    system("CLS");
     int orderNo = service.OrderNumber();
     cout << "Making Order number " << orderNo << endl;
     Pontun newOrder(orderNo, _selectedDeliveryPlace);
@@ -48,7 +50,24 @@ void SalesUI::createOrder(){
              << "press 'q' to quit" << endl;
         char input;
         cin >> input;
-        if(input == '2'){
+        system("CLS");
+        if(input == 'q'){
+            break;
+        }
+        else if (input == '1'){
+                vector<PizzaMenu> pzMenu = service.ReturnPizzaMenu();
+                for(unsigned int i = 0; i < pzMenu.size(); i++){
+                    cout << pzMenu[i] << endl << "-------------------------------" << endl;
+                }
+                cout << "Enter hot-key to select pizza from menu : ";
+                char input;
+                cin >> input;
+                Pizza pz = service.selectPizzaFromMenu( input );
+                pz.tagPizzaToOrder( orderNo );
+                service.CommitPizza(pz);
+                system("CLS");
+        }
+        else if(input == '2'){
             Pizza pz;
             cin >> pz;
             pz.tagPizzaToOrder( orderNo );
@@ -69,22 +88,6 @@ void SalesUI::createOrder(){
 
             }
             service.CommitPizza( pz );
-        }
-        else if(input == 'q'){
-            break;
-        }
-        else if(input == '1'){
-                vector<PizzaMenu> pzMenu = service.ReturnPizzaMenu();
-                cout << pzMenu.size();
-                for(unsigned int i = 0; i < pzMenu.size(); i++){
-                    cout << pzMenu[i];
-                }
-                cout << "Enter hotkey to select pizza from menu : ";
-                char input;
-                cin >> input;
-                Pizza pz = service.selectPizzaFromMenu( input );
-                pz.tagPizzaToOrder( orderNo );
-                service.CommitPizza(pz);
         }
         else if(input == '3'){
 
@@ -130,6 +133,7 @@ void SalesUI::createOrder(){
 }
 
 void SalesUI::GetInfoAboutOrder(){
+    system("CLS");
     try
     {
         cout << "input the orderNumber " << endl;

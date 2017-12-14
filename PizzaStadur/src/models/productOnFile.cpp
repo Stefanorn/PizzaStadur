@@ -25,6 +25,6 @@ void productOnFile::tagProductToOrder( int id){
 }
 ostream& operator << (ostream& outs, const productOnFile& product){
     outs << product._productName << ", ";
-    outs << product._productPrice << " kr." << endl;
+    outs << product._productPrice << " kr.";
     return outs;
 }

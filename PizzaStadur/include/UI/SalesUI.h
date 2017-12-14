@@ -13,6 +13,7 @@ class SalesUI {
         void createOrder();
         void GetInfoAboutOrder();
         void selectDeliveryPlace();
+        void PrintOrder(Pontun order);
 };
 
 #endif // SALESUI_H

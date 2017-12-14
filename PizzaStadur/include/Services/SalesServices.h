@@ -20,12 +20,15 @@ class SalesServices
         Toppings CharToTopping(char input);
         Pontun returnAOrder( int orderNo );
 
+        Pontun computeTotalPrice( Pontun order);
         void commitProduct(productOnFile prod);
         void CommitOrder(Pontun order);
         void CommitPizza( Pizza pizza );
         int OrderNumber();
         vector<Pizza> GetPizzaByOrderID(int orderNumber);
         vector<Toppings> getToppingsByPizzaID(int pizzaOrderNumber);
+        vector<productOnFile> getProductByID(int id);
+
         vector <PizzaMenu> ReturnPizzaMenu();
         vector<Products> ReturnAllProducts();
         vector<DeliveryPlaces> GetAllPlaces();

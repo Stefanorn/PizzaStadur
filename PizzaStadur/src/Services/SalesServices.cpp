@@ -14,7 +14,7 @@ Toppings SalesServices::CharToTopping(char input){
     throw invalidToppingHotkey();
 }
 
-void SalesServices::CommitOrder(Pontun order){
+Pontun SalesServices::computeTotalPrice( Pontun order){
     vector<Pizza> allPizza = pzRepo.ReturnAllPizzas();
     vector<productOnFile> allProd = producFileRepo.ReturnAllProds();
     int orderId = order.GetOrderNo();
@@ -28,6 +28,12 @@ void SalesServices::CommitOrder(Pontun order){
             order.ComputeTotalPrice( allProd[i].getProductPrice());
         }
     }
+
+    return order;
+
+}
+
+void SalesServices::CommitOrder(Pontun order){
 
    ordRepo.WriteOrderToFile( order );
 }
@@ -48,7 +54,6 @@ int SalesServices::OrderNumber(){
 Pontun SalesServices::returnAOrder( int orderNo ){
     vector<Pontun> allOrders = ordRepo.ReturnAllOrders();
     for(unsigned int i = 0; i < allOrders.size(); i++ ){
-         cout << allOrders[i];
         if(allOrders[i].GetOrderNo() == orderNo){
             return allOrders[i];
         }
@@ -123,4 +128,16 @@ productOnFile SalesServices::selectProduct(char input){
         }
     }
     throw InvalidProductHotkey();
+}
+
+
+vector<productOnFile> SalesServices::getProductByID(int id){
+    vector<productOnFile> all = producFileRepo.ReturnAllProds();
+    vector<productOnFile> selected;
+    for(unsigned int i = 0; i < all.size(); i++){
+        if(id == all[i].getID()){
+            selected.push_back(all[i]);
+        }
+    }
+    return selected;
 }

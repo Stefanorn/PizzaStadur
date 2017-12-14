@@ -153,32 +153,34 @@
 	<iostream>
 	"Pizza.h"
 
-1513090172 c:\users\tinna\documents\verklegt námskeið 1\pizzastadur\pizzastadur\include\models\pizza.h
+1513251528 c:\users\tinna\documents\verklegt námskeið 1\pizzastadur\pizzastadur\include\models\pizza.h
 	<iostream>
 	<string>
 	"Enums.h"
 	"PizzaExeptions.h"
 	"DeliveryPlaces.h"
+	"Toppings.h"
 
 1512729004 c:\users\tinna\documents\verklegt námskeið 1\pizzastadur\pizzastadur\include\enums.h
 
-1513096165 c:\users\tinna\documents\verklegt námskeið 1\pizzastadur\pizzastadur\include\exceptions\pizzaexeptions.h
+1513255612 c:\users\tinna\documents\verklegt námskeið 1\pizzastadur\pizzastadur\include\exceptions\pizzaexeptions.h
 
-1513090172 source:c:\users\tinna\documents\verklegt námskeið 1\pizzastadur\pizzastadur\src\models\deliveryplaces.cpp
+1513256111 source:c:\users\tinna\documents\verklegt námskeið 1\pizzastadur\pizzastadur\src\models\deliveryplaces.cpp
 	"DeliveryPlaces.h"
 
-1513090172 c:\users\tinna\documents\verklegt námskeið 1\pizzastadur\pizzastadur\include\models\deliveryplaces.h
+1513256111 c:\users\tinna\documents\verklegt námskeið 1\pizzastadur\pizzastadur\include\models\deliveryplaces.h
 	<iostream>
+	<cstring>
 	<vector>
 
-1513095244 c:\users\tinna\documents\verklegt námskeið 1\pizzastadur\pizzastadur\include\models\pontun.h
+1513251528 c:\users\tinna\documents\verklegt námskeið 1\pizzastadur\pizzastadur\include\models\pontun.h
 	"ToppingsMenuItem.h"
 	"Pizza.h"
 	"Toppings.h"
 	"DeliveryPlaces.h"
 	<iostream>
 
-1513096165 c:\users\tinna\documents\verklegt námskeið 1\pizzastadur\pizzastadur\include\repo\orderrepo.h
+1513252214 c:\users\tinna\documents\verklegt námskeið 1\pizzastadur\pizzastadur\include\repo\orderrepo.h
 	<vector>
 	"Pontun.h"
 	<iostream>
@@ -187,20 +189,22 @@
 
 1512729004 c:\users\tinna\documents\verklegt námskeið 1\pizzastadur\pizzastadur\include\exceptions\orderexeptions.h
 
-1513095244 source:c:\users\tinna\documents\verklegt námskeið 1\pizzastadur\pizzastadur\src\models\pontun.cpp
+1513259601 source:c:\users\tinna\documents\verklegt námskeið 1\pizzastadur\pizzastadur\src\models\pontun.cpp
 	"Pontun.h"
 
-1512988656 source:c:\users\tinna\documents\verklegt námskeið 1\pizzastadur\pizzastadur\src\models\products.cpp
+1513256111 source:c:\users\tinna\documents\verklegt námskeið 1\pizzastadur\pizzastadur\src\models\products.cpp
 	"Products.h"
 
-1512988656 c:\users\tinna\documents\verklegt námskeið 1\pizzastadur\pizzastadur\include\models\products.h
+1513252214 c:\users\tinna\documents\verklegt námskeið 1\pizzastadur\pizzastadur\include\models\products.h
+	<cstring>
 	<string>
 	<iostream>
+	<vector>
 
-1513036955 source:c:\users\tinna\documents\verklegt námskeið 1\pizzastadur\pizzastadur\src\models\toppings.cpp
+1513251528 source:c:\users\tinna\documents\verklegt námskeið 1\pizzastadur\pizzastadur\src\models\toppings.cpp
 	"Toppings.h"
 
-1513036955 c:\users\tinna\documents\verklegt námskeið 1\pizzastadur\pizzastadur\include\models\toppings.h
+1513251528 c:\users\tinna\documents\verklegt námskeið 1\pizzastadur\pizzastadur\include\models\toppings.h
 	<string>
 	<cstring>
 	<iostream>
@@ -213,10 +217,10 @@
 	<iostream>
 	<fstream>
 
-1512988656 source:c:\users\tinna\documents\verklegt námskeið 1\pizzastadur\pizzastadur\src\repo\productrepo.cpp
+1513251528 source:c:\users\tinna\documents\verklegt námskeið 1\pizzastadur\pizzastadur\src\repo\productrepo.cpp
 	"ProductRepo.h"
 
-1512988656 c:\users\tinna\documents\verklegt námskeið 1\pizzastadur\pizzastadur\include\repo\productrepo.h
+1513251528 c:\users\tinna\documents\verklegt námskeið 1\pizzastadur\pizzastadur\include\repo\productrepo.h
 	"Products.h"
 	<fstream>
 	<vector>
@@ -230,31 +234,35 @@
 	<vector>
 	<iostream>
 
-1513096931 source:c:\users\tinna\documents\verklegt námskeið 1\pizzastadur\pizzastadur\src\services\adminservices.cpp
+1513252214 source:c:\users\tinna\documents\verklegt námskeið 1\pizzastadur\pizzastadur\src\services\adminservices.cpp
 	"AdminServices.h"
 
-1513096931 c:\users\tinna\documents\verklegt námskeið 1\pizzastadur\pizzastadur\include\services\adminservices.h
+1513252214 c:\users\tinna\documents\verklegt námskeið 1\pizzastadur\pizzastadur\include\services\adminservices.h
 	"Pizza.h"
 	"DeliveryPlaces.h"
 	"Toppings.h"
 	"Products.h"
+	"PizzaMenu.h"
 	"pizzaRepo.h"
 	"PlacesRepo.h"
 	"ToppingMenuRepo.h"
 	"ProductRepo.h"
+	"PizzaMenuRepo.h"
+	"ProductOnFileRepo.h"
 
 1513005774 c:\users\tinna\documents\verklegt námskeið 1\pizzastadur\pizzastadur\include\repo\pizzarepo.h
 	"Pizza.h"
 	<vector>
 	<fstream>
 
-1513009108 source:c:\users\tinna\documents\verklegt námskeið 1\pizzastadur\pizzastadur\src\services\staffservices.cpp
+1513251528 source:c:\users\tinna\documents\verklegt námskeið 1\pizzastadur\pizzastadur\src\services\staffservices.cpp
 	"staffServices.h"
 
-1513009108 c:\users\tinna\documents\verklegt námskeið 1\pizzastadur\pizzastadur\include\services\staffservices.h
+1513251528 c:\users\tinna\documents\verklegt námskeið 1\pizzastadur\pizzastadur\include\services\staffservices.h
 	"orderRepo.h"
+	"PlacesRepo.h"
 
-1513096931 source:c:\users\tinna\documents\verklegt námskeið 1\pizzastadur\pizzastadur\src\ui\adminui.cpp
+1513261012 source:c:\users\tinna\documents\verklegt námskeið 1\pizzastadur\pizzastadur\src\ui\adminui.cpp
 	"AdminUI.h"
 
 1513078320 c:\users\tinna\documents\verklegt námskeið 1\pizzastadur\pizzastadur\include\ui\adminui.h
@@ -263,14 +271,14 @@
 	"Pizza.h"
 	"AdminServices.h"
 
-1513013110 source:c:\users\tinna\documents\verklegt námskeið 1\pizzastadur\pizzastadur\src\ui\staffui.cpp
+1513251528 source:c:\users\tinna\documents\verklegt námskeið 1\pizzastadur\pizzastadur\src\ui\staffui.cpp
 	"StaffUI.h"
 
-1512729004 c:\users\tinna\documents\verklegt námskeið 1\pizzastadur\pizzastadur\include\ui\staffui.h
+1513251528 c:\users\tinna\documents\verklegt námskeið 1\pizzastadur\pizzastadur\include\ui\staffui.h
 	<stdlib.h>
 	"staffServices.h"
 
-1513096700 source:c:\users\tinna\documents\verklegt námskeið 1\pizzastadur\pizzastadur\main.cpp
+1513251528 source:c:\users\tinna\documents\verklegt námskeið 1\pizzastadur\pizzastadur\main.cpp
 	"StaffUI.h"
 	"BakerUI.h"
 	"SalesUI.h"
@@ -296,41 +304,48 @@
 	<iostream>
 	"BakerServices.h"
 
-1513078320 c:\users\tinna\documents\verklegt námskeið 1\pizzastadur\pizzastadur\include\ui\salesui.h
+1513259601 c:\users\tinna\documents\verklegt námskeið 1\pizzastadur\pizzastadur\include\ui\salesui.h
 	<stdlib.h>
 	"SalesServices.h"
 
-1513096165 c:\users\tinna\documents\verklegt námskeið 1\pizzastadur\pizzastadur\include\services\salesservices.h
+1513259601 c:\users\tinna\documents\verklegt námskeið 1\pizzastadur\pizzastadur\include\services\salesservices.h
 	"orderRepo.h"
 	"pizzaRepo.h"
 	"ToppingMenuRepo.h"
-	"ToppingsRepo.h"
 	"PizzaExeptions.h"
 	"PlacesRepo.h"
+	"pizzaRepo.h"
+	"PizzaMenuRepo.h"
+	"ProductRepo.h"
+	"productOnFile.h"
+	"ProductOnFileRepo.h"
 
-1513090172 source:c:\users\tinna\documents\verklegt námskeið 1\pizzastadur\pizzastadur\src\models\pizza.cpp
+1513259601 source:c:\users\tinna\documents\verklegt námskeið 1\pizzastadur\pizzastadur\src\models\pizza.cpp
 	"Pizza.h"
 
-1513005774 source:c:\users\tinna\documents\verklegt námskeið 1\pizzastadur\pizzastadur\src\repo\orderrepo.cpp
+1513252214 source:c:\users\tinna\documents\verklegt námskeið 1\pizzastadur\pizzastadur\src\repo\orderrepo.cpp
 	"orderRepo.h"
 
-1513005774 source:c:\users\tinna\documents\verklegt námskeið 1\pizzastadur\pizzastadur\src\repo\pizzarepo.cpp
+1513257428 source:c:\users\tinna\documents\verklegt námskeið 1\pizzastadur\pizzastadur\src\repo\pizzarepo.cpp
 	"pizzaRepo.h"
 
 1513090172 source:c:\users\tinna\documents\verklegt námskeið 1\pizzastadur\pizzastadur\src\services\bakerservices.cpp
 	"BakerServices.h"
 
-1513095244 source:c:\users\tinna\documents\verklegt námskeið 1\pizzastadur\pizzastadur\src\services\salesservices.cpp
+1513259601 source:c:\users\tinna\documents\verklegt námskeið 1\pizzastadur\pizzastadur\src\services\salesservices.cpp
 	"SalesServices.h"
 
-1513090172 source:c:\users\tinna\documents\verklegt námskeið 1\pizzastadur\pizzastadur\src\ui\bakerui.cpp
+1513258006 source:c:\users\tinna\documents\verklegt námskeið 1\pizzastadur\pizzastadur\src\ui\bakerui.cpp
 	"BakerUI.h"
 
-1513096700 source:c:\users\tinna\documents\verklegt námskeið 1\pizzastadur\pizzastadur\src\ui\salesui.cpp
+1513256111 source:c:\users\tinna\documents\verklegt námskeið 1\pizzastadur\pizzastadur\src\ui\salesui.cpp
 	"SalesUI.h"
 
-1513036955 c:\users\tinna\documents\verklegt námskeið 1\pizzastadur\pizzastadur\include\models\toppingsmenuitem.h
+1513120946 c:\users\tinna\documents\verklegt námskeið 1\pizzastadur\pizzastadur\include\models\toppingsmenuitem.h
+	<cstring>
+	<string>
 	<iostream>
+	"Toppings.h"
 
 1513013973 c:\users\tinna\documents\verklegt námskeið 1\pizzastadur\pizzastadur\include\repo\toppingmenurepo.h
 	"ToppingsMenuItem.h"
@@ -338,18 +353,46 @@
 	<fstream>
 	<iostream>
 
-1513036955 source:c:\users\tinna\documents\verklegt námskeið 1\pizzastadur\pizzastadur\src\models\toppingsmenuitem.cpp
+1513252214 source:c:\users\tinna\documents\verklegt námskeið 1\pizzastadur\pizzastadur\src\models\toppingsmenuitem.cpp
 	"ToppingsMenuItem.h"
 
-1513013975 source:c:\users\tinna\documents\verklegt námskeið 1\pizzastadur\pizzastadur\src\repo\toppingmenurepo.cpp
+1513120946 source:c:\users\tinna\documents\verklegt námskeið 1\pizzastadur\pizzastadur\src\repo\toppingmenurepo.cpp
 	"ToppingMenuRepo.h"
 
-1513095244 source:c:\users\tinna\documents\verklegt námskeið 1\pizzastadur\pizzastadur\src\models\pizzamenu.cpp
+1513256111 source:c:\users\tinna\documents\verklegt námskeið 1\pizzastadur\pizzastadur\src\models\pizzamenu.cpp
 	"PizzaMenu.h"
 
-1513095244 c:\users\tinna\documents\verklegt námskeið 1\pizzastadur\pizzastadur\include\models\pizzamenu.h
-	"ToppingsMenuItem.h"
+1513251528 c:\users\tinna\documents\verklegt námskeið 1\pizzastadur\pizzastadur\include\models\pizzamenu.h
+	"Toppings.h"
+	"Pizza.h"
 	"PizzaExeptions.h"
 	"Enums.h"
 	<iostream>
+	"PizzaExeptions.h"
+	<vector>
+
+1513120946 c:\users\tinna\documents\verklegt námskeið 1\pizzastadur\pizzastadur\include\repo\pizzamenurepo.h
+	"PizzaMenu.h"
+	<fstream>
+	<vector>
+
+1513252214 c:\users\tinna\documents\verklegt námskeið 1\pizzastadur\pizzastadur\include\models\productonfile.h
+	<string>
+	<iostream>
+
+1513252214 c:\users\tinna\documents\verklegt námskeið 1\pizzastadur\pizzastadur\include\repo\productonfilerepo.h
+	<vector>
+	"productOnFile.h"
+	<iostream>
+	<fstream>
+	"PizzaExeptions.h"
+
+1513257428 source:c:\users\tinna\documents\verklegt námskeið 1\pizzastadur\pizzastadur\src\repo\pizzamenurepo.cpp
+	"PizzaMenuRepo.h"
+
+1513259601 source:c:\users\tinna\documents\verklegt námskeið 1\pizzastadur\pizzastadur\src\models\productonfile.cpp
+	"productOnFile.h"
+
+1513257428 source:c:\users\tinna\documents\verklegt námskeið 1\pizzastadur\pizzastadur\src\repo\productonfilerepo.cpp
+	"ProductOnFileRepo.h"
 

@@ -142,7 +142,7 @@ void SalesUI::GetInfoAboutOrder(){
     system("CLS");
     try
     {
-        cout << "input the orderNumber " << endl;
+        cout << "Input the orderNumber " << endl;
         int orderNo;
         cin >> orderNo;
         system("CLS");

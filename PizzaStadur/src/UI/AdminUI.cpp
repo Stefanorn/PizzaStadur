@@ -69,17 +69,17 @@ void AdminUI::mainMenu(){
         }
         else if(input == '3'){
             do{
-            cout << "How many products would you like to register? " << endl;
+            cout << "How many products would you like to register? ";
             cin >> size;
             while(cin.fail()){
                 cin.clear();
                 cin.ignore();
                 cout << "Invalid input" << endl;
-                cout << "How many products would you like to register? " << endl;
+                cout << "How many products would you like to register? ";
                 cin >> size;
             }
 
-            cout << "Please enter the product you would like to add, followed by its price:" << endl;
+            cout << "Please enter the product you would like to add, followed by its price: " << endl;
             //vector<Products> product(size);
             for(int i = 0; i < size; i++){
                 Products product;
@@ -89,7 +89,7 @@ void AdminUI::mainMenu(){
                 _adminService.registerProduct(product);
             }
 
-            cout << "Would you like to add other products (y/n)?" << endl;
+            cout << "Would you like to add other products (y/n)? ";
             cin >> input;
             }
             while(input == 'y');
@@ -132,7 +132,7 @@ void AdminUI::mainMenu(){
             }
         }
         else if(input == '4'){
-            cout << "How many places would you like to add?";
+            cout << "How many places would you like to add? ";
             cin >> size;
             while(cin.fail()){
                 cin.clear();
@@ -148,7 +148,7 @@ void AdminUI::mainMenu(){
                 cout << endl;
                 _adminService.registerPlaces( places[i] );
             }
-            cout << "Would you like to add more places (y/n)?" << endl;
+            cout << "Would you like to add more places (y/n)? ";
             cin >> input;
 
         }

@@ -14,7 +14,7 @@ void BakerUI::mainMenu(){
         char input;
         cin >> input;
         if (input == '1'){
-            cout << "Enter the pizza id number of pizza you whant to bake" << endl;
+            cout << "Enter the id number of the pizza you want to bake" << endl;
             int pizzaOrder;
             cin >> pizzaOrder;
             if( !cin.fail()){
@@ -34,10 +34,16 @@ void BakerUI::mainMenu(){
             for(unsigned int i = 0; i < unbakedPizzas.size(); i++ ){
                 cout << unbakedPizzas[i];
             }
+            if(unbakedPizzas.size() == 0) {
+                cout << "All the pizzas have been baked! Great job!" << endl;
+            }
 
         }
         else if (input == '3'){
             return;
+        }
+        else {
+            cout << "Oops, that wasn't the right command!" << endl;
         }
     }
 }

@@ -16,8 +16,6 @@ void PizzaMenuRepo::ReadFromFile(){
         int length = stream.tellg() / sizeof(PizzaMenu);
         stream.seekg(0, stream.beg);
 
-        cout << "Reading " << length << " PizzMenuItems" << endl;
-
         PizzaMenu temp;
         for(int i = 0; i < length; i++){
             stream.read((char*)(&temp), sizeof(PizzaMenu));

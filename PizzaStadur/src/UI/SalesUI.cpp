@@ -91,6 +91,13 @@ void SalesUI::createOrder(){
                         system("CLS");
                         cout << "Pease enter a valid toppings hot-key !!!" << endl;
                     }
+                    catch(toManyToppingsExeptions){
+                        cout << "to many toppings on youre pizza system overload, cant handle pizza with so many toppings !!!! " << endl;
+                        for(int i = 0; i < 40; i++){
+                            cout << "ERROR !! ";
+                        }
+                        system("PAUSE");
+                    }
 
 
             }
@@ -106,9 +113,15 @@ void SalesUI::createOrder(){
             cout << "Please select a product from the list above: ";
             char input;
             cin >> input;
-            productOnFile prod = service.selectProduct(input);
-            prod.tagProductToOrder( orderNo );
-            service.commitProduct( prod );
+            try{
+                productOnFile prod = service.selectProduct(input);
+                prod.tagProductToOrder( orderNo );
+                service.commitProduct( prod );
+            }
+            catch(InvalidProductHotkey){
+                cout << "InvalidProduct hotkey pleace enter a valid product";
+                system("PAUSE");
+            }
             system("CLS");
         }
         else {

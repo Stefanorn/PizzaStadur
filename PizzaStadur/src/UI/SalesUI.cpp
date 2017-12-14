@@ -47,7 +47,7 @@ void SalesUI::createOrder(){
              cout << "Press '1' to select pizza from menu" << endl
              << "Press '2' to make new pizza" << endl
              << "Press '3' to add something else " << endl
-             << "press 'q' to quit" << endl;
+             << "press 'q' to continue" << endl;
         char input;
         cin >> input;
         system("CLS");
@@ -71,6 +71,7 @@ void SalesUI::createOrder(){
             Pizza pz;
             cin >> pz;
             pz.tagPizzaToOrder( orderNo );
+            system("CLS");
             cout << "Adding Toppings to your pizza " << endl;
             vector <ToppingsMenuItem> allToppings = service.GetToppingsMenu();
             while(true){
@@ -88,9 +89,9 @@ void SalesUI::createOrder(){
 
             }
             service.CommitPizza( pz );
+            system("CLS");
         }
         else if(input == '3'){
-
 
             vector<Products> products = service.ReturnAllProducts();
             for(unsigned int i = 0; i < products.size(); i++){
@@ -102,9 +103,10 @@ void SalesUI::createOrder(){
             productOnFile prod = service.selectProduct(input);
             prod.tagProductToOrder( orderNo );
             service.commitProduct( prod );
-
+            system("CLS");
         }
         else {
+            system("CLS");
             cout << "Invalid Input " << endl;
         }
     }
@@ -121,6 +123,10 @@ void SalesUI::createOrder(){
             cin >> input;
         }
     }
+    system("CLS");
+    newOrder = service.computeTotalPrice(newOrder);
+    PrintOrder(newOrder);
+
     cout << "Press y to confirm your order: ";
     cin >> input;
     if(input == 'y'){
@@ -139,18 +145,32 @@ void SalesUI::GetInfoAboutOrder(){
         cout << "input the orderNumber " << endl;
         int orderNo;
         cin >> orderNo;
-        cout << "Printing order no " << orderNo << endl;
-        cout << service.returnAOrder(orderNo) ;
-        vector<Pizza> pz = service.GetPizzaByOrderID(orderNo);
-        for(unsigned int i = 0; i < pz.size(); i++){
-            cout << pz[i];
-        }
-        //service.GetOrderPrice();
+        system("CLS");
+        PrintOrder( service.returnAOrder(orderNo));
     }
     catch (NoOrderToReturnExeption)
     {
         cout << "Order does not exist" << endl;
     }
+}
+
+void SalesUI::PrintOrder(Pontun order){
+        cout << "--------------------------------------------" << endl;
+        cout << order << endl;
+        cout << "--------------------------------------------" << endl;
+        vector<Pizza> pz = service.GetPizzaByOrderID(order.GetOrderNo());
+        //ATH þetta virkar bara því ég er buin að commita pizzurnar og productinn
+        for(unsigned int i = 0; i < pz.size(); i++){
+            cout << pz[i] << endl;
+            cout << "____" << endl;
+        }
+        cout << "--------------------------------------------" << endl;
+        vector<productOnFile> prod = service.getProductByID(order.GetOrderNo());
+        for(unsigned int i = 0; i < prod.size(); i++){
+            cout << prod[i] << endl;
+            cout << "____" << endl;
+        }
+        cout << endl << "--------------------------------------------" << endl;
 }
 
 void SalesUI::selectDeliveryPlace(){

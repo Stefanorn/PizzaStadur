@@ -67,19 +67,6 @@ int Pontun::GetOrderNo() const{
 
 ostream& operator << (ostream& out, const Pontun& pontun){
     out << "Order no " << pontun._orderNumber << endl;
-    /*if(pontun._hasBeenPaid){
-        out << "has been paid" << endl;
-    }
-    else{
-        out << "has not been paid" << endl;
-    }
-
-    if(pontun._hasBeenDelivered){
-        out << "has been delivered" << endl;
-    }
-    else{
-        out << "has not been delivered" << endl;
-    }*/
 
     if(pontun._isDelivered){
         out << "To be delivered from " << pontun._place.getName() << endl;
@@ -88,7 +75,7 @@ ostream& operator << (ostream& out, const Pontun& pontun){
         out << "To be picked up at/in " << pontun._place.getName() << endl;
     }
 
-    out << "Total price: " << pontun._price << endl << endl;
+    out << "Total price: " << pontun._price << ".kr ";
 
     return out;
 }

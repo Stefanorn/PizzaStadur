@@ -74,7 +74,6 @@ istream& operator >> (istream& ins, Pizza& pizza){
 }
 
 ostream& operator << (ostream& outs, const Pizza& pizza){
-    outs << "ID   : " << pizza._pizzaID << endl;
     outs << "Base : ";
     if(pizza._base == 1){
         outs << "Regular" << endl;
@@ -108,9 +107,8 @@ ostream& operator << (ostream& outs, const Pizza& pizza){
     outs << "Price: " << pizza.getPrice() << " kr." << endl;
     outs << endl << "Toppings: " << endl;
     for(int i = 0; i < pizza._toppingIndex; i++){
-        outs << pizza._toppingsOnPizza[i];
+        outs << "\t"<< pizza._toppingsOnPizza[i];
     }
-    outs << endl << endl;
     return outs;
 }
 

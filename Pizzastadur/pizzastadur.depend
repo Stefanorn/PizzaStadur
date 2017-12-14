@@ -173,7 +173,7 @@
 	<cstring>
 	<vector>
 
-1513251528 c:\users\tinna\documents\verklegt námskeið 1\pizzastadur\pizzastadur\include\models\pontun.h
+1513262372 c:\users\tinna\documents\verklegt námskeið 1\pizzastadur\pizzastadur\include\models\pontun.h
 	"ToppingsMenuItem.h"
 	"Pizza.h"
 	"Toppings.h"
@@ -189,7 +189,7 @@
 
 1512729004 c:\users\tinna\documents\verklegt námskeið 1\pizzastadur\pizzastadur\include\exceptions\orderexeptions.h
 
-1513259601 source:c:\users\tinna\documents\verklegt námskeið 1\pizzastadur\pizzastadur\src\models\pontun.cpp
+1513262372 source:c:\users\tinna\documents\verklegt námskeið 1\pizzastadur\pizzastadur\src\models\pontun.cpp
 	"Pontun.h"
 
 1513256111 source:c:\users\tinna\documents\verklegt námskeið 1\pizzastadur\pizzastadur\src\models\products.cpp
@@ -255,10 +255,10 @@
 	<vector>
 	<fstream>
 
-1513251528 source:c:\users\tinna\documents\verklegt námskeið 1\pizzastadur\pizzastadur\src\services\staffservices.cpp
+1513262372 source:c:\users\tinna\documents\verklegt námskeið 1\pizzastadur\pizzastadur\src\services\staffservices.cpp
 	"staffServices.h"
 
-1513251528 c:\users\tinna\documents\verklegt námskeið 1\pizzastadur\pizzastadur\include\services\staffservices.h
+1513262372 c:\users\tinna\documents\verklegt námskeið 1\pizzastadur\pizzastadur\include\services\staffservices.h
 	"orderRepo.h"
 	"PlacesRepo.h"
 
@@ -271,7 +271,7 @@
 	"Pizza.h"
 	"AdminServices.h"
 
-1513251528 source:c:\users\tinna\documents\verklegt námskeið 1\pizzastadur\pizzastadur\src\ui\staffui.cpp
+1513263854 source:c:\users\tinna\documents\verklegt námskeið 1\pizzastadur\pizzastadur\src\ui\staffui.cpp
 	"StaffUI.h"
 
 1513251528 c:\users\tinna\documents\verklegt námskeið 1\pizzastadur\pizzastadur\include\ui\staffui.h
@@ -300,7 +300,8 @@
 	"PlacesRepo.h"
 	"orderRepo.h"
 
-1513090172 c:\users\tinna\documents\verklegt námskeið 1\pizzastadur\pizzastadur\include\ui\bakerui.h
+1513263973 c:\users\tinna\documents\verklegt námskeið 1\pizzastadur\pizzastadur\include\ui\bakerui.h
+	<stdlib.h>
 	<iostream>
 	"BakerServices.h"
 
@@ -308,7 +309,7 @@
 	<stdlib.h>
 	"SalesServices.h"
 
-1513259601 c:\users\tinna\documents\verklegt námskeið 1\pizzastadur\pizzastadur\include\services\salesservices.h
+1513262372 c:\users\tinna\documents\verklegt námskeið 1\pizzastadur\pizzastadur\include\services\salesservices.h
 	"orderRepo.h"
 	"pizzaRepo.h"
 	"ToppingMenuRepo.h"
@@ -332,13 +333,13 @@
 1513090172 source:c:\users\tinna\documents\verklegt námskeið 1\pizzastadur\pizzastadur\src\services\bakerservices.cpp
 	"BakerServices.h"
 
-1513259601 source:c:\users\tinna\documents\verklegt námskeið 1\pizzastadur\pizzastadur\src\services\salesservices.cpp
+1513262372 source:c:\users\tinna\documents\verklegt námskeið 1\pizzastadur\pizzastadur\src\services\salesservices.cpp
 	"SalesServices.h"
 
-1513258006 source:c:\users\tinna\documents\verklegt námskeið 1\pizzastadur\pizzastadur\src\ui\bakerui.cpp
+1513265765 source:c:\users\tinna\documents\verklegt námskeið 1\pizzastadur\pizzastadur\src\ui\bakerui.cpp
 	"BakerUI.h"
 
-1513256111 source:c:\users\tinna\documents\verklegt námskeið 1\pizzastadur\pizzastadur\src\ui\salesui.cpp
+1513263854 source:c:\users\tinna\documents\verklegt námskeið 1\pizzastadur\pizzastadur\src\ui\salesui.cpp
 	"SalesUI.h"
 
 1513120946 c:\users\tinna\documents\verklegt námskeið 1\pizzastadur\pizzastadur\include\models\toppingsmenuitem.h

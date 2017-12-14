@@ -1,6 +1,7 @@
 #ifndef BAKERUI_H
 #define BAKERUI_H
 
+#include <stdlib.h>
 #include <iostream>
 #include "BakerServices.h"
 

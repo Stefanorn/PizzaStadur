@@ -101,13 +101,14 @@ void StaffUI::selectDeliveryPlace(){
     }
     if (allPlaces.size() > 0) {
         try {
-        cout << "Select a PizzaPlace " << endl;
-        char input;
-        cin >> input;
-        _selectedDeliveryPlace = service.GetDeliveryPlace(input);
+            cout << "Select a PizzaPlace " << endl;
+            char input;
+            cin >> input;
+            _selectedDeliveryPlace = service.GetDeliveryPlace(input);
         }
         catch (InvalidDeliveryPlaceInput) {
             cout << "Oops, that delivery place does not exist! Try again" << endl;
+            return;
         }
     }
     else if (allPlaces.size() == 0){

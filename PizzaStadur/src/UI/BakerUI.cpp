@@ -78,9 +78,7 @@ void BakerUI::selectDeliveryPlace(){
         }
     }
     else if (allPlaces.size() == 0){
-        cout << "No delivery places found, returning to main menu" << endl;
-        system("PAUSE");
-        return;
+        throw nothingInFile();
     }
 
 

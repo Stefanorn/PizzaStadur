@@ -18,13 +18,13 @@ int main()
         char input;
         cin >> input;
 
-        if (input == '1'){
-            try{
+        if (input == '1') {
+            try {
                 SalesUI run;
             }
-            catch (InvalidDeliveryPlaceInput){
-            cout << "Pleace enter a valid piazza place deliveri place" << endl;
-            system("PAUSE");
+            catch (nothingInFile) {
+                cout << "No delivery places found, returning to main menu" << endl;
+                system("PAUSE");
             }
         }
 

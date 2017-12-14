@@ -14,9 +14,9 @@ Toppings SalesServices::CharToTopping(char input){
     throw invalidToppingHotkey();
 }
 
-Pontun SalesServices::computeTotalPrice( Pontun order){
-    vector<Pizza> allPizza = pzRepo.ReturnAllPizzas();
-    vector<productOnFile> allProd = producFileRepo.ReturnAllProds();
+Pontun SalesServices::computeTotalPrice( Pontun order,
+                                         vector<Pizza> allPizza,
+                                         vector<productOnFile> allProd ){
     int orderId = order.GetOrderNo();
     for(unsigned int i = 0; i < allPizza.size(); i++){
         if( orderId == allPizza[i].getPizzaToOrderId()){

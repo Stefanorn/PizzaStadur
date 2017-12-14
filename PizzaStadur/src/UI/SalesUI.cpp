@@ -154,7 +154,7 @@ void SalesUI::createOrder(){
         }
     }
     system("CLS");
-    newOrder = service.computeTotalPrice(newOrder);
+    newOrder = service.computeTotalPrice(newOrder, pizzasInOrder, productsInOrder  );
     PrintOrder(newOrder);
 
     cout << "Press y to confirm your order: ";

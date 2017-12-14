@@ -42,7 +42,9 @@ bool staffServices::PayForOrder(int orderNo){
 Pontun staffServices::DeliverOrder(int orderNo){
     vector<Pontun> orders = repo.ReturnAllOrders();
     for(unsigned int i = 0; i < orders.size(); i++){
-        if( orders[i].GetOrderNo() == orderNo  && orders[i].getDeliveryPlace() == _deliveryPlace ){
+        if( orders[i].GetOrderNo() == orderNo  &&
+            orders[i].getDeliveryPlace() == _deliveryPlace &&
+            orders[i].IsOrderPaid() ){
 
             orders[i].deliverOrder();
             repo.RewriteFile( orders );

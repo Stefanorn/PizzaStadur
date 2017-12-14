@@ -115,11 +115,11 @@ void SalesUI::createOrder(){
     cin >> input;
     while(true){
         if(input == 'd' || input == 'p'){
-            service.DeliveredOrPickedUp(newOrder, input);
+            newOrder = service.DeliveredOrPickedUp(newOrder, input);
             break;
         }
         else{
-            cout << "Just press 'p' or 'd', PLEASE!" << endl; ;
+            cout << "Just press 'd' or 'p', PLEASE!" << endl; ;
             cin >> input;
         }
     }

@@ -24,6 +24,7 @@ class Pontun
         void ComputeTotalPrice(double price);
         int GetOrderNo() const;
         void DeliveryOrPickUp(char input);
+        bool returnIsDelivered();
 
         DeliveryPlaces getDeliveryPlace();
 

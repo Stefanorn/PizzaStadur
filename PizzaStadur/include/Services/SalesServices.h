@@ -16,7 +16,7 @@ class SalesServices
     public:
         SalesServices();
 
-        void DeliveredOrPickedUp(Pontun order, char input) const;
+        Pontun DeliveredOrPickedUp(Pontun order, char input);
         Toppings CharToTopping(char input);
         Pontun returnAOrder( int orderNo );
 

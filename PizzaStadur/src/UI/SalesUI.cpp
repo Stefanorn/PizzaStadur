@@ -78,10 +78,10 @@ void SalesUI::createOrder(){
             Pizza pz;
             cin >> pz;
             pz.tagPizzaToOrder( orderNo );
-            system("CLS");
-            cout << "Adding Toppings to your pizza " << endl;
             vector <ToppingsMenuItem> allToppings = service.GetToppingsMenu();
             while(true){
+                    system("CLS");
+                    cout << "Adding Toppings to your pizza " << endl;
                     for(unsigned int i = 0; i < allToppings.size(); i++){
                         cout << allToppings[i];
                     }
@@ -91,9 +91,11 @@ void SalesUI::createOrder(){
                         break;
                     }
                     cout << "Adding topping to pizza" << endl;
+
                     try{
                         Toppings tp = service.CharToTopping(input);
                         pz.addToppings( tp );
+                        cout << tp << "added to your pizza " << endl ;
                     }
                     catch ( invalidToppingHotkey ){
                         system("CLS");
@@ -104,8 +106,9 @@ void SalesUI::createOrder(){
                         for(int i = 0; i < 40; i++){
                             cout << "ERROR !! ";
                         }
-                        system("PAUSE");
                     }
+
+                    system("PAUSE");
 
 
             }

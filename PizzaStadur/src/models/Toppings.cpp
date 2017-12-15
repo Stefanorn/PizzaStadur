@@ -23,6 +23,9 @@ int Toppings::getToppingID()
 {
     return _toppingID;
 }
+void Toppings::setToppingPrice(double price){
+    _toppingPrice = price;
+}
 
 double Toppings::getToppingPrice() const
 {

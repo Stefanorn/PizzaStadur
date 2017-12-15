@@ -12,6 +12,7 @@ class Toppings
         Toppings();
         Toppings( string toppingName, double toppingPrice , int pizzaToToppingId);
         string getToppingName();
+        void setToppingPrice(double price);
         int getToppingID();
         double getToppingPrice() const;
         friend istream& operator >> (istream& ins, Toppings& topping);

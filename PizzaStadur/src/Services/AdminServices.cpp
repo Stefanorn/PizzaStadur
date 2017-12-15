@@ -14,6 +14,7 @@ void AdminServices::registerPizza(PizzaMenu pizza,
                                    vector<Toppings> tp)
 {
     for(unsigned int i = 0; i< tp.size(); i++){
+        tp[i].setToppingPrice(0);
         pizza.addTopping(tp[i]);
     }
     cout << pizza;

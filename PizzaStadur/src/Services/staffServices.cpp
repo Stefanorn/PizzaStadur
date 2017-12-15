@@ -19,7 +19,9 @@ vector<Pontun> staffServices::ReturnUnDeliveredOrder(){
     vector<Pontun> allOrders = repo.ReturnAllOrders();
     vector<Pontun> UnDeliveredOrders;
     for(unsigned int i = 0; i < allOrders.size(); i++){
-        if(!allOrders[i].IsOrderDelivered()  && allOrders[i].getDeliveryPlace() == _deliveryPlace){
+        if(!allOrders[i].IsOrderDelivered()  &&
+            allOrders[i].getDeliveryPlace() == _deliveryPlace &&
+            allOrders[i].IsOrderPaid() ){
             UnDeliveredOrders.push_back(allOrders[i]);
         }
     }
